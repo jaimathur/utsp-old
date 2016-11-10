@@ -1,0 +1,237 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="interpretation7_files/filelist.xml">
+
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of Mathematical Morphology Outputs</font></b></p>
+<p align="justify">Here we will discuss how to interpret the outputs produced by experiment 
+7, 
+i.e., Mathematical Morphology. So, please follow the steps as shown below to get the sample 
+output for interpretation.</p>
+<p align="justify">1) Select &quot;inputimage&quot; as your experimental image.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage&quot; is a satellite image having 6 bands stored in BIL format as raw 
+image. It has the dimension 801x1401. Since in our discussion we will cover upto 
+its 4th band, so it is necessary to understand that what the first 4 bands of 
+this image represents. The first four bands are as follows: blue, green, red and 
+infra-red respectively.</p>
+<p align="justify">2) Select band 6 for applying morphological operation</p>
+<p align="justify">Here we are selecting band 6 as it has a lot of visible 
+features in our image. So, one can understand the output better</p>
+<p align="justify">3) Select &quot;Dilation&quot; in the operation option</p>
+<p align="justify">From the number of operations available we will study 
+dilation. Other operations can be interpreted in similar manner. </p>
+<p align="justify">4) Select structuring element as &quot;Square&quot; and width of 
+structuring element as 3</p>
+<p align="justify">Number of&nbsp; in built structuring elements are provided. 
+But we will use the simplest one : &quot;Square&quot; with a size of 3x3.</p>
+<p align="justify">5) Click on &quot;Process&quot; button</p>
+<p align="justify">You will get following images as output :</p>
+<p align="justify"><i><b>Original Image </b></i> </p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp7_original_image.jpg" width="650" height="373"></p>
+<p align="justify"><i><b>Output of morphological operation</b></i></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp7_mor_image.jpg" width="649" height="373"></p>
+<p align="justify"><i><b>Interpretation of dilation</b></i></p>
+<p align="justify">After dilation you can easily notice that the white component 
+in the image is increased in shape and size. i.e., black portion in the image is 
+reduced. You can easily get this if you will note the black spots in the image. 
+During dilation in gray scale image what happens is for each pixel, all image 
+pixels coming under structuring element are considered and the maximum pixel 
+value is assigned as the central pixel value. So only for those pixels where the 
+complete structuring element lies in pure black the output is black.</p>
+        <p class="MsoNormal"><b>MORPHOLOGICAL OPERATIONS</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:179.25pt;
+ height:207pt'>
+ <v:imagedata src="interpretation7_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=239 height=276
+src="interpretation7_files/image002.jpg" v:shapes="_x0000_s1025"><![endif]></b></p>
+        <p class="MsoNormal">The image shown above is red band of sample image 
+        quickbird.jpg. Use this image for comparison in all the morphological 
+        operations discussed here.</p>
+        <p class="MsoNormal"><b>EROSION</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation7_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation7_files/image004.jpg" v:shapes="_x0000_s1026"><![endif]></b></p>
+        <p class="MsoNormal">Observe that there are many number of black colored 
+        areas. All these areas have been removed by the structural element. By 
+        definition an erosion operation results in the removal of certain shape 
+        and size given by SE. The SE used here is square of size 3.</p>
+        <p class="MsoNormal"><b>DILATION</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:177.75pt;height:209.25pt'>
+ <v:imagedata src="interpretation7_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=237 height=279
+src="interpretation7_files/image006.jpg" v:shapes="_x0000_s1027"><![endif]></b></p>
+        <p class="MsoNormal">Dilation is opposite to erosion operation. Observe 
+        that edges and many areas have been filled up. Looks like have grown in 
+        size. By definition a dilation operation fills holes of certain shape 
+        and size given by SE. In dilation operation disconnected edges get 
+        connected and they also grow thick in width.</p>
+        <p class="MsoNormal"><b>OPENING</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation7_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation7_files/image008.jpg" v:shapes="_x0000_s1028"><![endif]></b></p>
+        <p class="MsoNormal">You might have noticed that above image looks like 
+        it is smoothened. This is because on implementing Opening operation, 
+        whatever the protrusions are present in the image, they are eliminated. 
+        It also breaks thin joints for example a weak link between edges. As a 
+        result we get a smooth contour. Observe the edges here, they are smooth 
+        than in the original image where edges are sharper.</p>
+        <p class="MsoNormal"><b>CLOSING</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1029" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation7_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation7_files/image010.jpg" v:shapes="_x0000_s1029"><![endif]></b></p>
+        <p class="MsoNormal">Closing operation is somewhat similar in its result 
+        when compared to opening. Because as you can see the edges have been 
+        smoothened and whatever narrow breaks between edges were present they 
+        are now connected. This operation also eliminates holes and fills gaps 
+        in the contour (edges).</p>
+        <p class="MsoNormal"><b>TOP-HAT FILTERING</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1030" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation7_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation7_files/image012.jpg" v:shapes="_x0000_s1030"><![endif]></b></p>
+        <p class="MsoNormal">Observe that all the bright (respectively dark) 
+        objects with uneven background are highlighted.</p>
+        <p class="MsoNormal"><b>BOUNDARY DETECTION</b></p>
+        <p class="MsoNormal"><b>[1] Dilation - Erosion</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1031" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation7_files/image013.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation7_files/image014.jpg" v:shapes="_x0000_s1031"><![endif]></b></p>
+        <p class="MsoNormal">It is clear that since dilation results in increase 
+        in thickness and size of objects and when eroded image is subtracted 
+        from it, we will still have majority of the dilated objects. But a more 
+        refined one. Compare the above image with the dilated image. Here the 
+        edges have come up a lot better when compared to the image that is only 
+        dilated.</p>
+        <p class="MsoNormal"><b>[2] Dilation – Original image</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1032" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation7_files/image015.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation7_files/image016.jpg" v:shapes="_x0000_s1032"><![endif]></b></p>
+        <p class="MsoNormal">Here the edges are more prominent and sharp than 
+        what we got from dilation –erosion operation.</p>
+        <p class="MsoNormal"><b>[3] Original image - Erosion</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1033" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation7_files/image017.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation7_files/image018.jpg" v:shapes="_x0000_s1033"><![endif]></b></p>
+        <p class="MsoNormal">Here the edges are too many and clumsy.</p>
+        <p class="MsoNormal"><b>HIT OR MISS TRANSFORM</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1034" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation7_files/image019.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation7_files/image020.jpg" v:shapes="_x0000_s1034"><![endif]></b></p>
+        <p class="MsoNormal">This is output generated using SE1 1 1 1 1 1 0 1 1 
+        1 (3 elements form a row) and SE2 0 0 0 0 0 1 0 0 0. Hieght by width 
+        being 3x3. SE1 is for object recognition and SE2 is for background. The 
+        objects which fitted into SE1 are displayed here.</td>
+  </tr>
+</table>
+  
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="interpretation3_files/filelist.xml">
+
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of Smoothing Outputs</font></b></p>
+<p align="justify">Here we will discuss how to interpret the outputs produced by experiment 
+3, 
+i.e., Smoothing. So, please follow the steps as shown below to get the sample 
+output for interpretation.</p>
+<p align="justify">1) Select &quot;inputimage&quot; as your experimental image.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage&quot; is a satellite image having 6 bands stored in BIL format as raw 
+image. It has the dimension 801x1401. Since in our discussion we will cover upto 
+its 4th band, so it is necessary to understand that what the first 4 bands of 
+this image represents. The first four bands are as follows: blue, green, red and 
+infra-red respectively.</p>
+<p align="justify">2) Select band 4 for red band, band 3 for green band and band 2 for blue 
+band.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+As according to the theory described in theory section of Virtual Lab, we 
+already know that a standard FCC uses infra-red wave band as red display, red 
+wave band as green display and green wave band as blue display. So, the same we 
+are doing here to get the standard FCC of &quot;inputimage&quot;.</p>
+<p align="justify">3) Click on Display button</p>
+<p align="justify">After the processing you will get an image. This is the standard FCC of &quot;inputimage&quot;. 
+You can also save it by right clicking it and then clicking on &quot;save image as&quot;. 
+The image will look like:</p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_fcc.jpg" width="694" height="386"></p>
+<p align="justify">You will also get histogram for the bands selected for display. The histogram 
+in our case will be:</p>
+<p align="justify"><b>Histogram for Infra-red&nbsp; Band (<i>displayed as red in fcc</i>):</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_red.jpg" width="590" height="381"></p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, you can easily notice that most of the pixels are assigned between grey 
+level 10 to 20. Also, another majority of pixels are assigned to gray level 60 
+to 120. We, will be comparing the histograms of the three bands (green, red and 
+infra-red) used in the example for understanding what we can easily get from 
+image histogram.</p>
+<p align="justify"><b>Histogram for Red Band&nbsp; (<i>displayed as green in fcc</i>):</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_green.jpg" width="587" height="380"></p>
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, it can be noticed that most of the pixels are assigned between gray level 
+25 to 70 and a wide range of grey level is not used. </p>
+<p align="justify"><b>Histogram for Green Band (<i>displayed as blue in fcc</i>)</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_blue.jpg" width="586" height="375"></p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, it is almost similar to red band, i.e., most of the pixels are assigned 
+between gray level 30 to 70.</p>
+<p align="justify">Now, as seen from the histogram of the three bands, it can be concluded that 
+the contrast of infra-red band is highest among these three bands. As it has 
+been provided in theory (<i>see video lecture</i>), that for a good contrast a 
+histogram should be well distributed among all the gray levels. Other attributes 
+that we can get from histogram are: mean, median, variance, standard deviation, 
+etc. (<i>see video lecture</i>).</p>
+<p align="justify"><b>Now, we are going to apply contrast enhancement over &quot;inputimage&quot;. To do so, 
+continue your steps in the experiment as:</b></p>
+<p align="justify">4) Choose the filter to be used for smoothing. Here we will 
+choose &quot;Average Filter&quot;. (<i>It is 
+set by default</i>)</p>
+<p align="justify">Here, we are going to interpret the results after application 
+of smoothing using simple average filter. A simple average filter considers the 
+pixel values of neighbors of central pixel, sums them and takes their average 
+according to the dimensions of neighborhood window, which we are going to select 
+in the next step.</p>
+<p align="justify">5) Enter &quot;3&quot; as &quot;no. of rows&quot;.</p>
+<p align="justify">6) Enter &quot;3&quot; as &quot;no. of columns&quot;</p>
+<p align="justify">Here, we have selected a 3x3 neighborhood window for 
+averaging. you should always use odd values in defining the neighborhood window 
+as it becomes easier to get the central element.</p>
+<p align="justify">7) Click on &quot;Process&quot; button.</p>
+<p align="justify">You will get the smoothened image and histogram of each band 
+used for display after smoothing, which will be as follows:</p>
+<p align="justify"><b><i>Smoothened image</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp3_smoohened.jpg" width="694" height="395"></p>
+<p align="justify"><b><i>Histogram after enhancement for red band</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp3_band1.jpg" width="600" height="449"></p>
+<p align="justify"><b><i>Histogram after enhancement for green band</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp3_band2.jpg" width="599" height="448"></p>
+<p align="justify"><b><i>Histogram after enhancement for blue band</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp3_band3.jpg" width="599" height="448"></p>
+<p align="justify">
+After averaging, some of the gray levels are merged together. So, where there 
+were sharp difference in gray level among neighbors, it becomes less. So, the 
+edges (which are formed due to large difference in pixel values of neighborhood 
+pixels and central pixels) becomes blurred. The advantage of smoothing is that 
+shot and pipper noise can be removed to a large extent. Size of neighborhood 
+window greatly effects the output of smoothing.</p>
+<p align="justify"><i><b>Interpretation using histograms</b></i></p>
+<p align="justify">As, some of the gray levels are merged in case of smoothing, 
+the convex hull of histogram after smoothing becomes zaggy. </p>
+        <p class="MsoNormal"><b>SMOOTHING</b></p>
+        <p class="MsoNormal">The image shown below is original sample image of 
+        quickbird.jpg. Please note that edges are the boundaries of 
+        objects/features. For example in figure below the boundary of bean 
+        shaped feature is called as its edge.</p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:173.25pt;
+ height:208.5pt'>
+ <v:imagedata src="interpretation3_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation3_files/image002.jpg" v:shapes="_x0000_s1025"><![endif]></b></p>
+        <p class="MsoNormal"><b>Weighted Average </b></p>
+        <p class="MsoNormal">The figure below is smoothened image using weighted 
+        average method. The coefficients used are 0.1 (8 numbers) and 0.2. It is 
+        clearly discernible that the image below is <b>blurred</b> when compared 
+        to original image shown above. The <b>edges now look less sharp</b> than 
+        before smoothening.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:177.75pt;height:211.5pt'>
+ <v:imagedata src="interpretation3_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=237 height=282
+src="interpretation3_files/image004.jpg" v:shapes="_x0000_s1026"><![endif]></p>
+        <p class="MsoNormal"><b>Lee filter</b></p>
+        <p class="MsoNormal">A smoothened image using Lee filter is shown below. 
+        Blurring of the image can be seen clearly. The <b>edges now look less 
+        sharp</b> than before smoothening. Factor (k)= 0.5</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation3_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation3_files/image006.jpg" v:shapes="_x0000_s1027"><![endif]></p>
+        <p class="MsoNormal"><b>Median filter</b></p>
+        <p class="MsoNormal">A smoothened image using Median filter is shown 
+        below. Blurring of the image can be seen clearly. The <b>edges now look 
+        less sharp</b> than before smoothening</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation3_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation3_files/image008.jpg" v:shapes="_x0000_s1028"><![endif]></p>
+        <p class="MsoNormal"><b>Mode filter</b></p>
+        <p class="MsoNormal">A smoothened image using Mode filter is shown 
+        below. Blurring of the image is too high and can be seen clearly. The <b>
+        edges now look less sharp</b> than before smoothening and the <b>feature 
+        colors look much darker</b>.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1029" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation3_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation3_files/image010.jpg" v:shapes="_x0000_s1029"><![endif]></p>
+        <p class="MsoNormal"><b>Gaussian filter</b></p>
+        <p class="MsoNormal">A smoothened image using Gaussian filter is shown 
+        below. Blurring of the image can be seen clearly. The <b>edges now look 
+        less sharp than before smoothening</b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1030" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation3_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation3_files/image012.jpg" v:shapes="_x0000_s1030"><![endif]></p>
+        <p class="MsoNormal"><b>Sigma filter</b></p>
+        <p class="MsoNormal">A smoothened image using Sigma filter is shown 
+        below. Blurring of the image can be seen clearly. The <b>edges now look 
+        less sharp than before smoothening</b>. Sigma value used is 1.8 and 
+        window size 3x3.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1031" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation3_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation3_files/image012.jpg" v:shapes="_x0000_s1031"><![endif]></p>
+        <p class="MsoNormal"><b>Circular filter</b></p>
+        <p class="MsoNormal">A smoothened image using Circular filter is shown 
+        below. Blurring of the image can be seen clearly. <b>The edges now look 
+        less sharp than before smoothening.</b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1032" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation3_files/image013.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation3_files/image014.jpg" v:shapes="_x0000_s1032"><![endif]></td>
+  </tr>
+</table>
+   
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

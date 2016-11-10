@@ -1,0 +1,965 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:(null)0="http://www.w3.org/TR/REC-html40">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+<link rel="File-List" href="fft_files/filelist.xml">
+
+<title>Virtual Labs - IIT Bombay</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+<body>
+	<div id="content">
+			<div class="post">
+			<div class="post-bgtop">
+			<div class="post-bgbtm">
+				<h1 class="title">Theory-<a href="start.html"><b>Discrete Fourier 
+				Transform</b></a></h1>
+				<div class="entry">
+					 &nbsp;<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">A transform is essentially a 
+						mathematical mapping process. When it is used in image 
+						analysis and processing, it provides insight into the 
+						manner in which the gray levels change within an image – 
+						the spatial frequency content of an image, the 
+						orientation, and so on. The Fourier transform is a well 
+						known example of a transform. Another popular transform, 
+						the principal component transform decorrelates multiband 
+						image data so that the redundancy in the dataset can be 
+						minimized.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">A transform maps image data into a 
+						different mathematical space via a transformation 
+						equation, such as the Fourier transform equation. Most 
+						of the transforms map the image data from the spatial 
+						domain to the frequency domain (also called the spectral 
+						domain), where <i>all</i> the pixels in the input 
+						(spatial domain) contribute to <i>each</i> value in the 
+						output (frequency domain), and vice versa. A pixel in 
+						the spatial domain receives contribution from all the 
+						frequencies in the frequency domain. The various terms 
+						used here will be explained below.</span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1051" type="#_x0000_t75" style='width:273pt;
+ height:268.5pt;mso-position-horizontal-relative:char;
+ mso-position-vertical-relative:line'>
+ <v:imagedata src="fft_files/image001.png" o:title="Fig5" grayscale="t"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=364 height=358
+src="fft_files/image002.gif" v:shapes="_x0000_s1051"><![endif]></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Illustration of mapping between 
+						spatial and transform domains</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">In the field of digital image 
+						processing, these transforms are used in their discrete 
+						(sampled) form. The discrete version is created by 
+						sampling the continuous form of the functions on which 
+						these transforms are based, that is, the <b><i>basis 
+						functions. </i></b>The discrete version of the basis 
+						functions is known as the <b><i>basis vectors.</i></b></span></p>
+						<p class="MsoNormal" style="text-align:justify"><b><i>
+						<span lang="EN-US">Basis images</span></i></b><span lang="EN-US"> 
+						or <b><i>basis matrices</i></b> are two-dimensional 
+						(2-D) versions of basis vectors. The process of 
+						transforming the image data into another domain, or 
+						mathematical space, amounts to projecting the image onto 
+						the basis images. The mathematical term for this 
+						projection process is an<i> <b>inner product</b></i> or 
+						scalar product. Frequency transforms can be performed on 
+						the entire image or smaller blocks (as in case of 
+						discrete cosine transform for JPEG image compression).</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Spatial frequency relates to how 
+						brightness levels change relative to spatial 
+						coordinates, in other words, spatial frequency relates 
+						to the rate of change of bright levels per unit 
+						distance. It is convention to use the term <b>frequency</b> 
+						for sinusoidal transforms, and <b>sequence </b>for 
+						rectangular wave transforms. Rapidly changing brightness 
+						values over short distances correspond to high frequency 
+						terms, and slowly changing brightness values correspond 
+						to low frequency terms.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;The lowest spatial frequency, called 
+						the <b><i>zero frequency term</i></b>, corresponds to an 
+						image with a constant value. The general form of the 
+						transformation equation, assuming an N x N image, is 
+						given by: </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">
+						<span style="position: relative; top: 15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1050" type="#_x0000_t75" style='width:279pt;height:58.5pt'>
+ <v:imagedata src="fft_files/image003.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=372 height=78
+src="fft_files/image004.gif" v:shapes="_x0000_s1050"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Here G(u,v) is the value of the 
+						transformed image at location (u,v), F(i,j) is the value 
+						of the image at pixel location (i,j). H(i,j;u,v) is the 
+						weighting matrix that varies for each (u,v). As can be 
+						seen, this is a linear operation, where the pixel 
+						intensities F(i,j) are weighted by H(.,.;.,.) and the 
+						products are summed . All the properties of a linear 
+						system are satisfied by this transformation. <i>k </i>is 
+						a normalizing factor to ensure that when the transform 
+						is reversed, the original image is obtained. </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;H(i,j;u,v) defines a set of basis 
+						images, one for each combination of (u,v). Therefore we 
+						have an inner product F(.,.) . H(.,.;u,v), i.e., each 
+						pixel F(i,j) has an associated weight pixel. u and v 
+						also vary from 0 to N-1, and therefore these 
+						calculations are carried out N<sup>2</sup> times for 
+						each combination of (u,v). Of course, this is applicable 
+						when the computations are carried out literally. In 
+						practice, the form of H permits the use of efficient 
+						algorithms that dramatically reduce the computational 
+						burden. </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">As will be seen later, for the 
+						Fourier transform kernel, H is given by the complex 
+						exponential exp[-j2</span><span lang="EN-US" style="font-family:Symbol">p(</span><span lang="EN-US">um+vn)/N]. 
+						Please note that “j” here denotes sqrt(-1). The indices 
+						are changed to (m,n) to avoid the confusion between this 
+						“j” and the j in pixel location (i,j).&nbsp; m and n vary 
+						from 0 to N-1, and thus for each pair of (u,v) we get N 
+						x N values of these complex exponential terms. </span>
+						</p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">An example for a 2x2 transform is 
+						shown in the figure below.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="margin-left:18.0pt;text-align:center">
+						<span lang="EN-US"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1049" type="#_x0000_t75" style='width:183pt;height:154.5pt'>
+ <v:imagedata src="fft_files/image005.gif" o:title="2x2Transform"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=244 height=206
+src="fft_files/image005.gif" v:shapes="_x0000_s1049"><![endif]></span></p>
+						<p class="MsoNormal" align="center" style="margin-left:18.0pt;text-align:center">
+						<span lang="EN-US">Example of 2x2 Transform and Basis 
+						Images</span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;</span><b><span lang="EN-US">Fourier Transform</span></b></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;Fourier transform decomposes a 
+						complex signal into a weighted sum of a zero frequency 
+						term (the DC term which is related to the average 
+						value), and sinusoidal terms, the basis functions, where 
+						each sinusoid is a harmonic of the fundamental. The <b>
+						<i>fundamental</i>&nbsp; </b>is the basic or lowest 
+						frequency. For instance, if the fundamental is 1 cycle 
+						per millimeter, then its harmonics are 2 cycles/mm, 3 
+						cycles/mm, and so on. </span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;From the transform, the original 
+						signal can be recreated by adding the fundamental and 
+						all the harmonics, with each term weighted by its 
+						corresponding transform coefficient.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1048" type="#_x0000_t75" style='width:189.75pt;height:213.75pt'>
+ <v:imagedata src="fft_files/image006.gif" o:title="Fourier reconstruction"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=253 height=285
+src="fft_files/image006.gif" v:shapes="_x0000_s1048"><![endif]></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">Reconstruction of original (square 
+						wave) from sinusoidal components</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">(in one dimension)</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The figure above illustrates the 
+						concept of composition of a signal as a weighted sum of 
+						sinusoids of different frequencies. The same is 
+						illustrated in two-dimensions in the next figure, where 
+						the input is a rectangular box of constant intensity.</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1047" type="#_x0000_t75" style='width:387pt;height:211.5pt'>
+ <v:imagedata src="fft_files/image007.gif" o:title="Fourier reconstruction-2D"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=516 height=282
+src="fft_files/image007.gif" v:shapes="_x0000_s1047"><![endif]></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">Reconstruction of original (square 
+						box) from sinusoidal components</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">(in two dimensions)</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">As can be seen for the above two 
+						figures, as more and more components are added, the 
+						quality of reconstructed signal (image) improves, and 
+						comes closer to the original. It can be stated without 
+						proof, that the exact reconstruction is not possible if 
+						even one frequency component is omitted. </span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The one-dimensional Fourier transform 
+						in continuous domain is defined as follows:</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 12.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1046" type="#_x0000_t75" style='width:189pt;height:42pt'>
+ <v:imagedata src="fft_files/image008.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=252 height=56
+src="fft_files/image009.gif" v:shapes="_x0000_s1046"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">where F(u) is the value of the 
+						Fourier transform at frequency u. The inverse Fourier 
+						transform is defined as</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 9.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1045" type="#_x0000_t75" style='width:191.25pt;height:41.25pt'>
+ <v:imagedata src="fft_files/image010.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=255 height=55
+src="fft_files/image011.gif" v:shapes="_x0000_s1045"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The basis functions, <i>e<span style="position: relative; top: -6.5pt">-j2πux</span></i>, 
+						are complex exponentials and are sinusoidal in nature. 
+						Continuous Fourier transform theory assumes that the 
+						functions start at -∞ and go to +∞, so they are 
+						continuous and everywhere. The above computation is 
+						possible only if f(x) has finite energy, i.e.,</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 6.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1044" type="#_x0000_t75" style='width:102pt;height:29.25pt'>
+ <v:imagedata src="fft_files/image012.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=136 height=39
+src="fft_files/image013.gif" v:shapes="_x0000_s1044"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The symbol || . ||<sub>2</sub> 
+						denotes the L<sub>2</sub> - norm of the signal f(x), 
+						defined by </span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 12.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1043" type="#_x0000_t75" style='width:199.5pt;height:51pt'>
+ <v:imagedata src="fft_files/image014.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=266 height=68
+src="fft_files/image015.gif" v:shapes="_x0000_s1043"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;If f(x) is complex, then f<sup>*</sup>(x) 
+						is the complex conjugate of f(x). If f(x) is real, the 
+						above integral simply integrates the square of f(x) over 
+						the interval [-</span><span lang="EN-US" style="font-family: Euclid Symbol">¥</span><span lang="EN-US">&nbsp; 
+						+</span><span lang="EN-US" style="font-family: Euclid Symbol">¥</span><span lang="EN-US">].
+						</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;F(u) in general is complex. In order 
+						to visualize the Fourier transform, it is resolved into 
+						its real and imaginary parts.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US" style="font-size:16.0pt">F(u)&nbsp; = F<sub>r</sub> 
+						(u) + j.F<sub>i</sub>(u)</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">where F<sub>r</sub>(u) is the real 
+						part of F(u) and F<sub>i</sub>(u) is its imaginary part. 
+						Magnitude of F(u) is given by</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US" style="font-size:16.0pt">|F(u)|&nbsp; = [F<sub>r</sub>(u)]<sup>2</sup> 
+						+ [F<sub>i</sub>(u)]<sup>2</sup></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The other component of the Fourier 
+						transform, apart from magnitude, is its phase. This is 
+						given by</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US" style="font-size:16.0pt;font-family:Symbol">
+						f</span><span lang="EN-US" style="font-size:16.0pt">(u) 
+						= arcTan [F<sub>i</sub>(u) / F<sub>r</sub>(u)]</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US" style="font-size:16.0pt">&nbsp;</span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1042" type="#_x0000_t75" style='width:171pt;height:171pt;
+ mso-position-horizontal-relative:char;mso-position-vertical-relative:line'>
+ <v:imagedata src="fft_files/image016.jpg" o:title="Fig5"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=228 height=228
+src="fft_files/image017.jpg" v:shapes="_x0000_s1042"><![endif]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+						&nbsp;<!--[if gte vml 1]><v:shape
+ id="_x0000_s1041" type="#_x0000_t75" style='width:174pt;height:174pt;
+ mso-position-horizontal-relative:char;mso-position-vertical-relative:line'>
+ <v:imagedata src="fft_files/image018.jpg" o:title="Fig5"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=232 height=232
+src="fft_files/image019.jpg" v:shapes="_x0000_s1041"><![endif]></span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Original image (rectangular 
+						window)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; (Magnitude of Fourier transform)</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;It can be inferred from the above 
+						example that when we have a function that ends abruptly 
+						in one domain, such as the function f<i>(x)</i>, it 
+						leads to a continuous series of decaying ripples in the 
+						other domain F(u). Since the signal f(x) is decomposed 
+						in terms of sinusoidal waves, each of which exists in 
+						the interval [-</span><span lang="EN-US" style="font-family: Euclid Symbol">¥</span><span lang="EN-US">&nbsp; 
+						+</span><span lang="EN-US" style="font-family: Euclid Symbol">¥</span><span lang="EN-US">], 
+						an abrupt end to a signal in one domain requires an 
+						infinite number of sinusoids in the other domain to 
+						represent it exactly. In the above example, the width of 
+						the rectangle is inversely proportional to the spacing 
+						of the undulations or ripples in the transform domain. 
+						If it is narrow, then the ripples are well spaced in the 
+						transform domain, and vice versa. </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">In order to use digital computers, we 
+						deal with discrete Fourier transform (DFT) which is 
+						defined as</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1040" type="#_x0000_t75" style='width:156pt;height:42pt'>
+ <v:imagedata src="fft_files/image020.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=208 height=56
+src="fft_files/image021.gif" v:shapes="_x0000_s1040"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The inverse DFT is defined as</span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1039" type="#_x0000_t75" style='width:139.5pt;height:42pt'>
+ <v:imagedata src="fft_files/image022.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=186 height=56
+src="fft_files/image023.gif" v:shapes="_x0000_s1039"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The basis functions for the Fourier 
+						transform are e<sup>j</sup></span><sup><span lang="EN-US" style="font-family:Symbol">q</span></sup><span lang="EN-US">, 
+						which is given by the Euler’s identity </span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">e<sup>j</sup></span><sup><span lang="EN-US" style="font-family:Symbol">q</span></sup><span lang="EN-US"> 
+						= cos(</span><span lang="EN-US" style="font-family:Symbol">q</span><span lang="EN-US">) 
+						+ jsin(</span><span lang="EN-US" style="font-family:Symbol">q</span><span lang="EN-US">)</span></p>
+						<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Putting this equation into the DFT 
+						equation by substituting <i>θ = -2πmn/N</i> , the <b><i>
+						one-dimensional DFT equation</i></b> can be written as:</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1038" type="#_x0000_t75" style='width:333pt;height:45pt'>
+ <v:imagedata src="fft_files/image024.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=444 height=60
+src="fft_files/image025.gif" v:shapes="_x0000_s1038"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The F (n) terms can be broken down so 
+						that the first term corresponds to the real part and the 
+						second term to the imaginary part.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1037" type="#_x0000_t75" style='width:165pt;height:36pt'>
+ <v:imagedata src="fft_files/image026.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=220 height=48
+src="fft_files/image027.gif" v:shapes="_x0000_s1037"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1036" type="#_x0000_t75" style='width:168pt;height:36pt'>
+ <v:imagedata src="fft_files/image028.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=224 height=48
+src="fft_files/image029.gif" v:shapes="_x0000_s1036"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The magnitude is given by F<sub>m</sub>(n) 
+						= Sqrt[{R(n)}<sup>2</sup>&nbsp; + {I(n)}<sup>2</sup>]</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;The phase is given by F</span><sub><span lang="EN-US" style="font-family:Symbol">f</span></sub><span lang="EN-US">(n) 
+						= arctan[I(n) / R(n)]</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;Magnitude component indicates the 
+						strength of different frequencies. If a particular 
+						frequency is absent, its magnitude is zero. In case of 
+						images, most often we see the magnitude decreasing with 
+						increasing frequency.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;The phase component indicates a 
+						relative ordering of various parts of the image. It can 
+						be seen that even if parts of the image are 
+						interchanged, the magnitude remains unaltered, but the 
+						phase will be different, and understanding what is 
+						contained in the image becomes difficult. It is somewhat 
+						similar to the comprehension capability being lost when 
+						words are spoken in a wrong order in a sentence.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;The figure below shows the magnitude 
+						and phase of some sinusoidal waveforms:</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1035" type="#_x0000_t75" style='width:220.5pt;height:286.5pt;
+ mso-position-horizontal-relative:char;mso-position-vertical-relative:line'>
+ <v:imagedata src="fft_files/image030.jpg" o:title="5" gain="84021f"
+  blacklevel="-4588f"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=294 height=382
+src="fft_files/image031.jpg" v:shapes="_x0000_s1035"><![endif]></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Magnitude and phase of sinusoidal 
+						waveforms</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span><b><span lang="EN-US">A Numerical Example</span></b></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Consider a 4-element sequence of 
+						numbers [3 2 1 1] for which we shall compute the DFT.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">For a 4-element sequence, the DFT is 
+						also a sequence of length 4. The frequency components 
+						that we have to compute include F(0), F(1), F(2) and 
+						F(3).</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;By the formula of DFT, we have</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 24.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1034" type="#_x0000_t75" style='width:323.25pt;height:54pt'>
+ <v:imagedata src="fft_files/image032.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=431 height=72
+src="fft_files/image033.gif" v:shapes="_x0000_s1034"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">= 0.25 [ 3 + 2 + 1 + 1] = 1.75 
+						(=average of the four elements)</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 24.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1033" type="#_x0000_t75" style='width:317.25pt;height:54pt'>
+ <v:imagedata src="fft_files/image034.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=423 height=72
+src="fft_files/image035.gif" v:shapes="_x0000_s1033"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">= 0.25[3 + 2(-j) + 1(-1) + 1(j)]
+						</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">= 0.25 [2 – j]</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 24.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1032" type="#_x0000_t75" style='width:324pt;height:54pt'>
+ <v:imagedata src="fft_files/image036.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=432 height=72
+src="fft_files/image037.gif" v:shapes="_x0000_s1032"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">= 0.25[3 + 2(-1) + 1 + 1(-1)]</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">= 0.25</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 24.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1031" type="#_x0000_t75" style='width:321pt;height:54pt'>
+ <v:imagedata src="fft_files/image038.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=428 height=72
+src="fft_files/image039.gif" v:shapes="_x0000_s1031"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">= 0.25 [3 + 2(j) + 1(-1) + 1(-j)]</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">= 0.25[2-j]</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						&nbsp;</p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Therefore the Fourier transform 
+						sequence for the above sequence is given by </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;(1/4) [ 7&nbsp; (2-j)&nbsp;&nbsp; 1&nbsp;&nbsp; (2-j) ]</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;The above calculations are performed 
+						using Euler’s rule for e<sup>jx</sup> = cos(x) + jsin(x)</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<b>
+						<span lang="EN-US">2-Dimensional DFT</span></b></p>
+						<p class="MsoNormal"><span lang="EN-US">The 
+						two-dimensional DFT is a straightforward extension of 
+						the 1-dimensional DFT. <span style="color:black">We can 
+						decompose an image into a weighted sum of 2-D sinusoidal 
+						terms. The equation for the <b><i>2-D discrete Fourier 
+						transform</i></b> is: </span></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1030" type="#_x0000_t75" style='width:228pt;height:45pt'>
+ <v:imagedata src="fft_files/image040.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=304 height=60
+src="fft_files/image041.gif" v:shapes="_x0000_s1030"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">There is a major difference in the 
+						physical interpretation of the Fourier Transform in two 
+						dimensions. In one-dimension, the frequency indicates 
+						the rate of variation along the x-axis. In two 
+						dimensions, the number of directions along with the rate 
+						of change of intensities in the image are measured is 
+						very large (infinite in continuous images, finite but 
+						large in discrete case). </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1029" type="#_x0000_t75" style='width:3in;height:220.5pt;
+ mso-position-horizontal-relative:char;mso-position-vertical-relative:line'>
+ <v:imagedata src="fft_files/image042.jpg" o:title="5"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=288 height=294
+src="fft_files/image043.jpg" v:shapes="_x0000_s1029"><![endif]>&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">Physical interpretation of frequency 
+						in two-dimensions</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;If we denote the frequencies by u- 
+						and v-axes, then any given frequency is given by </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span><span lang="EN-US" style="font-family:Symbol">n</span><span lang="EN-US"> 
+						= sqrt (u<sup>2</sup> + v<sup>2</sup>) and hence the 
+						wavelength = C / sqrt (u<sup>2</sup> + v<sup>2</sup>), 
+						where C is the velocity of light. </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;Using Euler’s equation to expand e<sup>jx</sup> 
+						= cos(x) + j sin(x), we can write the Fourier transform 
+						equation as</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">
+						<span style="position: relative; top: 15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='width:6in;height:45.75pt'>
+ <v:imagedata src="fft_files/image044.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=61
+src="fft_files/image045.gif" v:shapes="_x0000_s1028"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">= R(u,v) - j I(u,v)</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">The real part R(u,v) of F(u,v) is 
+						given by</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:279pt;height:45.75pt'>
+ <v:imagedata src="fft_files/image046.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=372 height=61
+src="fft_files/image047.gif" v:shapes="_x0000_s1027"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal"><span lang="EN-US">and the 
+						imaginary part I(u,v) is given by</span></p>
+						<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:273.75pt;height:45.75pt'>
+ <v:imagedata src="fft_files/image048.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=365 height=61
+src="fft_files/image049.gif" v:shapes="_x0000_s1026"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal"><span lang="EN-US">The magnitude of 
+						the Fourier transform is given by </span></p>
+						<p class="MsoNormal"><span lang="EN-US">&nbsp;</span><span lang="SV">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |F(u,v)| = sqrt[R<sup>2</sup>(u,v) + I<sup>2</sup>(u,v)]</span></p>
+						<p class="MsoNormal"><span lang="SV">&nbsp;</span><span lang="EN-US">The phase of the 
+						Fourier transform is given by</span></p>
+						<p class="MsoNormal" style="text-align: center"><span lang="EN-US">&nbsp;</span><span lang="EN-US" style="font-family:Symbol"> f</span><span lang="SV">(u,v) 
+						= arcTan[I(u,v) / R(u,v)]</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="SV">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color: black">Phase data 
+						contains information about where objects are in the 
+						image, i.e., their relative placement with respect to 
+						each other. Magnitude does not carry as much information 
+						as the phase. In fact, even if the magnitude is replaced 
+						by a constant, if the phase is faithfully preserved, a 
+						significant amount of information about the image is 
+						still available.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">The inverse 2-D 
+						DFT is given by:</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US">
+						<span style="position: relative; top: 14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1025" type="#_x0000_t75" style='width:202.5pt;height:45pt'>
+ <v:imagedata src="fft_files/image050.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=270 height=60
+src="fft_files/image051.gif" v:shapes="_x0000_s1025"><![endif]></span><!--[if gte mso 9]><![endif]--></span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">where F<span style="position: relative; top: -6.5pt">-1</span>&nbsp;notation 
+						represents the inverse transform. This equation 
+						illustrates that the function f(m,n)&nbsp; is represented by 
+						a weighted sum of the basis functions, and that the 
+						transform coefficients, <i>F(u,v</i>), are the weights. 
+						The complex exponentials are the basis functions. </span>
+						</p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify"><b>
+						<span lang="EN-US" style="color:black">Properties of the 
+						2-D Fourier Transform</span></b></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<h3><span lang="EN-US">Separability </span></h3>
+						<p class="MsoNormal"><i>
+						<span lang="EN-US" style="color: black">&nbsp;</span></i></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">This is one of 
+						important properties of the Fourier transform. This 
+						implies that the two-dimensional basis image can be 
+						decomposed into two product terms where each term 
+						depends only on the rows or columns. Therefore the 2-D 
+						DFT can be found by successive application of two 1-D 
+						DFTs. This is evident from the equation of the 
+						2-dimensional Fourier transform. For each row, the 
+						one-dimensional DFT is first computed, and stored in an 
+						array. On this array, the one-dimensional DFT is then 
+						computed, but the order is along the columns. In this 
+						process, the computations are considerably simplified, 
+						and the complexity of both the hardware and software 
+						implementations becomes less. Efficient computations of 
+						the DFT are known under a famous abbreviation FFT, or 
+						Fast Fourier Transform. Very efficient algorithms exist 
+						when the image is square, whose rows and columns are an 
+						integral power of 2, i.e., M = N = 2<sup>p</sup>, where 
+						P is an integer. Research based on the mathematical 
+						theory of numbers produced algorithms for non-square 
+						size images, whose rows and columns may even be prime 
+						numbers.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US">&nbsp;</span></p>
+						<p class="MsoNormal"><b>
+						<span lang="EN-US" style="color:black; text-decoration:underline">
+						<font size="3">Linearity</font></span></b></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;The Fourier 
+						transform is a linear operator and is shown by the 
+						fol</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;Let g(m,n) = a.f<sub>1</sub>(m,n) 
+						+ b.f<sub>2</sub>(m,n)</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;Then it can be 
+						shown that G(u,v) = a.F<sub>1</sub>(u,v) + b.F<sub>2</sub>(u,v)</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;where a and b are 
+						constants. Similar relation applies to the inverse 
+						Fourier transform as well.</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal">
+						<b>
+						<span lang="EN-US" style="color:black; text-decoration:underline">
+						<font size="3">Convolution</font></span></b></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">Convolution in 
+						one domain is the equivalent of multiplication in the 
+						other domain. This is what allows us to perform 
+						filtering in the spatial domain with convolution masks. 
+						We use * to denote the convolution operation, and </span>
+						<i>
+						<span lang="EN-US" style="font-family:ScriptC;
+color:black">F</span><span lang="EN-US" style="color:black">[ ]</span></i><span lang="EN-US" style="color:black"> 
+						for the forward Fourier transform and similarly, </span>
+						<i>
+						<span lang="EN-US" style="font-family:ScriptC;color:black">
+						F</span><span lang="EN-US" style="color: black; position: relative; top: -6.5pt">-1</span><span lang="EN-US" style="color:black">[ 
+						]</span></i><span lang="EN-US" style="color:
+black"> for the inverse Fourier transform. </span>
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">The equations 
+						that define convolution&nbsp; property are:</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;</span><span lang="EN-US" style="font-family:ScriptC;color:black">F</span><span lang="EN-US" style="color:black">[f(m,n) * 
+						h(m,n)]&nbsp;&nbsp; =&nbsp;&nbsp; F(u,v) . H(u,v)</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;</span><span lang="EN-US" style="font-family:ScriptC;color:black">F</span><span lang="EN-US" style="color:black">[F(u,v) * 
+						H(u,v)] = f(m,n) . h(m,n)</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">It may be 
+						computationally less intensive to apply filters in the 
+						spatial domain of the image rather than the frequency 
+						domain of the image, especially if parallel hardware is 
+						available. </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;&nbsp;</span></p>
+						<p class="MsoNormal"><b>
+						<span lang="EN-US" style="color:black; text-decoration:underline">
+						<font size="3">Translation</font></span></b></p>
+						<p class="MsoNormal"><b><i>
+						<span lang="EN-US" style="color:black">&nbsp;</span></i></b></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">The translation 
+						property of the Fourier transform is given by the 
+						following equations:</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US" style="font-family:ScriptC;color:black">
+						F</span><span lang="EN-US" style="color:black">[f(m – m<sub>o</sub>, 
+						n – n<sub>o</sub>]&nbsp; =&nbsp; F(u,v). exp[-j2</span><span lang="EN-US" style="font-family:Symbol;
+color:black">p</span><span lang="EN-US" style="color:black">{(m<sub>o</sub>u/M) 
+						+ (n<sub>o</sub>v/N)}]</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">These equations 
+						tell us that if the image is moved, the resulting 
+						Fourier spectrum undergoes a phase shift, but magnitude 
+						of the spectrum remains the same. This is evident from 
+						the fact that the magnitude of the complex exponential 
+						is equal to 1.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;Similar relation 
+						applies to the inverse Fourier transform as well:</span></p>
+						<p class="MsoNormal" style="text-align:center">
+						<span lang="EN-US" style="color:black">&nbsp;</span><span lang="EN-US" style="font-family:ScriptC;color:black">F<sup>-</sup></span><sup><span lang="EN-US" style="color:black">1</span></sup><span lang="EN-US" style="color:
+black">[F(u – u<sub>o</sub>, v – v<sub>o</sub>]&nbsp; =&nbsp; f(m,n). exp[+j2</span><span lang="EN-US" style="font-family:Symbol;color:black">p</span><span lang="EN-US" style="color:black">{(u<sub>o</sub>m/M) 
+						+ (v<sub>o</sub>v/N)}]</span></p>
+						<p class="MsoNormal" align="center" style="text-align:left">
+						<span lang="EN-US" style="color:black">&nbsp;This is also 
+						known as the&nbsp; modulation property, or the frequency 
+						translation property.</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;These equations 
+						tell us that if the image is multiplied by a complex 
+						exponential (sinusoid), its corresponding spectrum is 
+						shifted. This is the principle in communication systems 
+						where, for instance, low frequency speech signal is 
+						carried on a high frequency carrier signal.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal"><b>
+						<span lang="EN-US" style="color:black; text-decoration:underline">
+						<font size="3">Rotation</font></span></b></p>
+						<p class="MsoNormal"><b><i>
+						<span lang="EN-US" style="color:black">&nbsp;</span></i></b><span lang="EN-US" style="color:black">This property 
+						tell us that if an image is rotated by an angle </span>
+						<span lang="EL" style="color: black">θ</span><span lang="EN-US" style="color: black; position: relative; top: 6.5pt">0</span><span lang="EN-US" style="color:black">, 
+						then <i>F(u, v)</i> is rotated by the same angle, and 
+						vice versa. The rotation property can be easily 
+						illustrated by using polar coordinates.</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal"><u><b>
+						<span lang="EN-US" style="color:black"><font size="3">Displaying the 
+						Fourier Spectrum</font></span></b><span lang="EN-US" style="color:black; font-weight:700"><font size="3">
+						</font>
+						</span></u></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">The Fourier 
+						spectrum consists of complex floating point numbers, 
+						stored with a <i>data format</i> of <i>complex</i> – 
+						where the <i>image structure</i> contains a <i>matrix</i> 
+						structure with one matrix for the real part and one for 
+						the imaginary part. We shift the origin to the center of 
+						the image by applying the properties of periodicity and 
+						modulation with <i>u<span style="position: relative; top: 4.5pt">0</span>&nbsp;= 
+						v<span style="position: relative; top: 4.5pt">0</span>&nbsp;= 
+						N/2</i> which is equivalent to multiplying the image 
+						with (-1)<sup>m+n</sup>, for every pixel at location (m,n). 
+						This makes it convenient to display the Fourier 
+						magnitude spectrum with the zero frequency at the 
+						centre, with frequency increasing in radial direction, 
+						away from the centre.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color: black">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color: black">This helps 
+						visualize the concepts of low and high frequencies 
+						better, and most software packages provide interactive 
+						selection of cut-off points for low and highpass 
+						filtering based on this form of display of the magnitude 
+						spectrum. An example is shown below:</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">
+						<img border="0" src="fft21.JPG" width="598" height="295">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">To take advantage 
+						of the human visual system’s response to brightness we 
+						can greatly enhance the visual information available by 
+						displaying the following log transform of the spectrum:</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US" style="color:black">L(u,v)&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp; 
+						K.[1 + |Log{|F(u,v)|}</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">The log function 
+						compresses the data, and the scaling factor K remaps the 
+						data to the 0-255 range.</span></p>
+						<p class="MsoNormal" style="text-align:justify">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<p class="MsoNormal"><b><i>
+						<span lang="EN-US" style="color:black">Phase </span></i>
+						</b></p>
+						<p class="MsoNormal"><b><i>
+						<span lang="EN-US" style="color:black">&nbsp;</span></i></b></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">The phase 
+						spectrum is displayed primarily to illustrate phase 
+						changes. It has a range of 0 to 360 degrees, or 0 to 2π 
+						radians. The phase data are stored in floating point</span><span lang="EN-US" style="font-size:32.0pt;color:black">
+						</span><span lang="EN-US" style="color:black">data, so 
+						it has a larger dynamic range than the 256 levels 
+						typically</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">available for display. The data are rescaled 
+						to 0-255 range for on-screen display purposes.</span></p>
+						<p class="MsoNormal">
+						<span lang="EN-US" style="color:black">&nbsp;</span></p>
+						<h2><span lang="EN-US">Image Processing in Fourier 
+						Domain</span></h2>
+						<p class="MsoNormal"><b>
+						<span lang="EN-US" style="color:black">&nbsp;</span></b></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<img border="0" src="fft22.jpg" width="425" height="218"></p>
+						<p class="MsoNormal" align="center" style="text-align:center">
+						<span lang="EN-US" style="color:black">Chain of Steps in 
+						Fourier Transform</span></p>
+						<p class="MsoNormal">
+						&nbsp;</p>
+						<p class="MsoNormal" style="text-align:justify">
+						&nbsp;</p>
+				</div>
+			</div>
+			</div>
+			</div>
+
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+
+	<!-- end #footer -->
+</div>
+</body>
+</html>

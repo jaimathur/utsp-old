@@ -1,0 +1,718 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of Image Viewer Outputs</font></b></p>
+<p align="justify">Here we will discuss how to interpret the outputs produced by experiment 1, 
+i.e., Image Viewer. So, please follow the steps as shown below to get the sample 
+output for interpretation.</p>
+<p align="justify">1) Select &quot;inputimage&quot; as your experimental image.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage&quot; is a satellite image having 6 bands stored in BIL format as raw 
+image. It has the dimension 801x1401. Since in our discussion we will cover upto 
+its 4th band, so it is necessary to understand that what the first 4 bands of 
+this image represents. The first four bands are as follows: blue, green, red and 
+infra-red respectively.</p>
+<p align="justify">2) Choose &quot;view color composite&quot;, <i>it is already set as default</i>.</p>
+<p align="justify">3) Select band 4 for red band, band 3 for green band and band 2 for blue 
+band.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+As according to the theory described in theory section of Virtual Lab, we 
+already know that a standard FCC uses infra-red wave band as red display, red 
+wave band as green display and green wave band as blue display. So, the same we 
+are doing here to get the standard FCC of &quot;inputimage&quot;.</p>
+<p align="justify">4) Click on Display button</p>
+<p align="justify">After the processing you will get an image. This is the standard FCC of &quot;inputimage&quot;. 
+You can also save it by right clicking it and then clicking on &quot;save image as&quot;. 
+The image will look like:</p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_fcc.jpg" width="652" height="363"></p>
+<p align="justify">You will also get histogram for the bands selected for display. The histogram 
+in our case will be:</p>
+<p align="justify"><b>Histogram for Infra-red&nbsp; Band (<i>displayed as red in fcc</i>):</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_red.jpg" width="589" height="380"></p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, you can easily notice that most of the pixels are assigned between grey 
+level 10 to 20. Also, another majority of pixels are assigned to gray level 60 
+to 120. We, will be comparing the histograms of the three bands (green, red and 
+infra-red) used in the example for understanding what we can easily get from 
+image histogram.</p>
+<p align="justify"><b>Histogram for Red Band&nbsp; (<i>displayed as green in fcc</i>):</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_green.jpg" width="587" height="379"></p>
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, it can be noticed that most of the pixels are assigned between gray level 
+25 to 70 and a wide range of grey level is not used. </p>
+<p align="justify"><b>Histogram for Green Band (<i>displayed as blue in fcc</i>)</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_blue.jpg" width="584" height="379"></p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, it is almost similar to red band, i.e., most of the pixels are assigned 
+between gray level 30 to 70.</p>
+<p align="justify">Now, as seen from the histogram of the three bands, it can be concluded that 
+the contrast of infra-red band is highest among these three bands. As it has 
+been provided in theory (<i>see video lecture</i>), that for a good contrast a 
+histogram should be well distributed among all the gray levels. Other attributes 
+that we can get from histogram are: mean, median, variance, standard deviation, 
+etc. (<i>see video lecture</i>).</p>
+<p align="justify"><b>Now, we are going to interpret the image at pixel level. To do so, 
+continue your steps in the experiment as:</b></p>
+<p align="justify">5) Select the option &quot;Image subset and pixel value of each band&quot;. (<i>It is 
+set by default</i>)</p>
+<p align="justify">Here, you can provide the upper and lower coordinates of the subset image 
+that you want to extract and for which you want to see the pixel values. It can 
+be done either manually or by clicking the respective buttons. But, to match the 
+values with our example values, follow the steps.</p>
+<p align="justify">6) Enter &quot;83&quot; in &quot;minimum row value&quot;.</p>
+<p align="justify">7) Enter &quot;88&quot; in &quot;maximum row value&quot;.</p>
+<p align="justify">8) Enter &quot;309&quot; in &quot;minimum column value&quot;.</p>
+<p align="justify">9) Enter &quot;314&quot; in &quot;maximum column value&quot;</p>
+<p align="justify">By doing so, we are going to extract a 6x6 subset from the image.</p>
+<p align="justify">10) Click on generate button.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+You will get the subset image and its band values, which will be as follows:</p>
+<p align="justify"><b><i>subset image</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_subset.jpg" width="6" height="6"></p>
+<p align="justify"><b><i>pixel values</i></b></p>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="width: 450; border-collapse: collapse; border: medium none">
+  <tr>
+    <td colspan="6" style="border: 1.0pt inset black; padding: .75pt; background: green" width="446">
+    <p align="center" style="text-align:justify"><span style="color:white">PIXEL 
+    DATA OF BAND 1 FOR THE SELECTED SUBSET OF IMAGE</span></td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="67">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="67">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="67">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="67">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="67">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">57&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="67">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+  </tr>
+</table>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="width: 450; border-collapse: collapse; border: medium none">
+  <tr>
+    <td colspan="6" style="border: 1.0pt inset black; padding: .75pt; background: green" width="446">
+    <p align="center" style="text-align:justify"><span style="color:white">PIXEL 
+    DATA OF BAND 2 FOR THE SELECTED SUBSET OF IMAGE</span></td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="68">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">42&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">41&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="68">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">42&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">42&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">45&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="68">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">40&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">42&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">43&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">46&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="68">
+    <p class="MsoNormal" align="justify">45&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">42&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">41&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">45&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">45&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="68">
+    <p class="MsoNormal" align="justify">45&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">45&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">45&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">41&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">44&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="68">
+    <p class="MsoNormal" align="justify">45&nbsp;</td>
+  </tr>
+</table>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="width: 450; border-collapse: collapse; border: medium none">
+  <tr>
+    <td colspan="6" style="border: 1.0pt inset black; padding: .75pt; background: green" width="446">
+    <p align="center" style="text-align:justify"><span style="color:white">PIXEL 
+    DATA OF BAND 3 FOR THE SELECTED SUBSET OF IMAGE</span></td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">32&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">32&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">32&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">32&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">33&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">33&nbsp;</td>
+  </tr>
+</table>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="width: 450; border-collapse: collapse; border: medium none">
+  <tr>
+    <td colspan="6" style="border: 1.0pt inset black; padding: .75pt; background: green" width="446">
+    <p align="center" style="text-align:justify"><span style="color:white">PIXEL 
+    DATA OF BAND 4 FOR THE SELECTED SUBSET OF IMAGE</span></td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">94&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">93&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">88&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">89&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">89&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">93&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">90&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">90&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">93&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">92&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">87&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">93&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">95&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">95&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">94&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">95&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">103&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">100&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">78&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">82&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">94&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">97&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">103&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">95&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">91&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">98&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">109&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">109&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">102&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">98&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">96&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">100&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="73">
+    <p class="MsoNormal" align="justify">99&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">83&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">91&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">106&nbsp;</td>
+  </tr>
+</table>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="width: 450; border-collapse: collapse; border: medium none">
+  <tr>
+    <td colspan="6" style="border: 1.0pt inset black; padding: .75pt; background: green" width="446">
+    <p align="center" style="text-align:justify"><span style="color:white">PIXEL 
+    DATA OF BAND 5 FOR THE SELECTED SUBSET OF IMAGE</span></td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">64&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">67&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">59&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">58&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">69&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">64&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">63&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">57&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">68&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">61&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">60&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">65&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">64&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">63&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">52&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">55&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">70&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">74&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">71&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">62&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">68&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">64&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">69&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">72&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">71&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">69&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">66&nbsp;</td>
+  </tr>
+</table>
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="width: 450; border-collapse: collapse; border: medium none">
+  <tr>
+    <td colspan="6" style="border: 1.0pt inset black; padding: .75pt; background: green" width="446">
+    <p align="center" style="text-align:justify"><span style="color:white">PIXEL 
+    DATA OF BAND 6 FOR THE SELECTED SUBSET OF IMAGE</span></td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">27&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">27&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">32&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">27&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">24&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">24&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">26&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">33&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">28&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">32&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="border-left: 1.0pt inset #111111; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="69">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="75">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="74">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="70">
+    <p class="MsoNormal" align="justify">29&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="71">
+    <p class="MsoNormal" align="justify">30&nbsp;</td>
+    <td style="border-left: medium none; border-right: 1.0pt inset #111111; border-top: medium none; border-bottom: 1.0pt inset #111111; padding: .75pt" width="72">
+    <p class="MsoNormal" align="justify">31&nbsp;</td>
+  </tr>
+</table>
+<p class="MsoNormal" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+This shows the pixel data for all 6 bands, while we have used only three band 4, 
+band 3, band2. So, we will be discussing the pixel values of these three bands 
+only. </p>
+<p class="MsoNormal" align="justify">Here it can be noticed that in this subset of image, the 
+pixel values for band 4 are highest, while in other bands these values are very 
+less comparatively. Now we will see the spectrum for various objects on earth in 
+different wavebands to understand the concept.</p>
+<p class="MsoNormal" align="justify">
+<img border="0" src="interpretation_images/spectral%20response.jpg" width="526" height="429"></p>
+<p class="MsoNormal" align="justify">Since, pixels values are the measure of&nbsp; % 
+reflectance, we can use this graph to compare our pixel value with its&nbsp; 
+%reflectance. It can be easily noticed that the curve shown in green color 
+(healthy vegetation) can be compared to our pixel values as its value before 
+infra-red and after infra-red region are very less as compared to that in 
+infra-red region. </p>
+<p class="MsoNormal" align="justify">So, in this case we can interpret that regions shown in 
+perfect red color in standard FCC as the regions of healthy vegetation.</p>
+<p class="MsoNormal" align="justify">Here, it can also be noticed from the curve that in case of 
+water, %reflectance is nearly zero after red band. So, you can take it as an 
+exercise to see whether the pixel values of image predict the same or not. Just 
+make a subset of a region shown below and take a look on pixel values of each 
+band for the subset marked below (<i>red circle marked at upper left corner</i>). 
+You will get what kind of region it is using the curve shown.</p>
+<p class="MsoNormal" align="justify">
+<img border="0" src="interpretation_images/exp1_test.JPG" width="654" height="367"></p>
+    </td>
+  </tr>
+</table>
+  
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

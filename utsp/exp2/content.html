@@ -1,0 +1,827 @@
+﻿<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volume, Speed and Delay Study at Intersection</title>
+    <link href="../css/theory.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in 
+      text-->
+            <img src="../images/logo.jpg"></div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+                <a href="../index.html">Urban Transportaion Systems Planning Lab</a>
+            </div><!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+        </header><!-- The lab article is the main content area where all the 
+  experiment content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+                Regression Analysis
+            </header><!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav><!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+
+            <div id="experiment-article-sections">
+                <!-- First section of the article-->
+
+                <section id="experiment-article-section-1">
+                    <div class="icon" id="experiment-article-section-1-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/introduction.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+                    <div class="heading" id=
+                    "experiment-article-section-1-heading">
+                        Aim
+                    </div><!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+                    <div class="content" id=
+                    "experiment-article-section-1-content">
+                        <div class="divContent">
+
+                            <p> <span style="font-size: medium; font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To determine how many trips are produced from and attracted to different zones using regression model.
+                            <br><br><br>
+                            <b>Objectives</b><br><br>
+                            <ul>
+                            <li> To understand the process of Trip Generation.</li>
+                            <li> To develop regression based Trip Generation (Production & Attraction) models. </li>
+                            <li> Peform preliminary statistical analysis of data from Trip Generation models and compute future Production Attraction Table.</li>
+                            </ul>
+                            </span> </p>
+                        </div>
+                    </div>
+                </section><!-- Second section of the article-->
+                
+                
+                
+                 <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/objective.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-3-heading">
+                        Theory
+                    </div>
+
+                    <div class="content" id=
+
+                    "experiment-article-section-3-content">
+                        <div class="divContent">
+                           
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 18pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                         <hr> Regression Models<hr> Single Linear Regression Model (SLRM)</span></b> <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            </span></b>
+
+                       
+   <center> <table><tr><th>Y Values</th><th>X Values</th></tr>
+    <tr><td>0.3415</td><td>0.7</td></tr>
+    <tr><td>0.50705</td><td>0.89</td></tr>
+    <tr><td>0.648</td><td>1.2</td></tr>
+    <tr><td>0.5554</td><td>1.32</td></tr>
+    <tr><td>0.514</td><td>1.2</td></tr>
+    <tr><td>1.135</td><td>3</td></tr>
+    <tr><td>0.9245</td><td>2.1</td></tr>
+  </table></center>
+  
+                        
+               <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                 <center> y = a + bx </center>     
+               </span></p> 
+			    
+			
+                </br>
+                <img src="img/1.bmp" style="width:600px; height:400px; margin-left:10%">
+                </br>    
+                
+                 <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                  For i<sup>th</sup> observation x<sub>i</sub> let y<sub>i</sub> be the observed value and the corresponding estimated value obtained from equation (1) be denoted as y<sub>e</sub>. The difference between them is called as error, deviation or residual. A best fit curve is obtained only when this error is minimum. Thus to remove the positive and negative signs, sum of squares of error is taken which is minimised and the corresponding value of a and b is found out.     
+               </span></p> 
+               
+               	<!------------------------images --------------------------------->
+                </br>
+                <img src="img/1.png" style="width:300px; height:150px; margin-left:10%">
+                </br> 
+                
+                 <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                  Partial derivative with respect a and b is set to zero and after rearranging the terms we get     
+               </span></p> 
+               
+                </br>
+                <img src="img/2.png" style="width:400px; height:150px; margin-left:10%">
+                </br> 
+                
+                <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                  The above two equations are called as the characteristics equations. Applying Cramer's Rule we get
+               </span></p> 
+               
+                </br>
+                <img src="img/3.png" style="width:350px; height:280px; margin-left:10%">
+                </br> 
+                
+                <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                 That is point (x<sup>∗</sup>,y<sup>∗</sup>) satisfies the equation of best fitting line, this means that the best fitting straight line always passes through the means of the observation. </br>
+                 
+                 <center>a=y<sup>∗</sup>− bx<sup>∗</sup></center>
+                 <br>
+                 The proportion of total variation explained by line is the measure of goodness of fit of the regression line. This proportion is explained by goodness Coefficient of Determination 
+                 
+                 
+               </span></p> 
+		 </br>
+                <img src="img/4.png" style="width:380px; height:150px; margin-left:10%">
+                </br> 	
+               
+                
+                
+                  <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                  Its value ranges from zero when none of the total variation is explained by the regression line to one when all the variation is explained by the regression line. The square root of coefficient of determination is called as coefficient of correlation. If r is near +1 it denotes positive correlation and if is near -1 it denotes negative correlation. Proper magnitude and formula for r is given below:
+               </span></p> 
+                   
+		 </br>
+                <img src="img/5.png" style="width:450px; height:150px; margin-left:10%">
+                </br> 
+                
+                  <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                 <b>Correlation</b><br>
+
+In order to measure the degree to which Y observations are spread around their average value Total Sum of Square (TSS) deviations from the mean is found with the help of formula given below:
+               </span></p> 
+               
+                </br>
+                <img src="img/6.png" style="width:500px; height:350px; margin-left:10%">
+                </br>
+                	    
+			    
+		<p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                 <b>Multiple Linear Regression Model (MLRM)</b><br><br>
+
+In order to measure the degree to which Y observations are spread around their average value Total Sum of Square (TSS) deviations from the mean is found with the help of formula given below:<br><br>
+
+<center>Y=a<sub>0</sub> + a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub> + ... ... .a<sub>n</sub>x<sub>n</sub></center>
+<br>
+Characteristics of MLRM are: 
+<ul><br>
+
+<li> There should be (n+1) observations where n is the number of independent variables used for the calibration of the above equation.</li>
+<li> The independent variables chosen must not be highly correlated among each other. A coefficient of correlation as mentioned earlier will help in finding out the relation between independent terms. Only those variables which are not highly related should be mentioned in the MLRM. In case when two variables are highly related then it would be difficult to capture the effect of one on the dependent variable because varying any one of the two X's will involve change of the other.</li>
+<li>The selected independent variables must be highly correlated to the dependent variable. The relation between coefficients of variable can be determined by obtaining correlation matrix.</li> 
+</ul><br>
+
+ The goodness to fit can be assessed by obtaining coefficient of multiple correlation and required statistical test results.
+ <br><br>
+ Non Linear Regression Model (NLRM)<br>
+<br>
+These models are calibrated by one of the two methods. First method consists of specifying the non linear model and proceeding through minimization of the sum of the squared deviations as in the LRM.<br><br>
+Example<br>
+
+<center><table>
+    <tr><th>Y Values</th><th>X Values</th></tr>
+    <tr><td>0.3415</td><td>0.7</td></tr>
+    <tr><td>0.50705</td><td>0.89</td></tr>
+    <tr><td>0.648</td><td>1.2</td></tr>
+    <tr><td>0.5554</td><td>1.32</td></tr>
+    <tr><td>0.514</td><td>1.2</td></tr>
+    <tr><td>1.135</td><td>3</td></tr>
+    <tr><td>0.9245</td><td>2.1</td></tr>
+    </table></center>
+     </span></p> 
+     
+      </br>
+                <img src="img/2.bmp" style="width:500px; height:400px; margin-left:10%">
+                </br>
+                
+                
+       <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 14pt; font-family: "Verdana","sans-serif";'>
+               Considering <b> Linear Regression Model</b> (LRM)
+From the formulas of a and b given above we get
+a=0.78 and b=0.56
+
+Considering <b>Non Linear Regression Model (NLRM)</b> 
+
+<center>y=ax<sup>b</sup></center>
+
+Taking log both the side<br>
+<center>logy=loga+blogx</center><br>
+
+The above equation can be written as y<sup>′</sup>=a<sup>′</sup>+bx<sup>′</sup> where<br>
+
+From the formulas of a and b given above we get<br>
+
+y<sup>′</sup>=logy<br>
+a<sup>′</sup>=loga<br>
+x<sup>′</sup>=logx<br>
+
+While in the second method the non linear form of equation is represented in a linear format and then calibration is done for the new linear equation obtained. Few examples of such non linear equation are given below <br>
+
+               </span></p> 
+               
+     	
+                </br>
+                <img src="img/t1.png" style="width:700px; height:400px; margin-left:10%">
+                </br> 
+    
+               
+                <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                 The solution for SLRM can be obtained from the procedure above. You can perform experiments not only on SLRM but also on MLRM and Non linear Models since it is tedious to work on them manually.
+<br>
+The Non Linear Models are
+               </span></p> 
+               
+                </br>
+                <img src="img/8.png" style="width:700px; height:320px; margin-left:10%">
+                </br> 
+               
+                <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                Regression Analysis will give a relation between the trip production (attraction) and its relevant independent variables. This relationship can be assumed to continue for futuristic scenario. Thus by obtaining future census data of variables we can get future Production Attraction table.
+<br>
+To get an idea you can perform experiment by default file which is recent census data of Pune city. 
+
+Example<hr>
+<br>
+
+Planners have estimated the following models for the AM Peak Hour<br>
+
+T<sub>i</sub>=1.5∗H<sub>i</sub><br><br>
+
+T<sub>j</sub>=(1.5∗E<sub>off,j</sub>)+(1∗E<sub>oth,j</sub>)+(0.5∗E<sub>ret,j</sub>)<br>
+
+where,<br>
+
+Ti = Person trips originating in zone i.<br>
+
+Tj = Person trips destined in zone i.<br>
+
+Hi= Number of House holds in zone i<br>
+
+You are also given the following data<br>
+
+               </span></p> 
+               
+                 </br>
+                <img src="img/9.png" style="width:700px; height:320px; margin-left:10%" >
+                </br> 
+               	    
+		
+		  <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+              A. What are the number of person trips originating in and destined for each city? </br> 
+
+B. Normalize the number of person trips so that the number of person trip origins = the number of person trip destinations. </br> 
+Solution </br> 
+
+A. The number of person trips originating in and destined for each city: </br> 
+
+               </span></p> 
+               
+                 </br>
+                <img src="img/10.png" >
+                </br> 
+               	    
+		 <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+             B. Normalize the number of person trips so that the number of person trip origins = the number of person trip destinations. Assume the model for person trip origins is more accurate. Use: <br>
+
+               </span></p> 
+               
+                </br>
+                <img src="img/11.png" style="width:500px; height:200px; margin-left:10%">
+                </br> 
+               
+		 </br>
+                <img src="img/12.png" style="width:800px; height:300px; margin-left:10%">
+                </br>	    
+                
+                
+                 <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+            References<hr><br>
+             Books<br>
+<ul>
+<li>J. De D. Ortuzar and L.G. Willumsen (1996), Modelling Transport. Wiley Publications, London.</li>
+<li>    C. S. Papacostas and P. D. Prevedouros (2001), Transportation Engineering & planning. Prentice-Hall of India, New Delhi.</li>
+
+
+               </span></p> 
+			            
+                          <p class="MsoNormal" style=
+                            <span style=
+                            "margin-bottom: 13.5pt; line-height: 150%;">
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                          </b></b></br></br> </br></br></span></p>
+
+
+                </div></div></section>          
+ 
+                  <section id="experiment-article-section-5">
+                    <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+
+                    "experiment-article-section-5-heading">
+                        Procedure
+                    </div>
+
+                    <div class="content" id=
+
+                    "experiment-article-section-5-content">
+                        <div class="divContent">
+                       <hr>
+ 			 
+			      <b> Step 1 :</b> 
+			      <br><hr>
+			    Select the type of experiment you want to perform. The format of the input file should be according to the default file.  </span> <span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+
+
+                            </br>
+                             <img src="img/2.8.jpg" style="width:600px; height:600px; margin-left:10%">
+                           
+			</br>
+			
+			 <b> Step 2 :</b> 
+			   <br><hr><br>
+			<img src="img/2.1.jpg" style="width:650px; height:250px; margin-left:10%">
+			<br>
+			Data Analysis can be done in three types<br><br>
+
+    Correlation<br>
+    Description Statistics<br>
+    Plot<br>
+
+			 <b> Step 3 :</b> 
+			   <br><hr><br>
+			   
+			 The Statistics of selected parameters is obtained in the format given below.
+			<br><br><br>			
+			
+ 			<br>
+			<img src="img/2.4.jpg" style="width:750px; height:400px; margin-left:10%">
+			<br>
+                          
+                         <b> Step 4 :</b> 
+			   <br><hr><br>
+			   
+			Output is obtained<br><br>
+			Correlation between different parameters can be determined. The output is represented in the form of a matrix given below.<br><br>
+			
+ 			<br>
+			<img src="img/2.6.jpg" style="width:750px; height:400px; margin-left:10%">
+			<br> 
+                          Example of the output obtained from Linear Regression Model is given below. After obtaining the equation select future data file to obtain future trips.
+                          
+                          <br>
+			<img src="img/2.7.jpg" style="width:750px; height:400px; margin-left:10%">
+			<br> 
+			
+			Demo Video to know the procedure of performing PHP Based experiment
+                         <hr> 
+                         
+                         
+                         <center>
+<video id="0" controls="" height="400" width="640">
+  <source src="video/RegressionPHP.mp4" type="video/mp4">
+  <source src="video/RegressionPHP.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/RegressionPHP.webm" type="video/webm">
+  <object data="video/RegressionPHP.mp4" height="400" width="640">
+    <embed src="video/RegressionPHP.swf" height="400" width="640">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+
+Demo Video to know the procedure of performing Java Based experiment
+<hr><br>
+
+<center>
+<video id="0" controls="" height="400" width="640">
+  <source src="video/Regression.mp4" type="video/mp4">
+  <source src="video/Regression.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/Regression.webm" type="video/webm">
+  <object data="video/Regression.mp4" height="400" width="640">
+    <embed src="video/Regression.swf" height="400" width="640">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+
+
+
+                            </div>
+                            </div>
+               </section>              
+
+                
+
+               
+
+                <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Experiment
+                    </div>
+                    
+
+                    <div class="content" id=
+                    "experiment-article-section-4-content">
+                        <div class="divContent">
+                  
+                        
+                           
+                                     
+                        				<p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>Input files needed </span></p>
+							<hr>
+						        <br>
+						        
+						        <b> For data analysis. </b><br>
+							<ul>
+								<li> 
+
+    Household wise socio-economic characteristics and number of trips generated for base year.
+
+								</li>
+							</ul>
+							<ul>
+							<b>To Estimate Trip rates and to forecast trip rates for future year. </b>
+								<li> 
+  Household wise socio-economic characteristics and number of trips generated for base year.  								
+								</li>
+<li> Household wise socio-economic characteristics for future year. </li>
+								
+							</ul><br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>Experiment </span></p>
+							<hr>
+							<br>
+							
+							<span class="title1"><a href="applet/DataAnalysis1.php" onclick="fullScreen1('applet/DataAnalysis1.php')";><strong> <span style="text-decoration: underline;">Click Here</span> To Perform Experiment with JAVA based Simulation</strong></a></span>
+							
+                      	<br><br>	
+                      	
+                      <span class="title1"><a href="DataRegrMod.php"><strong> <span style="text-decoration: underline;">Click Here</span> To Perform Experiment with PHP based Simultation</strong></a></span>
+                      	
+                      	
+                      	
+             		<br><p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>See the default Excel / CSV input files for file format:</span></p>
+							<hr>
+					<br><br><table>
+<tr>
+<th>Download &amp;<br> Save each of these files to perform experiment.</th>
+</tr>
+<tr>
+<td>
+
+<a href="../Docs/pune.xls"><img src="img/SmallXLS.jpg" alt="Excel" style="height:5%; width:5%;" >&nbsp;<strong>(Click Here) for Input File (xls)</strong></a>
+
+</td>
+
+</tr>
+<tr><td>
+
+<a href="../Docs/punecsv.csv"><img src="img/SmallCSV.jpg" alt="CSV" style="height:5%; width:5%;">&nbsp;<strong>(Click Here) for Input File (csv)</strong></a>
+
+</td>
+
+</tr>
+</table>
+                         
+                           
+                        </div>
+                    </div>
+                </section>
+
+          
+                <section id="experiment-article-section-2">
+                    <div class="icon" id="experiment-article-section-2-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/theory.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-2-heading">
+                        Self Evaluation
+                    </div><!-- Write the section content inside a paragraph 
+
+        element, we can also include images with &lt;img&gt; tag -->
+
+                    <div class="content" id=
+                    "experiment-article-section-2-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">1)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">A gradient operator uses coefficients</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans5998" name="ans0"
+                                                        type="radio" value=
+                                                        "5998"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans5998">that are both positive and negative and add up to zero</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans5999" name="ans0"
+                                                        type="radio" value=
+                                                        "5999"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans5999">That are positive</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6000" name="ans0"
+                                                        type="radio" value=
+                                                        "6000"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6000">that should add up to one</label></td>
+                                                    </tr>
+						    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+
+                                                        "ans6001" name="ans0"
+                                                        type="radio" value=
+
+                                                        "6000"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+
+                                                        "padding-left:3px;">
+                                                        <label for=
+
+                                                        "ans6000">That must be integers always</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">2)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Temperature is
+                                            measure of degree of -------- of a
+                                            substance.</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">Hotness</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002">Coldness</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6003" name="ans1"
+                                                        type="radio" value=
+                                                        "6003"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6003">Hotness or
+                                                        Coldness</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint11" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    
+                                    <div id="hint">
+                                        <div id="textHint14" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+                                    <input align="middle" id="loadTime" name=
+                                    "loadTime" type="hidden" value=
+                                    "1379688870/"><br>
+
+                                    <div style="padding-left:40px;">
+                                        <input id="submit1" name="submit1"
+                                        onclick="get_radio_value();" style=
+                                        "width:8%;" type="submit" value=
+                                        "&nbsp;Submit&nbsp;">&nbsp;&nbsp;<input id="cancel1"
+                                        name="cancel1" style="width:8%;" type=
+                                        "reset" value="&nbsp;Cancel&nbsp;">
+                                    </div>
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div>
+                </section>
+
+                
+                
+                 <section id="experiment-article-section-9">
+                    <div class="icon" id="experiment-article-section-9-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-9-heading">
+                        FAQs
+                    </div>
+               <div class="content" id="experiment-article-section-7-content">
+               <div class="divContent">     
+              <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif"; margin-left:5%;'>      
+              
+                   1. <b>What is Difference between Trip and journey?</b><br>
+                   A trip is a one-way person movement by a mechanized mode of transport, having two trip ends, an origin (the start of the trip) and a destination (the end of the trip). journey is a one-way movement from a point of origin to a point of destination.<br><br>
+2. <b>what is Non-home based trip and home based trip?</b><br>
+The trip in which at least one of trip ends is home, is called as home based trip. The trip in which neither of the end is home, is called as non home based trip.<br><br>
+3. <b>What are trip production and trip attraction?</b><br>Trip production - this is defined as the home end of an HB trip or as the origin of NHB trip. Trip attraction - this is defined as the home end of an HB trip or the destination of NHB trip.<br><br>
+4. When same zone behaves as an trip production and attraction?<br><br>
+
+<br>
+			<img src="img/fig26.jpg" style="width:650px; height:250px; margin-left:10%">
+			<br>
+
+If one person goes for the work and then from the work place he goes to workshop then zones behaves as trip production and attraction zone <br><br>
+  
+     5.  <b>What are trip generation rates?</b><br>
+     Trip generation rates are average rates used to estimate how much traffic a specific land use will produce. For example, the amount of traffic generated by a group of homes is different from a business park.<br><br>
+  6.   <b>What are zones?</b><br>
+  Regions within the study area that contain homogenous land uses and can be described accurately by only a few variables.
+                  
+</span></p></div></div>
+                </section>
+               
+
+               
+            </div>
+        </article>
+	
+
+        <footer  class="footer">
+            <!-- Put the content here -->
+            <div style="margin-left:40%; margin-right:40% ">
+            <a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+            </div>
+      </footer> 
+    </div>
+</body>
+</html>

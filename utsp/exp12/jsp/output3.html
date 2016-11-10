@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+
+<script language="JavaScript" type="text/javascript">
+//  Published at: scripts.tropicalpcsolutions.com
+var reloaded = false;
+var loc=""+document.location;
+loc = loc.indexOf("?reloaded=")!=-1?loc.substring(loc.indexOf("?reloaded=")+10,loc.length):"";
+loc = loc.indexOf("&")!=-1?loc.substring(0,loc.indexOf("&")):loc;
+reloaded = loc!=""?(loc=="true"):reloaded;
+
+function reloadOnceOnly() {
+    if (!reloaded)
+        window.location.replace(window.location+"?reloaded=true");
+}
+reloadOnceOnly(); //You can call this via the body tag if desired
+</script>
+<title>Logarithmic Stretch Output</title>
+</head>
+
+<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')">
+
+<p>
+<b>OUTPUT IMAGE</b></p>
+
+<p>
+<img border="0" src="log_stretch_outimg.jpg"></p>
+<p><b>ORIGINAL IMAGE</b></p>
+<p><img border="0" src="out_original_img.jpg"></p>
+
+</body>
+
+</html>

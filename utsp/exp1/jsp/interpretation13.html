@@ -1,0 +1,156 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="interpretation13_files/filelist.xml">
+
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of&nbsp; Accuracy 
+        Assessment Outputs</font></b></p>
+        <p class="MsoNormal"><b>Error Matrix</b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:6in;
+ height:135pt'>
+ <v:imagedata src="interpretation13_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=180
+src="interpretation13_files/image002.jpg" v:shapes="_x0000_s1025"><![endif]></p>
+        <p class="MsoNormal" style="text-align:justify">The table above is 
+        called an “error matrix” or “confusion matrix” generated using test 
+        samples taken from sam1.jpg image and tested on the classified image of 
+        the same using Maximum Likelihood Classification technique. </p>
+        <p class="MsoNormal" style="text-align:justify">It depicts how the test 
+        samples of different classes/features have been classified by a 
+        technique (here MLC technique). So, looking at the table you can infer 
+        that there are 6 classes in the classified image. It can also be 
+        inferred that</p>
+        <p class="MsoNormal" style="text-align:justify">[1] Total number of 
+        samples taken for each class</p>
+        <p class="MsoNormal" style="text-align:justify">For example from the 
+        “total” column a total of 270 samples have been taken as test samples 
+        for class1, 306 for class6, 189 for class5 and so on</p>
+        <p class="MsoNormal" style="text-align:justify">[2] The number of 
+        samples correctly classified and incorrectly classified by the 
+        classification technique.</p>
+        <p class="MsoNormal" style="text-align:justify">For example consider 
+        class 4, out of total 1222 samples 1199 have been correctly classified 
+        and 21 have been incorrectly classified as class 3.</p>
+        <p class="MsoNormal" style="text-align:justify">[3] Number of samples 
+        out of the Total (i.e. 2270) that have been classified in a particular 
+        class. For example consider class 3, a total of 318 (look at row for 
+        Total) samples have been classified as class 3. But actually we have 
+        taken a total of 214 samples as belonging to class 3. So, it is to 
+        understood that additional samples (belonging to other classes) have 
+        been misclassified as class 3.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:243pt;height:259.5pt'>
+ <v:imagedata src="interpretation13_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=324 height=346
+src="interpretation13_files/image004.jpg" v:shapes="_x0000_s1026"><![endif]></p>
+        <p class="MsoNormal" style="text-align:justify">The overall accuracy 
+        tells about the percentage of samples that were correctly classified. 
+        Indirectly it denotes the reliability of a classification technique.</p>
+        <p class="MsoNormal" style="text-align:justify">Producer’s accuracy for 
+        a class is also called as “error of commission”. It indicates the 
+        percentage of ground-truth data that has been correctly classified for 
+        each class.</p>
+        <p class="MsoNormal" style="text-align:justify">User’s accuracy comes 
+        into picture when someone else takes your classified image and tests it 
+        with his/her own ground-truth data (i.e. test samples). It is also named 
+        as “error of omission”.</p>
+        <p class="MsoNormal" style="text-align:justify">Kappa coefficient is a 
+        more accurate way of evaluating the classification capability of a 
+        technique.&nbsp; </p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+    </td>
+  </tr>
+</table>
+  
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

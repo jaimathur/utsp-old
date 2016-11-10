@@ -1,0 +1,253 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="interpretation2_files/filelist.xml">
+
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of Contrast 
+        Enhancement Outputs</font></b></p>
+<p align="justify">Here we will discuss how to interpret the outputs produced by experiment 
+2, 
+i.e., Contrast Enhancement. So, please follow the steps as shown below to get the sample 
+output for interpretation.</p>
+<p align="justify">1) Select &quot;inputimage&quot; as your experimental image.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage&quot; is a satellite image having 6 bands stored in BIL format as raw 
+image. It has the dimension 801x1401. Since in our discussion we will cover upto 
+its 4th band, so it is necessary to understand that what the first 4 bands of 
+this image represents. The first four bands are as follows: blue, green, red and 
+infra-red respectively.</p>
+<p align="justify">2) Select band 4 for red band, band 3 for green band and band 2 for blue 
+band.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+As according to the theory described in theory section of Virtual Lab, we 
+already know that a standard FCC uses infra-red wave band as red display, red 
+wave band as green display and green wave band as blue display. So, the same we 
+are doing here to get the standard FCC of &quot;inputimage&quot;.</p>
+<p align="justify">3) Click on Display button</p>
+<p align="justify">After the processing you will get an image. This is the standard FCC of &quot;inputimage&quot;. 
+You can also save it by right clicking it and then clicking on &quot;save image as&quot;. 
+The image will look like:</p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_fcc.jpg" width="711" height="396"></p>
+<p align="justify">You will also get histogram for the bands selected for display. The histogram 
+in our case will be:</p>
+<p align="justify"><b>Histogram for Infra-red&nbsp; Band (<i>displayed as red in fcc</i>):</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_red.jpg" width="623" height="403"></p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, you can easily notice that most of the pixels are assigned between grey 
+level 10 to 20. Also, another majority of pixels are assigned to gray level 60 
+to 120. We, will be comparing the histograms of the three bands (green, red and 
+infra-red) used in the example for understanding what we can easily get from 
+image histogram.</p>
+<p align="justify"><b>Histogram for Red Band&nbsp; (<i>displayed as green in fcc</i>):</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_green.jpg" width="618" height="402"></p>
+<p align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, it can be noticed that most of the pixels are assigned between gray level 
+25 to 70 and a wide range of grey level is not used. </p>
+<p align="justify"><b>Histogram for Green Band (<i>displayed as blue in fcc</i>)</b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_hist_blue.jpg" width="619" height="399"></p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Here, it is almost similar to red band, i.e., most of the pixels are assigned 
+between gray level 30 to 70.</p>
+<p align="justify">Now, as seen from the histogram of the three bands, it can be concluded that 
+the contrast of infra-red band is highest among these three bands. As it has 
+been provided in theory (<i>see video lecture</i>), that for a good contrast a 
+histogram should be well distributed among all the gray levels. Other attributes 
+that we can get from histogram are: mean, median, variance, standard deviation, 
+etc. (<i>see video lecture</i>).</p>
+<p align="justify"><b>Now, we are going to apply contrast enhancement over &quot;inputimage&quot;. To do so, 
+continue your steps in the experiment as:</b></p>
+<p align="justify">4) Choose the method of contrast enhancement. Here we will 
+choose &quot;Standard Deviation&quot;. (<i>It is 
+set by default</i>)</p>
+<p align="justify">Here, we are going to interpret the results after application 
+of enhancement using standard deviation. For other methods you can interpret the 
+result in similar manner using theory for respective methods.</p>
+<p align="justify">5) Enter &quot;2&quot; as&nbsp; &quot;standard deviation&quot;.</p>
+<p align="justify">By doing so, we are limiting the stretch to [mean-2*(standard 
+deviation)] to [mean+2*(standard deviation)]. Where, mean and standard deviation 
+is computed over a particular band.</p>
+<p align="justify">6) Click on &quot;Process&quot; button.</p>
+<p align="justify">You will get the enhanced image and histogram of each band 
+used for display after enhancement, which will be as follows:</p>
+<p align="justify"><b><i>Enhanced image</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp2_enhanced.jpg" width="709" height="407"></p>
+<p align="justify"><b><i>Histogram after enhancement for red band</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp2_band1.jpg" width="578" height="436"></p>
+<p align="justify"><b><i>Histogram after enhancement for green band</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp2_band2.jpg" width="575" height="434"></p>
+<p align="justify"><b><i>Histogram after enhancement for blue band</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp2_band3.jpg" width="569" height="430"></p>
+<p align="justify"><i><b>Interpretation using histograms</b></i></p>
+<p align="justify">Now, as you can see that the histograms before enhancement 
+were concentrated around few gray levels but after enhancement in all the three 
+bands distribution of gray levels is uniform from 0 to 255. Since, for the same 
+number of pixels the gray levels used are much higher therefore, the output 
+image becomes enhanced as discrimination between gray levels is increased.</p>
+        <p class="MsoNormal"><b>HISTOGRAM EQUALISATION</b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:173.25pt;
+ height:208.5pt'>
+ <v:imagedata src="interpretation2_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation2_files/image002.jpg" v:shapes="_x0000_s1025"><![endif]></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:175.5pt;height:210.75pt'>
+ <v:imagedata src="interpretation2_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=234 height=281
+src="interpretation2_files/image004.jpg" v:shapes="_x0000_s1026"><![endif]></p>
+        <p class="MsoNormal">Compare the two images shown above. The first one 
+        is the original sample image of quickbird.jpg. Here the gray values have 
+        been recomputed using mean and standard deviation values. You will 
+        observe that some of the areas have grown in brightness values (look in 
+        the rectangular enclosed areas). This is because a number of pixels in 
+        the darker regions have now increased gray values after histogram 
+        equalization. You can also compare the histograms to see change in pixel 
+        values for a particular gray level. </p>
+        <p class="MsoNormal"><b>LOGARITHMIC STRETCHING</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:183pt;height:207.75pt'>
+ <v:imagedata src="interpretation2_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=244 height=277
+src="interpretation2_files/image006.jpg" v:shapes="_x0000_s1027"><![endif]></b></p>
+        <p class="MsoNormal">As can see that after Logarithmic stretching the 
+        original image has brightened all over the image. This is because the 
+        all the pixel gray level values have been pushed towards and nearer to 
+        255. See for yourself how the histogram looks like before and after 
+        stretching by implementing this method on quickbird.jpg.</p>
+        <p class="MsoNormal"><b>EXPONENTIAL STRETCHING</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='width:175.5pt;height:210.75pt'>
+ <v:imagedata src="interpretation2_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=234 height=281
+src="interpretation2_files/image008.jpg" v:shapes="_x0000_s1028"><![endif]></b></p>
+        <p class="MsoNormal">Observe that all the areas have considerably 
+        darkened in color. This is because the distribution of gray levels have 
+        been changed. The number of pixels whose gray values fall below mean of 
+        the distribution have considerably improved. Compare the histograms of 
+        both original and stretched image.</p>
+        <p class="MsoNormal"><b>DECORRELATION STRETCH</b>&nbsp;</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1029" type="#_x0000_t75" style='width:177pt;height:210.75pt'>
+ <v:imagedata src="interpretation2_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=236 height=281
+src="interpretation2_files/image010.jpg" v:shapes="_x0000_s1029"><![endif]><b>&nbsp;</b></p>
+        <p class="MsoNormal">Image shown above is the result of decorrelation 
+        stretching. Here the color separation between different bands are 
+        enhanced and hence the exaggerated colors. Like all other stretching 
+        methods this technique helps in easy discrimination of features.&nbsp;</p>
+        <p class="MsoNormal"><b>LINEAR STRETCHING</b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1030" type="#_x0000_t75" style='width:177pt;height:207pt'>
+ <v:imagedata src="interpretation2_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=236 height=276
+src="interpretation2_files/image012.jpg" v:shapes="_x0000_s1030"><![endif]></p>
+        <p class="MsoNormal">Compare the original image and above image you will 
+        find a slight enhancement or increase in brightness in the regions 
+        enclosed by rectangular figures. Linear tries to distribute the gray 
+        values uniformly. </p>
+<p align="justify">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+  
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

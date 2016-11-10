@@ -1,0 +1,1715 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Satellite Image Processing</title>
+</head>
+
+<body>
+    <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in 
+      text-->
+            <img src="../images/logo.jpg"></div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+                <a href="../index.html">Satellite Image Processing Lab</a>
+            </div><!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+        </header><!-- The lab article is the main content area where all the 
+  experiment content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+                K-means Clustering
+            </header><!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav><!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+
+            <div id="experiment-article-sections">
+                <!-- First section of the article-->
+
+                <section id="experiment-article-section-1">
+                    <div class="icon" id="experiment-article-section-1-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/introduction.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-1-heading">
+                        Aim
+                    </div><!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+
+                    <div class="content" id=
+                    "experiment-article-section-1-content">
+                        <div class="divContent">
+                            <h2 style="color: Red;"><strong style=
+                            "text-decoration: underline"><span style=
+                            "font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);">
+                            <span style=
+                            "font-size: large;"></span></span></strong></h2>
+
+                            <p>&nbsp;</p>
+
+                            <p class="MsoNormal" style=
+                            "line-height: 150%; text-align: right;"><a href=
+                            "http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;">
+                            Back To Experiment List</span></a></p>
+
+                            <p><span style=
+                            "font-size: medium; font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To apply K-means clustering with user defined numberof classes ans maximum number of iterations on the input raw satellite image or image with general formats. </span></p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><span style=
+                            "font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            <strong><span style=
+                            "font-size: large;"></span></strong></span></p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><!-- p { margin-bottom: 0.21cm; } --></p>
+
+                            <p style="margin-bottom: 0cm;"><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;"><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></span></p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(0, 0, 0);">
+                            <br></span></p>
+                        </div>
+                    </div>
+                </section><!-- Second section of the article-->
+
+                <section id="experiment-article-section-2">
+                    <div class="icon" id="experiment-article-section-2-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/theory.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-2-heading">
+                        Pre Test
+                    </div><!-- Write the section content inside a paragraph 
+        element, we can also include images with &lt;img&gt; tag -->
+
+                    <div class="content" id=
+                    "experiment-article-section-2-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">1)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">A gradient operator uses coefficients</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans5998" name="ans0"
+                                                        type="radio" value=
+                                                        "5998"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans5998">that are both positive and negative and add up to zero</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans5999" name="ans0"
+                                                        type="radio" value=
+                                                        "5999"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans5999">That are positive</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6000" name="ans0"
+                                                        type="radio" value=
+                                                        "6000"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6000">that should add up to one</label></td>
+                                                    </tr>
+						    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+
+                                                        "ans6001" name="ans0"
+                                                        type="radio" value=
+
+                                                        "6000"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+
+                                                        "padding-left:3px;">
+                                                        <label for=
+
+                                                        "ans6000">That must be integers always</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">2)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Temperature is
+                                            measure of degree of -------- of a
+                                            substance.</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">Hotness</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002">Coldness</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6003" name="ans1"
+                                                        type="radio" value=
+                                                        "6003"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6003">Hotness or
+                                                        Coldness</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint11" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    
+                                    <div id="hint">
+                                        <div id="textHint14" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+                                    <input align="middle" id="loadTime" name=
+                                    "loadTime" type="hidden" value=
+                                    "1379688870/"><br>
+
+                                    <div style="padding-left:40px;">
+                                        <input id="submit1" name="submit1"
+                                        onclick="get_radio_value();" style=
+                                        "width:8%;" type="submit" value=
+                                        "&nbsp;Submit&nbsp;">&nbsp;&nbsp;<input id="cancel1"
+                                        name="cancel1" style="width:8%;" type=
+                                        "reset" value="&nbsp;Cancel&nbsp;">
+                                    </div>
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div>
+                </section>
+
+               <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/objective.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-3-heading">
+                        Theory
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-3-content">
+                        <div class="divContent">
+                            <p><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+&lt;w:Zoom&gt;0&lt;/w:Zoom&gt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";}
+&lt;/style&gt;
+&lt;![endif]--></p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            &nbsp;</p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 18pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            K - Means Clustering</span></b> <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            </span></b><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;/w:LatentStyles&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 10]&gt;
+&lt;style&gt;
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+&lt;![endif]--><span lang="EN-IN" style=
+'font-size: 12pt; font-family: "Verdana","sans-serif";'><br></span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'><br></span></p>
+
+                            <p class="MsoNormal" style=
+                            "line-height: 150%; text-align: right;"><a href=
+                            "http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;">
+                            Back To Experiment List</span></a></p>
+                            <!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            <b> Image Classification :</b></br></br>
+                            Assigning pixels in the image to categories into classes of interest is known as image classification.
+                            </br></br>
+
+			    Examples: built-up areas, water body, green vegetation, bare soil, rocky areas, cloud, shadow, etc.</br></br>
+
+			    Classification is done on the basis of features. Features are attributes of the data elements based on which 			       	    the elements are assigned to various classes. E.g., in satellite remote sensing, the features are 				    measurements made by sensors in different wavelengths of the electromagnetic spectrum – visible/infrared / 				    microwave/texture features. etc. </br></br>
+			    <b>Video for Classification :</b></br></br>
+			    </span></p>
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span></p>
+
+
+		    	    <!----------------video link 1------------------------------>
+                              <p class="MsoNormal" style="line-height: 150%; padding-left:3%;padding-right:3%;">
+                             <iframe width="420" width="430" height="350"
+			     src="vlabs.iitb.ac.in/csre/siplabs/1_colorcomb.flv">
+			     </iframe> 
+			     </p>
+			     <!----------------video link 1------------------------------>
+			     
+			     
+                            <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            <b> K - Means Clustering :</b></br></br>
+
+			    It is an iterative algorithm for clustering. This is the most popular clustering algorithm. Number of Cluster 				    'K' is already known to user. Its steps are as follows:</br></br>
+
+	 		    <b>Step 1 :</b> K cluster mean vectors are initialized randomly.</br></br>
+
+			    <b>Step 2 :</b> Each pixel is assigned to one of the cluster according to the minimum feature distance from 			    the cluster mean vectors.</br></br>
+
+			    <b>Step 3 :</b> After each pixel is assigned to some cluster, new mean vectors are computed for each cluster 				    according to the assignment.</br></br>
+
+			    <b>Step 4 :</b> New cluster mean vectors are checked from the previous cluster mean vectors. If there is a 				    difference greater than some threshold then this process is repeated until cluster means are stabilized.
+			    </br></br>
+			    </span></p>
+                           
+                           
+                           <!--------------------pic 1---------------------->
+                           <img src="../images/exp9/t9_pic1.jpg">
+                           <!--------------------pic 1---------------------->
+                           
+                           </br></br>
+                           
+                            <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            Here, data heap is the set of all pixels. ui is the initial cluster mean vectors. Ci are clusters.
+			    </span></p>
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span></p>
+                            
+                            <!--------------------pic 2---------------------->
+                           <img src="../images/exp9/t9_pic2.jpg">
+                           <!--------------------pic 2---------------------->
+
+ 			    <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            </span></p>
+                            
+                             <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            Here, for convergence of algorithm, new cluster mean vectors are compared with previous cluster mean vectors.
+			    Some important points to be noted :</br></br>
+
+			    Choice of K is important.</br></br>
+
+			    For normal remotely sensed images, about 15-20 iterations are maximum required for stabilization of the 				    cluster centers.</br></br>
+
+			    Convergence can be based on average difference between cluster centres or maximum difference between any pair 				    of cluster centers.</br></br>
+			    </span></p>
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span><span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif";'><br></span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'><br>
+                            &nbsp;</span> <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                              Video for K-means clustering algorithm :  </span></b></p>
+                             
+                             
+                             <!----------------video link 1------------------------------>
+                              <p class="MsoNormal" style="line-height: 150%; padding-left:3%;padding-right:3%;">
+                             <iframe width="420" width="430" height="350"
+			     src="vlabs.iitb.ac.in/csre/siplabs/1_colorcomb.flv">
+			     </iframe> 
+			     </p>
+			     <!----------------video link 1------------------------------>
+                        
+                        </span></p>
+                        
+                          <p class="MsoNormal" style=
+                            "margin-bottom: 13.5pt; line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                          </b></b></br></br> </br></br></span></p>
+
+
+
+    </div></div></section>
+    
+    
+      <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Simulator
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-4-content">
+                        <div class="divContent">
+                            <p><a href=
+                            "http://coepvlab.ac.in:8080/COEP/Vlabs/Simulators/ElectricalLab/SensorLab/Rtd/index.html"
+                            target="_blank">Click here for Simulator</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experiment-article-section-5">
+                    <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-5-heading">
+                        Procedure
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-5-content">
+                        <div class="divContent">
+                            
+
+                            <!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin:0in;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";}
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <h3 style="color: red;"><big>
+                            <!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin-top:0in;
+mso-para-margin-right:0in;
+mso-para-margin-bottom:10.0pt;
+mso-para-margin-left:0in;
+line-height:115%;
+mso-pagination:widow-orphan;
+font-size:11.0pt;
+font-family:"Calibri","sans-serif";
+mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;}
+&lt;/style&gt;
+&lt;![endif]--></big></h3>
+
+                            
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            &nbsp;<b>These are the general guide lines and steps that should be followed to perform the experiment :</b></span></p>
+
+                            <p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            &nbsp;</span></p>
+
+                          
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                           <b> Step 1: </b>Select Image</span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+
+			</br>
+ 			   <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                           Select the image on which you want to perform the experiment. </span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+				
+			   <!------pic 1--------------------------->	
+			    <img src="../images/exp9/proc91.bmp" width="350" height="200">
+			   <!------pic 1--------------------------->	
+			   
+			    </br>
+			      <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                           You can also upload your own images by clicking on "upload more images". </span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+                            </br>
+                            
+                            <!--------------pic 2------------>
+                             <img src="../images/exp9/proc92.bmp" width="350" height="200">
+                             <!--------------pic 2------------>
+                             
+                             </br>
+                              <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                          <b> Step 2 :</b> select desired bands to be used for clustering. </span> <span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+
+			</br>
+ 			   <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                           Select "All", if you want to use all bands of the image. Otherwise, select "Custom" and then mark the bands to 				   be used as :    </span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+                            </br>
+                            
+                             <!--------------pic 3------------>
+                             <img src="../images/exp9/proc93.bmp" width="350" height="200">
+                             <!--------------pic 3------------>
+
+                             <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                           <b>Step 3 : </b> Specify initial cluster centers.</br></br>
+                           If you want it to randomly select cluster centers automatically then choose "Random". Otherwise, select "User 				   Specified". If you will choose "User Specified", then you will have to select a cluster center file (*.ctr) in 				   the next option.</br></br>
+
+			   Note: (*.ctr) file should match according to the number of classes, bands and image you are going to use.
+			   </br></br>
+			   </span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+                            
+                            </br>
+                             
+                            </br>
+                            
+                            <!-----------------pic 4--------------------->
+                             <img src="../images/exp9/proc94.bmp" width="350" height="200" >
+                             <!-----------------pic 4--------------------->
+                             
+                              
+                             </br>
+                             <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                           <b>Step 4 : </b> Enter other parameters </br></br>
+                           Enter the number of desired classes and name of the file for storing final cluster centers, generated after 				   clustering by the operation.</br></br>
+
+			   Note : Do not provide any extension to the file name. It will automatically create the file with an extension 				   (.ctr), so you would be able to use it further for specifying initial cluster centers. </br></br>
+			   </span><span lang="EN-IN"
+                            style= 'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+                            
+                             </br>
+                             <!-----------------pic 5--------------------->
+                             <img src="../images/exp9/proc95.bmp" width="350" height="200" >
+                             <!-----------------pic 5--------------------->
+                           
+                          <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                           <b>Step 5 : </b> Click on the button "Process" </br></br>
+                            This will give you the clustered image as output.</br></br>
+
+			   </span><span lang="EN-IN"
+                            style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+                            
+                             <!-----------------pic 6--------------------->
+                             <img src="../images/exp9/proc96.bmp" width="350" height="200" >
+                             <!-----------------pic 6--------------------->
+                       
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            &nbsp;</span><span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'><br></span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>&nbsp;</span></p>
+                            </div>
+                            </div>
+               </section>              
+
+
+ 		    <section id="experiment-article-section-7">
+                    <div class="icon" id="experiment-article-section-7-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+                    
+                    <div class="heading" id=
+                    "experiment-article-section-7-heading">
+                        Interpretation
+                    </div>
+
+                    <div class="content" >
+                           
+
+                            <h2>&nbsp;</h2>
+
+                            <p class="MsoNormal" style=
+                            "line-height: 150%; text-align: right;"><a href=
+                            "http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;">
+                            Back To Experiment List</span></a></p>
+
+                            <p>&nbsp;</p><!--[if gte mso 9]&gt;&lt;xml&gt;
+font-size:11.0pt;
+font-family:"Calibri","sans-serif";
+mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;}
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 18pt; font-family: "Verdana","sans-serif";'>
+                          <b>Interpretation Of K-means Clustering Outputs </b>
+                            </br></br>
+			    </span></p>
+                           
+                           <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                          Here we will discuss how to interpret the outputs produced by experiment 9, i.e., k-means clustering. So, please follow the steps as shown below to get the sample output for interpretation.</br></br>
+
+1) Select "inputimage" as your experimental image.</br></br>
+
+                    "inputimage" is a satellite image having 6 bands stored in BIL format as raw image. It has the dimension 801x1401. Since in our discussion we will cover upto its 4th band, so it is necessary to understand that what the first 4 bands of this image represents. The first four bands are as follows: blue, green, red and infra-red respectively.</br></br>
+
+2) Select "No. of bands to be used" as "All"</br></br>
+
+Number of bands actually works as number of feature vectors. So here we are using all the bands for clustering. Instead of selecting "All" one can also experiment with "custom" and then can select particular bands to be used for clustering</br></br>
+
+3) Enter "Maximum number of iteration" as "5"</br></br>
+
+K-means clustering has two terminating conditions :  first, if successive iterations does not produces significant difference in clustered output. Second, if number of iterations exceeds maximum number of iterations specified by user. The output will be better if you increase this number. One can always experiment with these values.</br></br>
+
+Note : If you are using a large size image, it will be better to keep this number less to not overload the server.</br></br>
+
+4) Select "Initial cluster center" as "Random"</br></br>
+
+If you are clustering an image using k-means clustering then for first time you need to specify the starting cluster centers for each class. So, one can always choose "Random" to generate the initial clusters randomly. But, if you are going to perform k-means clustering on same image that you have used previously for clustering with same number of classes ythen you can use the final cluster centres produced by the program as initial cluster centers. So, it will be like iterating the clustering on same image further.</br></br>
+
+5) Enter "Desired no. of classes" as "3"</br></br>
+
+This will depend on your need that in how many classes you want to cluster the image. For testing, we are taking it as 3.</br></br>
+
+6) Enter any name in "Name of file, storing final cluster centers", Here we are entering the name as                "inputimage_centre_5_3"</br></br>
+
+Keeping the name in this format will help you further to recognize that this cluster center file is having final clusters for "inputimage" with max. no of iterations "5" and number of classes as "3". The extension ".ctr" will be added automatically by the program.</br></br>
+
+7) Click on "Process" button</br></br>
+
+You will get following image as output :</br></br>
+
+K-means clustered image of inputimage
+                            </br></br>
+			    </span></p>
+			    
+			 
+			     <!--------------------pic 1---------------------->
+                           <img src="../images/exp9/i91.jpg" style="width:650px; height:350px;">
+                           <!--------------------pic 1---------------------->
+                            </br></br>
+                            
+                            <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                           Here one can easily notice that the original image is clustered into three regions with three different colors. The colors are chosen randomly by the program. This is the reason that why we need to perform clustering. Since, during clustering it uses the different bands as feature vector, the clustering output classify efficiently according to the objects present in the image. As you have already seen the FCC of this image and also interpreted that, so you can easily identify that the regions in this clustered image as water body (green), vegetation (yellow), built-up areas or other (purple).
+                            </br></br>
+			    </span></p>
+
+                            <p>&nbsp;</p>
+
+                            
+                            <h1>&nbsp;</h1>
+
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            <p style="text-align: center;">&nbsp;</p>
+
+                            
+                        
+                    </div>
+                </section>
+
+                <section id="experiment-article-section-8">
+                    <div class="icon" id="experiment-article-section-8-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-8-heading">
+                        Reference
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-8-content">
+                        <div class="divContent">
+                            <p><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin:0in;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";}
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <p class="PreformattedText"><b style=""><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            Books</span></b><span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>:</span></p>
+
+                            <p class="PreformattedText">&nbsp;</p>
+
+                            <p class="PreformattedText">&nbsp;</p>
+                            <!--[if gte mso 9]&gt;&lt;xml&gt;
+font-family:"Times New Roman","serif";}
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <p class="MsoNormal">
+                            <!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+mso-para-margin-right:0in;
+mso-para-margin-bottom:10.0pt;
+mso-para-margin-left:0in;
+line-height:115%;
+mso-pagination:widow-orphan;
+font-size:11.0pt;
+font-family:"Calibri","sans-serif";
+mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;}
+&lt;/style&gt;
+&lt;![endif]--></p>
+
+                            <p class="MsoNormal" style=
+                            "text-indent: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [1]  Rafael C. Gonzalez, Richard E. Woods and Steven L. Eddins (2004), “<i>Digital Image Processing using MATLAB</i>” Pearson Education</span></p>
+
+                            <p class="MsoNormal" style="line-height: normal;">
+                            <span style=
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-left: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [2] J.A. Richards and X. Jia, “<i>Remote Sensing Digital Image Analysis", 4th edition,</i>” Springer, Berlin, 2006</span></p>
+
+                            <p class="MsoNormal" style="line-height: normal;">
+                            <span style=
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-left: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [3]  R. Schowengerdt, “<i> Remote Sensing: Models and Methods for Image Processing", 3rd edition,</i>'
+                            <i>Academic Press, Mass., 2007</i>”</span></p>
+
+                            <p class="MsoNormal" style="line-height: normal;">
+                            <span style=
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="MsoNormal" style=
+                            "text-indent: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [4] J.R. Jensen, “<i>Digital Image Processing: A Remote Sensing Perspective", 4th edition,</i>”Prentice-Hall, NJ, 2005</span></p>
+                            </br>
+                             <p class="MsoNormal" style=
+
+                            "margin-left: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [5] P.M. Mather and M. Koch, “<i> Computer Analysis of Remotely Sensed Images",</i>'
+                           John Wiley, NY, 2011”</span></p>
+                            
+                            </br>
+                             <p class="MsoNormal" style=
+
+                            "margin-left: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [6] B. Tso and P.M. Mather, “<i>Classification Methods for Remotely Sensed Images", 2nd edition,</i>'
+                            CRC Press, 2009</span></p>
+                            
+                             </br>
+                             <p class="MsoNormal" style=
+
+                            "margin-left: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [7] Tim Morris (2004), “<i> Computer Vision and Image Processing", </i>'
+                           Englewood Cliffs, NJ: Prentice Hall</span></p>
+                            
+                             </br>
+                             <p class="MsoNormal" style=
+
+                            "margin-left: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [8]  A. K. Jain (1989), “<i>Fundamentals of Digital Image Processing,</i>'
+                             Englewood Cliffs, NJ: Prentice Hall</span></p>
+                            
+                             </br>
+                             <p class="MsoNormal" style=
+
+                            "margin-left: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [9] Bhabatosh Chanda and Dwijest Dutta Majumder (2002), “<i>Digital Image Processing and Analysis", </i>'
+                            </span></p>
+                            
+                             </br>
+                             <p class="MsoNormal" style=
+
+                            "margin-left: 0.25in; line-height: normal;">
+                            <span lang="EN-IN" style=
+
+                            'font-size: 12pt; font-family: "Arial","sans-serif";'>
+                            [10] Raman Maini and Himanshu Aggarwal (2010), “<i> A comprehensive review of image enhancement techniques",</i>
+                            Journal of computing, Vol. 2, Issue. 3, pno 8-13, 2010</span></p>
+
+                            <p class="MsoNormal">&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <h3><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+&lt;w:Zoom&gt;0&lt;/w:Zoom&gt;
+&lt;w:TrackMoves /&gt;
+&lt;w:TrackFormatting /&gt;
+&lt;w:PunctuationKerning /&gt;
+&lt;w:ValidateAgainstSchemas /&gt;
+&lt;w:SaveIfXMLInvalid&gt;false&lt;/w:SaveIfXMLInvalid&gt;
+&lt;w:IgnoreMixedContent&gt;false&lt;/w:IgnoreMixedContent&gt;
+&lt;w:AlwaysShowPlaceholderText&gt;false&lt;/w:AlwaysShowPlaceholderText&gt;
+&lt;w:DoNotPromoteQF /&gt;
+&lt;w:LidThemeOther&gt;EN-US&lt;/w:LidThemeOther&gt;
+&lt;w:LidThemeAsian&gt;X-NONE&lt;/w:LidThemeAsian&gt;
+&lt;w:LidThemeComplexScript&gt;X-NONE&lt;/w:LidThemeComplexScript&gt;
+&lt;w:Compatibility&gt;
+&lt;w:BreakWrappedTables /&gt;
+&lt;w:SnapToGridInCell /&gt;
+&lt;w:WrapTextWithPunct /&gt;
+&lt;w:UseAsianBreakRules /&gt;
+&lt;w:DontGrowAutofit /&gt;
+&lt;w:SplitPgBreakAndParaMark /&gt;
+&lt;w:DontVertAlignCellWithSp /&gt;
+&lt;w:DontBreakConstrainedForcedTables /&gt;
+&lt;w:DontVertAlignInTxbx /&gt;
+&lt;w:Word11KerningPairs /&gt;
+&lt;w:CachedColBalance /&gt;
+&lt;/w:Compatibility&gt;
+&lt;w:BrowserLevel&gt;MicrosoftInternetExplorer4&lt;/w:BrowserLevel&gt;
+&lt;m:mathPr&gt;
+&lt;m:mathFont m:val="Cambria Math" /&gt;
+&lt;m:brkBin m:val="before" /&gt;
+&lt;m:brkBinSub m:val="&#45;-" /&gt;
+&lt;m:smallFrac m:val="off" /&gt;
+&lt;m:dispDef /&gt;
+&lt;m:lMargin m:val="0" /&gt;
+&lt;m:rMargin m:val="0" /&gt;
+&lt;m:defJc m:val="centerGroup" /&gt;
+&lt;m:wrapIndent m:val="1440" /&gt;
+&lt;m:intLim m:val="subSup" /&gt;
+&lt;m:naryLim m:val="undOvr" /&gt;
+&lt;/m:mathPr&gt;&lt;/w:WordDocument&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267"&gt;
+&lt;w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 7" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 8" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 9" /&gt;
+&lt;w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" /&gt;
+&lt;w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" /&gt;
+&lt;w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" /&gt;
+&lt;w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" /&gt;
+&lt;w:LsdException Locked="false" Priority="0" Name="Hyperlink" /&gt;
+&lt;w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" /&gt;
+&lt;w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" /&gt;
+&lt;w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" /&gt;
+&lt;w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" /&gt;
+&lt;w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" /&gt;
+&lt;w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" /&gt;
+&lt;w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" /&gt;
+&lt;w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" /&gt;
+&lt;w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" /&gt;
+&lt;w:LsdException Locked="false" Priority="37" Name="Bibliography" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" /&gt;
+&lt;/w:LatentStyles&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 10]&gt;
+&lt;style&gt;
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin:0in;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";}
+&lt;/style&gt;
+&lt;![endif]--></h3>
+
+                          
+
+                            <h3><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+&lt;w:Zoom&gt;0&lt;/w:Zoom&gt;
+&lt;w:TrackMoves /&gt;
+&lt;w:TrackFormatting /&gt;
+&lt;w:PunctuationKerning /&gt;
+&lt;w:ValidateAgainstSchemas /&gt;
+&lt;w:SaveIfXMLInvalid&gt;false&lt;/w:SaveIfXMLInvalid&gt;
+&lt;w:IgnoreMixedContent&gt;false&lt;/w:IgnoreMixedContent&gt;
+&lt;w:AlwaysShowPlaceholderText&gt;false&lt;/w:AlwaysShowPlaceholderText&gt;
+&lt;w:DoNotPromoteQF /&gt;
+&lt;w:LidThemeOther&gt;EN-US&lt;/w:LidThemeOther&gt;
+&lt;w:LidThemeAsian&gt;X-NONE&lt;/w:LidThemeAsian&gt;
+&lt;w:LidThemeComplexScript&gt;X-NONE&lt;/w:LidThemeComplexScript&gt;
+&lt;w:Compatibility&gt;
+&lt;w:BreakWrappedTables /&gt;
+&lt;w:SnapToGridInCell /&gt;
+&lt;w:WrapTextWithPunct /&gt;
+&lt;w:UseAsianBreakRules /&gt;
+&lt;w:DontGrowAutofit /&gt;
+&lt;w:SplitPgBreakAndParaMark /&gt;
+&lt;w:DontVertAlignCellWithSp /&gt;
+&lt;w:DontBreakConstrainedForcedTables /&gt;
+&lt;w:DontVertAlignInTxbx /&gt;
+&lt;w:Word11KerningPairs /&gt;
+&lt;w:CachedColBalance /&gt;
+&lt;/w:Compatibility&gt;
+&lt;w:BrowserLevel&gt;MicrosoftInternetExplorer4&lt;/w:BrowserLevel&gt;
+&lt;m:mathPr&gt;
+&lt;m:mathFont m:val="Cambria Math" /&gt;
+&lt;m:brkBin m:val="before" /&gt;
+&lt;m:brkBinSub m:val="&#45;-" /&gt;
+&lt;m:smallFrac m:val="off" /&gt;
+&lt;m:dispDef /&gt;
+&lt;m:lMargin m:val="0" /&gt;
+&lt;m:rMargin m:val="0" /&gt;
+&lt;m:defJc m:val="centerGroup" /&gt;
+&lt;m:wrapIndent m:val="1440" /&gt;
+&lt;m:intLim m:val="subSup" /&gt;
+&lt;m:naryLim m:val="undOvr" /&gt;
+&lt;/m:mathPr&gt;&lt;/w:WordDocument&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267"&gt;
+&lt;w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 7" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 8" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 9" /&gt;
+&lt;w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" /&gt;
+&lt;w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" /&gt;
+&lt;w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" /&gt;
+&lt;w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" /&gt;
+&lt;w:LsdException Locked="false" Priority="0" Name="Hyperlink" /&gt;
+&lt;w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" /&gt;
+&lt;w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" /&gt;
+&lt;w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" /&gt;
+&lt;w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" /&gt;
+&lt;w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" /&gt;
+&lt;w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" /&gt;
+&lt;w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" /&gt;
+&lt;w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" /&gt;
+&lt;w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" /&gt;
+&lt;w:LsdException Locked="false" Priority="37" Name="Bibliography" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" /&gt;
+&lt;/w:LatentStyles&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 10]&gt;
+&lt;style&gt;
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin:0in;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";}
+&lt;/style&gt;
+&lt;![endif]--></h3>
+
+
+                            
+                            
+
+                          
+
+                          
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experiment-article-section-9">
+                    <div class="icon" id="experiment-article-section-9-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-9-heading">
+                        FAQs
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-9-content">
+                       
+                        <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                       <b>Q 1. What does user requires to have to be able to use virtual satellite image processing and analysis lab?</b>
+                       </br></br>
+                       Ans : Virtual Satellite image processing and analysis lab setup only requires internet connection and a web
+                       browser at the student's end to connect to the lab. The lab is self-contained, with sample images, aim, theory
+                       procedure, actual experiment and interpretation of the results. It is highly recommended to use v-SIPAL in mozilla
+                       firefox or google chrome and have adobe flash player installed in you PC.
+                       </br></br>
+                       
+                       <b>Q 2. Which image formats are supported?</b>
+                       </br></br>
+                       Ans : v-SIPAL supports all basic image formats like JPEG, BMP, TIFF, geoTIFF. In addition to these, raw satellite
+                       images can also be used
+                       with header file having an extension (.hdr)
+                       </br></br>
+                       
+                       <b>Q 3. Are sample images there for users?</b>
+                       </br></br>
+                       Ans : Each user is provided with two sample images :  Sample 1 is a raw satellite image with 6 bands, Sample 2 is
+                       a jpeg file with 3 bands.
+                       </br></br>
+                       
+                       <b>Q 4. Is there any restriction on image size to upload?</b>
+                       </br></br>
+                       Ans : One can upload images of any size. But it is highly recommended to not upload images having dimensions more
+                       than 2048x2048.
+                       </br></br>
+                       
+                       <b>Q 5. Can user download the output images?</b>
+                       </br></br>
+                       Ans : Yes. User can download output images and histograms by just right clicking on them and then clicking on
+                       "Save image as".
+                       
+			    </span></p>
+                       
+                    </div>
+                </section>
+            </div>
+        </article>
+	
+
+        <footer  class="footer">
+            <!-- Put the content here -->
+            <div style="margin-left:40%; margin-right:40% ">
+            <a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+            </div>
+      </footer> 
+    </div>
+</body>
+</html>

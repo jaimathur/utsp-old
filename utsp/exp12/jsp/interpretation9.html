@@ -1,0 +1,128 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of K-means 
+        Clustering Outputs</font></b></p>
+<p align="justify">Here we will discuss how to interpret the outputs produced by experiment 
+9, 
+i.e., k-means clustering. So, please follow the steps as shown below to get the sample 
+output for interpretation.</p>
+<p align="justify">1) Select &quot;inputimage&quot; as your experimental image.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage&quot; is a satellite image having 6 bands stored in BIL format as raw 
+image. It has the dimension 801x1401. Since in our discussion we will cover upto 
+its 4th band, so it is necessary to understand that what the first 4 bands of 
+this image represents. The first four bands are as follows: blue, green, red and 
+infra-red respectively.</p>
+<p align="justify">2) Select &quot;No. of bands to be used&quot; as &quot;All&quot;</p>
+<p align="justify">Number of bands actually works as number of feature vectors. 
+So here we are using all the bands for clustering. Instead of selecting &quot;All&quot; 
+one can also experiment with &quot;custom&quot; and then can select particular bands to be 
+used for clustering</p>
+<p align="justify">3) Enter &quot;Maximum number of iteration&quot; as &quot;5&quot;</p>
+<p align="justify">K-means clustering has two terminating conditions :&nbsp; 
+first, if successive iterations does not produces significant difference in 
+clustered output. Second, if number of iterations exceeds maximum number of 
+iterations specified by user. The output will be better if you increase this 
+number. One can always experiment with these values.</p>
+<p align="justify"><i>Note : </i>If you are using a large size image, it will be 
+better to keep this number less to not overload the server.</p>
+<p align="justify">4) Select &quot;Initial cluster center&quot; as &quot;Random&quot;</p>
+<p align="justify">If you are clustering an image using k-means clustering then 
+for first time you need to specify the starting cluster centers for each class. 
+So, one can always choose &quot;Random&quot; to generate the initial clusters randomly. 
+But, if you are going to perform k-means clustering on same image that you have 
+used previously for clustering with same number of classes ythen you can use the 
+final cluster centres produced by the program as initial cluster centers. So, it 
+will be like iterating the clustering on same image further.</p>
+<p align="justify">5) Enter &quot;Desired no. of classes&quot; as &quot;3&quot;</p>
+<p align="justify">This will depend on your need that in how many classes you 
+want to cluster the image. For testing, we are taking it as 3.</p>
+<p align="justify">6) Enter any name in &quot;Name of file, storing final cluster 
+centers&quot;, Here we are entering the name as&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage_centre_5_3&quot;</p>
+<p align="justify">Keeping the name in this format will help you further to 
+recognize that this cluster center file is having final clusters for &quot;inputimage&quot; 
+with max. no of iterations &quot;5&quot; and number of classes as &quot;3&quot;. The extension &quot;.ctr&quot; 
+will be added automatically by the program.</p>
+<p align="justify">7) Click on &quot;Process&quot; button</p>
+<p align="justify">You will get following image as output :</p>
+<p align="justify"><b><i>K-means clustered image of inputimage</i></b></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp9_outkmeans_final.jpg" width="646" height="369"></p>
+<p align="justify">
+Here one can easily notice that the original image is clustered into three 
+regions with three different colors. The colors are chosen randomly by the 
+program. This is the reason that why we need to perform clustering. Since, 
+during clustering it uses the different bands as feature vector, the clustering 
+output classify efficiently according to the objects present in the image. As 
+you have already seen the FCC of this image and also interpreted that, so you 
+can easily identify that the regions in this clustered image as water body 
+(green), vegetation (yellow), built-up areas or other (purple).</p>
+    </td>
+  </tr>
+</table>
+   
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

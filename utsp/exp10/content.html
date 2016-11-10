@@ -1,0 +1,1051 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All or Nothing Assignment </title>
+</head>
+
+<body>
+    <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in 
+      text-->
+            <img src="../images/logo.jpg"></div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+                <a href="../index.html">All or Nothing Assignment </a>
+            </div><!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+        </header><!-- The lab article is the main content area where all the 
+  experiment content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+                All or Nothing Assignment 
+            </header><!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav><!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+
+            <div id="experiment-article-sections">
+                <!-- First section of the article-->
+
+                <section id="experiment-article-section-1">
+                    <div class="icon" id="experiment-article-section-1-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/introduction.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+                    <div class="heading" id=
+                    "experiment-article-section-1-heading">
+                        Aim
+                    </div><!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+                    <div class="content" id=
+                    "experiment-article-section-1-content">
+                        <div class="divContent">
+
+                            <p> <span style="font-size: medium; font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To assign trips on a network for a given OD demand by using All or Nothing assignment technique.
+                            <br><br><br>
+                            <b>Objectives</b><br><br>
+                            <ul>
+                            <li> To understand the concept of All-Or-Nothing route assignment technique.</li>
+                            <li>To perform All-Or-Nothing route assignment experiment for a given network and obtain link flow volumes.</li>
+                            </ul>
+                            </span> </p>
+                        </div>
+                    </div>
+                </section><!-- Second section of the article-->
+                
+                
+                
+                 <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/objective.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-3-heading">
+                        Theory
+                    </div>
+
+                    <div class="content" id=
+
+                    "experiment-article-section-3-content">
+                        <div class="divContent">
+                           
+
+                            
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            &nbsp;</p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 18pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                           Introduction</span></b> <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            </span></b>
+
+                            <span lang="EN-IN" style=
+'font-size: 12pt; font-family: "Verdana","sans-serif";'><br></span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'><br></span></p>
+
+                            <p class="MsoNormal" style=
+                             "line-height: 150%; text-align: right;"><a href=
+                            "http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;">
+                            Back To Experiment List</span></a></p>
+                            
+                            <br>
+
+                            <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                           The simplest route choice and assignment method is <b>All-or-nothing</b> assignment. This method assumes that there are no congestion effects, that all drivers consider the same attributes for route choice and that they perceive and weigh them in the same way. The absence of congestion effects means that link cost are fixed; the assumption that all drivers perceive the same costs means that every driver from <b>i</b> to <b>j</b> must choose the same route. Therefore, all drivers are assigned to one route between <b>i</b> and <b>j</b> and no driver is assigned to other, less attractive, routes. These assumptions are probably reasonable in sparse and uncongested networks where there are few alternative routes and they are very different in cost.
+                            
+                            <br>
+                            The assignment algorithm itself is the procedure that loads the matrix T to the shortest path trees and produces the flows V<span style="font-size:10px">A, B</span> on links (between nodes A and B). All load algorithms start with an initialization stage, in this case making all V<span style="font-size:10px">A, B</span> = 0 and then apply one of two basic variations: pair-by-pair methods and once -through approaches.. 
+                          
+                          <br>
+                                <br>
+                                <b>Example</b>
+                                <hr>
+<center><img src="img/net.jpg" alt="image1" style="max-width:100% !important;width:auto;height:auto"/></center>
+        
+        		    <br>
+                           
+			    </span></p>
+                           <ul style="list-style:none;">
+                           <li>t1=10 units</li>
+                           <li>t2=15 units</li>
+                           <li>t3=5 units</li>
+                           <li>t4=20 units</li>
+                           <li>t5=30 units</li>
+                            </ul>       
+                           <br>For origin: 1&nbsp;&nbsp;destination: 2&nbsp;&nbsp;Flow: 100<br>
+                           <br>Possible path Travel Time Shortest path<br>
+                           <br>1-2 10  1-2<br>
+                        
+                        <br>
+                               <br>Flow on link 1 = 100<br><br>
+                          <br>For origin: 1&nbsp;&nbsp;destination: 3&nbsp;&nbsp;Flow: 200<br>
+                           <br>Possible path Travel Time Shortest path<br>
+                           <br>1-3 15  1-3<br>
+                        <br>
+                               <br>Flow on link 2 = 200<br><br>
+                          <br>For origin: 1&nbsp;&nbsp;destination: 4&nbsp;&nbsp;Flow: 500<br>
+                           <br>Possible path Travel Time Shortest path<br>
+                           <br>1-2-4 10+20=30 1-2-4<br>
+                           <br>1-3-4 15+30=45 1-3-4<br>
+                           <br>1-2-3-4 10+5+30=45 1-2-3-4<br>                        <br>
+                               <br>Flow on link 1 = 100 + 500 = 600 Flow on link4 = 500<br><br>
+                          <br>For origin: 2&nbsp;&nbsp;destination: 3&nbsp;&nbsp;Flow: 400<br>
+                           <br>Possible path Travel Time Shortest path<br>
+                           <br>2-3 5 2-3<br>
+                            <br>
+                               <br>Flow on link 3 = 400<br><br>
+                          <br>For origin: 2&nbsp;&nbsp;destination: 4&nbsp;&nbsp;Flow: 300<br>
+                           <br>Possible path Travel Time Shortest path<br>
+                           <br>2-4 20 2-4<br>
+                            <br>
+                               <br>Flow on link 4 = 500 + 300 = 800<br><br>
+                          <br>For origin: 3&nbsp;&nbsp;destination: 4&nbsp;&nbsp;Flow: 600<br>
+                           <br>Possible path Travel Time Shortest path<br>
+                           <br>3-4 30 3-4<br>
+                                <br>
+                               <br><b>Flow on link 5 = 600<br><br>Flow pattern based on all or nothing assignment</b><br>
+                <center><img src="img/net2.jpg" alt="image1" style="max-width:100% !important;width:auto;height:auto"/></center>                                      <br>
+                                <br>
+                                <b>Reference</b>
+                                <hr>
+                            <br>
+                            <b>Books</b>
+                        <br>    
+                        <br>
+                            <ul>
+                                <li>J. De D. Ortuzar and L.G. Willumsen (1996), Modelling Transport. Wiley Publications, London.</li>
+                                <li>Y. Sheffi (1985), Urban Transportation Networks: Equilibrium Analysis with Mathematical Programming Methods. Prentice-Hall Inc., Englewood Cliffs, New Jersey.</li>
+                            </ul>
+                          <p class="MsoNormal" style=
+                            "margin-bottom: 13.5pt; line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                          </b></b></br></br> </br></br></span></p>
+
+
+                </div></div></section>          
+ 
+                  <section id="experiment-article-section-5">
+                    <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+
+                    "experiment-article-section-5-heading">
+                        Procedure
+                    </div>
+
+                    <div class="content" id=
+
+                    "experiment-article-section-5-content">
+                        <div class="divContent">
+                            
+                         
+                         <p class="MsoNormal" style="line-height: 150%;">
+                         <span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                         &nbsp;<b>Step 1</b><hr><br>
+                             Select the type of experiment you want to perform. The format of the input file should be according to the default file.
+
+
+                         </span></p>
+
+			</br>
+ 			  
+ 			    
+			    <img src="img2/fig7.png" style="width:650px; height:600px; margin-left:10%">
+			    </br>
+			    
+			      <b> Step 2 :</b> 
+			      <br><hr>
+			     You can build your network by creating nodes and links by selecting the icon given below</span> <span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+
+
+                            </br>
+                             <img src="img2/fig1.png" style="width:600px; height:200px; margin-left:10%">
+                            </br>
+                             <img src="img2/fig2.png" style="width:600px; height:200px; margin-left:10%">
+                           
+			</br>                            </br>
+                             <img src="img2/fig3.png" style="width:600px; height:200px; margin-left:10%">
+                           <br>
+After creating network input data for your OD table. Go to "Choose OD pair" in"Experiment" option and input origin destination and trips data. <br>
+			</br>
+			
+			 <b> Step 3 :</b> 
+			   <br><hr><br>
+Select "Run" in "Experiment" to perform All or Nothing Experiment
+<br>
+			<img src="img2/fig4.png" style="width:650px; height:250px; margin-left:10%"><br>
+			<img src="img2/fig6.png" style="width:650px; height:250px; margin-left:10%">
+			<br>
+You can get the output values for individual step or select "Skip" option to your bottom right to get the final output
+			<br>
+			<img src="img2/fig5.png" style="width:500px; height:100px; margin-left:10%">
+			<br><br>
+			<img src="img2/figure_4.bmp" style="width:500px; height:100px; margin-left:10%">
+			<br>
+			<br>
+			 <b> Step 4 :</b> 
+			   <br><hr><br>
+Save the output file to the desired location			   
+			<br>
+			<b>Demo Video to run PHP Based Experiment</b><hr><br>
+			<center><video id="0" controls="" width="640" height="400">
+  <source src="video/assgn.mp4" type="video/mp4">
+  <source src="video/assgn.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/assgn.webm" type="video/webm">
+  <object data="video/assgn.mp4" width="640" height="400">
+    <embed src="video/assgn.swf" width="640" height="400">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video></center>
+			<br>
+			<br>
+			<b>Demo Video to run Java Based Experiment</b><hr><br>
+			<center><video id="0" controls="" width="640" height="400">
+  <source src="video/UserEquilibrium.mp4" type="video/mp4">
+  <source src="video/UserEquilibrium.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/UserEquilibrium.webm" type="video/webm">
+  <object data="video/UserEquilibrium.mp4" width="640" height="400">
+    <embed src="video/UserEquilibrium.swf" width="640" height="400">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video></center>
+			<br>
+			
+			
+ 			
+                          
+                            </div>
+                            </div>
+               </section>              
+
+                
+
+               
+
+                <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Experiment
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-4-content">
+                        <div class="divContent">
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>Input files needed </span></p>
+							<hr>
+							<ul>
+								<li> 
+ Origin Destination demand data. 							
+								</li>
+								<li>
+ Link flow characteristics data. 
+								</li>
+							</ul><br>
+                            *Default input files with specified format are given below.
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>Experiment </span></p>
+							<hr>
+							<br>
+						<br>	<p style="text-align:justify"><span class="title1"><a href="applet/aon.php?width=1281&height=674" style="text-decoration: underline;">Click Here to Perform Experiment with JAVA based Simulation</a></span></p>
+						<br><br>	<p style="text-align:justify"><span class="title1"><a href="AONMod.php" style="text-decoration: underline;">Click Here to Perform Experiment with PHP based Simulation</a></span></p>
+             		<br><p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>See the default Excel / CSV input files for file format:</span></p>
+							<hr>
+					<br><br><table>
+<tr>
+<th>Download &amp;<br> Save each of these files to perform experiment.</th>
+<th>Click on the icon to download &amp;<br> Save all XLS/CSV files in zip format.</th>
+</tr>
+<tr>
+<td>
+<span class="title1"><a href="Docs/survey_old.xls"><img src="img2/SmallXLS.jpg" alt="Excel" style="width:5%;height:5%">  (Click Here) For Link Characteristics Matrix File (xls)</a></span>
+<br><span class="title1"><a href="Docs/survey.xls"><img src="img2/SmallXLS.jpg" alt="Excel" style="width:5%;height:5%">  (Click Here) For Origin Destination File (xls)</a></span>
+</td>
+<td align="center" valign="top">
+<span class="title1">All XLS Files in zip format</span>
+<p><a href="Docs/CategoryAnalysis.zip"><img style="display: block; margin-left: auto; margin-right: auto;width:10%;height:10%" src="img/XLS.JPG" alt="Excel"></a></p>
+</td>
+</tr>
+<tr><td>
+<span class="title1"><a href="Docs/survey_old.csv"><img src="img2/SmallCSV.jpg" alt="CSV" style="width:5%;height:5%">(Click Here) For Link Characteristics (csv)</a></span>
+<br><span class="title1"><a href="Docs/survey.csv"><img src="img2/SmallCSV.jpg" alt="CSV" style="width:5%;height:5%"> (Click Here) For Origin Destination File (csv) </a></span>
+</td>
+<td align="center" valign="top">
+<span class="title1">All CSV Files in zip format</span>
+<p><a href=".Docs/CategoryAnalysisCSV.zip"><img style="display: block; margin-left: auto; margin-right: auto;width:10%;height:10%" src="img2/CSV.JPG" alt="CSV"></a></p>
+</td>
+</tr>
+</table>
+						</div>
+                    </div>
+                </section>
+
+
+              
+
+                
+                
+                
+               <section id="experiment-article-section-2">
+                    <div class="icon" id="experiment-article-section-2-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-2-heading">
+                        Pre Test
+                    </div>
+					
+                    <div class="content" id=
+                    "experiment-article-section-2-content">
+			<hr>
+						<div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">1)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">In all-or-nothing assignment, travel time on any link assumed to depends on: 
+</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6058" name="ans0"
+                                                        type="radio" value=
+                                                        "6058"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6058">  Independent of capacity  </label></td>
+                                                    </tr>
+
+													<tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6058" name="ans0"
+                                                        type="radio" value=
+                                                        "6058"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6058">  Depends on fixed capacity</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6057" name="ans0"
+                                                        type="radio" value=
+                                                        "6057"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6057">  Depends on infinite capacity </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6059" name="ans0"
+                                                        type="radio" value=
+                                                        "6059"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6059"> None of these</label></td>
+                                                    </tr>
+												</table>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">2)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">In all or nothing assignment, the flow is proportionally distributed between links connecting a pair of nodes. </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">False</label></td>
+                                                    </tr>
+
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                  <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">3)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Shortest path among a given number of path between a origin-destination pair is fixed </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">False</label></td>
+                                                    </tr>
+												</table>
+													</tr>
+                                    </table>
+
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">4)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">The volume is assigned to link with respect to minimum impedance between two nodes and not between minimum impedance between Origin Destination. </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> False</label></td>
+                                                    </tr>                                  </table></table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">5)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">All the drivers are allowed to change their path in between? </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">  True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">False</label></td>
+                                                    </tr>
+
+                                                </table>
+                                         </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">6)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Drivers behaviours is not taken into account while assigning traffic volume </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">False</label></td>
+                                                    </tr>
+
+                                                </table>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">7)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">All or nothing is an iterative process </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">False</label></td>
+                                                    </tr>
+
+                                                </table>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">8)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">The intrazonal impedance value should be zero? </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">False</label></td>
+                                                    </tr>
+
+                                                </table>
+                                        </tr>
+                                    </table>
+                                <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                   
+                                    <input align="middle" id="loadTime" name=
+                                    "loadTime" type="hidden" value=
+                                    "1379688873/"><br>
+
+                                    <div style="padding-left:40px;">
+                                        <input id="submit1" name="submit1"
+                                        onclick="get_radio_value();" style=
+                                        "width:8%;" type="submit" value=
+                                        "&nbsp;Submit&nbsp;">&nbsp;&nbsp;<input id="cancel1"
+                                        name="cancel1" style="width:8%;" type=
+                                        "reset" value="&nbsp;Cancel&nbsp;">
+                                    </div>
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                 <section id="experiment-article-section-9">
+                    <div class="icon" id="experiment-article-section-9-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-9-heading">
+                        FAQs
+                    </div>
+                    <div class="content" id=
+
+                    "experiment-article-section-5-content">
+                        <div class="divContent">
+                            <ul>
+                                <ol type="1">
+                                    <li>
+                                    <b>What is link?</b><br>
+                                    An element of a transportation network that connects two nodes. A section of roadway or a bus route could be modeled as a link.
+                                </li>
+                                <li>
+                                    <b>What are Nodes?</b><br>
+                                    Nodes are points at which links terminate. Links may terminate at destinations or at intersections with other links.
+                                </li>
+                                <li>
+                                    <b>What are Routes in network?</b><br>
+                                    Pathways through a network. Routes are composed of links and nodes.
+                                </li>
+                                <li>
+                                    <b>What is Trip Assignment Analysis? </b><br>
+                                    Pathways through a network. Routes are composed of links and nodes.
+                                </li>
+                                <li>
+                                    <b>What is Trip Assignment Analysis? </b><br>
+                                    The process used to estimate the routes (for each mode) that will be used to travel from origin to destination. This process yields the total number of vehicles or passengers that a particular route can expect to service.
+                                </li>
+                                <li>
+                                    <b>Why this assignment is called All-or-nothing assignment ? </b><br>
+                                     In this method the trips from any origin zone to any destination zone are assign to a single, minimum cost, path between them and other path are assign zero flow.
+                                </li>
+                                <li>
+                                    <b>What are the basic assumptions made in All-or-nothing assignment?</b><br>
+                                     
+1-Travel time is a fixed input, equal to free flow travel time and it does not vary depending on the congestion on a link.<br>
+2-Unlimited number of vehicles can be assign to a link
+
+                                </li>
+                                <li>
+                                    <b>In which condition All-or-nothing assignment can be used?</b><br>
+ Though All-or-nothing is unrealistic as only one path between every O-D pair is utilised, this model may be reasonable in sparse and uncongested networks where there arefew alternative routes and they have a large difference in travel cost. This model may also be used to identify the path which the drivers would like to travel in the absence of congestion.
+                                </li>
+                                </ol>
+                            </ul>
+                        </div>
+                     </div>
+                </section>
+               
+
+               
+            </div>
+        </article>
+	
+
+        <footer  class="footer">
+            <!-- Put the content here -->
+            <div style="margin-left:40%; margin-right:40% ">
+            <a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+            </div>
+      </footer> 
+    </div>
+</body>
+</html>

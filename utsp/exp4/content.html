@@ -1,0 +1,1792 @@
+﻿<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category Analysis | Trip Generation</title>
+</head>
+
+<body>
+    <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in 
+      text-->
+            <img src="../images/logo.jpg"></div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+                <a href="../index.html">Civil Lab</a>
+            </div><!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+        </header><!-- The lab article is the main content area where all the 
+   content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+               Growth Factor Distribution Model
+            </header><!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav><!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+
+            <div id="experiment-article-sections">
+                <!-- First section of the article-->
+
+                <section id="experiment-article-section-1">
+                    <div class="icon" id="experiment-article-section-1-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/introduction.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-1-heading">
+                        Aim
+                    </div><!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+                    <div class="content" id=
+                    "experiment-article-section-1-content">
+                        <div class="divContent">
+                            <p><span style=
+                            "font-size: medium; font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            To determine the number of future trips between Origin Destination pair.</span></p>
+<p>&nbsp;</p>
+
+                            <p><span style=
+                            "font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            <strong><span style=
+                            "font-size: large;">Objective:-</span></strong></span></p>
+							<hr>
+                            <p>&nbsp;</p>
+
+                            <p><!-- p { margin-bottom: 0.21cm; } --></p>
+
+                           <ul>
+							   <li> To understand model formulation. </li> <br>
+							   <li> To understand different model descriptions. </li><br>
+							   <li> To allocate future trips in trip distribution matrix. </li>
+							</ul>
+                            </div>
+                    </div>
+                </section><!-- Second section of the article-->
+  <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/objective.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-3-heading">
+                        Theory
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-3-content">
+                        <div class="divContent">
+                            <p><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+&lt;w:Zoom&gt;0&lt;/w:Zoom&gt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";}
+&lt;/style&gt;
+&lt;![endif]--></p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            &nbsp;</p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: blue;'>
+								Trip Distribution </span></b></p><hr>
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                          The generated trips from each zone is distributed to all other zones based on the choice of destination, this is called trip distribution which is the second stage of travel demand modeling. This step matches trip maker's origins and destinations to develop a "trip table" matrix that displays the number of trips going from each origin to each destination. A typical trip table is represented below. </span></p>					<br>
+							<br><img src="img/3.png"/>
+							<br>
+							
+							<p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+								Where T<sub>ij</sub> is the number of trips between origin i and destination j, Oi is total number of trips originating from zone i and Dj is the total number of trips attracted to zone j, T is total trips. Note that the practical value of trips on the diagonal, e.g. from zone 1 to zone 1, is zero since no intra-zonal trip occurs.</span></p>
+							<br>
+							
+							<p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>There are a number of methods to distribute trips among destinations; and two such methods are growth factor model and gravity model.</span></p>
+						<br>
+							
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+								Growth Factor Model </span></b></p>
+							<hr>
+							<br>
+							<p style="text-align:justify"> Growth factor model is one of the methods among the number of methods to distribute trips among destinations. Growth factor model is a method which responds only to relative growth rates at origins and destinations and this is suitable for short term trend extrapolation.</p>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 10pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Types Of Growth Factor Model </span></b></p>
+							<br>
+							<ol type="1">
+								<li>Uniform Growth factor method</li>
+								<li>Singly constrained growth factor method</li>
+								<li>Doubly constraint growth factor method</li>
+							</ol>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: blue;'>
+								Uniform Growth Factor Method </span></b></p><hr>
+                            <br>
+							<p style="text-align:justify"> If growth rate is the only information available for the whole of the study area, then we can only assume that it will apply to each cell in the matrix, that is a uniform growth rate. The equation can be written as: Tij = f x tij </p>
+							<br><p style="text-align:justify"> Where f is the uniform growth factor and tij is the previous total number of trips, Tij is the expanded total number of trips. Advantages are that they are simple to understand, and they are useful for short-term planning. </p>
+							
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 10pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Example </span></b></p><hr><br>
+							<p style="text-align:justify"> Trips originating from zone 1, 2, 3 of a study area are 78, 92 and 82 respectively and those terminating at zones 1,2,3 are given as 88,96 and 78 respectively. If the growth factor is 1.3 and the cost matrix is as shown below, find the expanded origin-constrained growth trip table. </p>
+							<br>
+							<img src="img/4.png"/>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 10pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Solution </span></b></p><br>
+							<p style="text-align:center"> Given growth factor = 1.3, Therefore, multiplying the growth factor with each of the cells in the matrix gives the solution as shown below. </p>
+							<br>
+							<img src="img/5.png"/>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 10pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Singly Constrained Growth Factor method </span></b></p><hr><br>
+							<p style="text-align:justify"> This method is used when the expected growth of either trips originated or trips destined are available. An example below illustrates how to solve for such models </p>
+							<br>
+							<br>
+							
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 10pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Example</span></b></p><hr><br>
+							   <img src="img/6.png"/>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 10pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Method</span></b></p><hr><br>
+							<p style="text-align:justify"> Multiply each cell in Row 1 by 400/355 </p>
+							<p style="text-align:justify"> Multiply each cell in Row 2 by 460/455 </p>
+			
+							<p style="text-align:justify"> Multiply each cell in Row 3 by 400/255 </p>
+							<p style="text-align:justify"> Multiply each cell in Row 4 by 702/570 </p>
+									<br>
+							<br>
+							
+							<img src="img/7.png"/>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Doubly Constraint Growth Factor method</span></b></p><hr><br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Example</span></b></p><hr><br>
+							<p style="text-align:justify"> This method is used when the growth of trips originated and distributed for each zone is available. Thus two growth factor sets are available for each zones. Consequently there are two constraints and such a model is called as Double Constraint Growth Factor model </p>
+							<br>
+							<p style="text-align:justify">An example below illustrates how to solve for such models </p>
+							<br>
+							<img src="img/9.png"/>
+							<br>
+							<img src="img/8.png"/>
+							<br>
+							<img src="img/10.png"/>
+							<br>
+							<img src="img/11.png"/>
+							<br>
+							<img src="img/12.png"/>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 10pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Final Result</span></b></p><hr><br>
+							<img src="img/13.png"/>
+							<br>
+							<img src="img/14.png"/>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							References</span></b></p><hr><br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 10pt; line-height: 150%; font-family: "Verdana","sans-serif"; color:Blue;'>
+							Books</span></b></p><br>
+							<br>
+							<br>
+							<ul>
+								<li>J. De D. Ortuzar and L.G. Willumsen (1996), Modelling Transport. Wiley Publications, London.</li><br>
+								<li>C. S. Papacostas and P. D. Prevedouros (2001), Transportation Engineering & planning. Prentice-Hall of India, New Delhi.</li><br>
+								<li>L. R. Kadiyali. Traffic Engineering and Transport planning. Khanna Publications, Delhi.</li><br>
+							</ul>
+									
+							</div>
+					</div>
+				</section>
+                <section id="experiment-article-section-5">
+                    <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-5-heading">
+                        Experiment
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-5-content">
+                        <div class="divContent">
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>Input files needed </span></p>
+							<hr>
+							<p style="text-align:justify"><b>  For Uniform Growth Factor Method.  </b></p> <br>
+							<ul>
+								<li> 
+    Origin Destination trip data for base year.
+								</li>
+							</ul>
+							<br>
+							<p style="text-align:justify"><b> For Singly (Origin)Constrained Growth Factor Method. </b></p>
+							<ul>
+								<li> 
+  Origin Destination trip data for base year. 								
+								</li>
+								<li>
+									 Origin totals for future year. 
+								</li>
+							</ul>
+							<br>
+							<p style="text-align:justify"><b>  For Singly (Destination)Constrained Growth Factor Method.  </b></p>
+							<ul>
+								<li> 
+ Origin Destination trip data for base year. 								</li>
+								<li>
+ Destination totals for future year. 								</li>
+							</ul><br>
+							<p style="text-align:justify"><b>  For Doubly Constrained Growth Factor Method. </b></p>
+							<ul>
+								<li> 
+  Origin Destination trip data for base year. 							</li>
+								<li>
+  Origin totals for future year. 							</li>
+								<li>
+									Destination totals for future year. </li>
+							</ul><br>
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>Experiment </span></p>
+							<hr>
+							<br>
+						<p><span class="title1"><a href="applet/gfm.php" onclick="fullScreen1('applet/gfm.php')" ;=""><strong> <span style="text-decoration: underline;">Click Here</span> To Perform Experiment with JAVA based Simulation</strong></a></span></p>
+							<br><br><p><span class="title1"><a href="GroFactMod.php"><strong> <span style="text-decoration: underline;">Click Here</span> To Perform Experiment with PHP based Simultation</strong></a></span>
+</p>
+							<br><p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>See the default Excel / CSV input files for file format:</span></p>
+							<hr>
+					<br><br><table>
+<tr>
+<th>Download &amp;<br> Save each of these files to perform experiment.</th>
+<th>Click on the icon to download &amp;<br> Save all XLS/CSV files in zip format.</th>
+</tr>
+<tr>
+<td>
+<span class="title1"><a href="Docs/origin_future.xls"><img src="img/SmallXLS.jpg" alt="Excel" style="width:5%;height:5%">  (Click Here) For Future Year Origins Total File (xls)</a></span>
+<br><span class="title1"><a href="Docs/destination_future.xls"><img src="img/SmallXLS.jpg" alt="Excel" style="width:5%;height:5%"> (Click Here) For Future Year Destinations Total File (xls)</a></span>
+<br><span class="title1"><a href="Docs/base_matrix.xls"><img src="img/SmallXLS.jpg" alt="Excel" style="width:5%;height:5%">(Click Here) For Base Year O-D Matrix File (xls)</a></span></td>
+<td align="center" valign="top">
+<span class="title1">All XLS Files in zip format</span>
+<p><a href="Docs/CategoryAnalysis.zip"><img style="display: block; margin-left: auto; margin-right: auto;width:10%;height:10%" src="img/XLS.JPG" alt="Excel"></a></p>
+</td>
+</tr>
+<tr><td>
+<span class="title1"><a href="Docs/origin_futurecsv.csv"><img src="img/SmallCSV.jpg" alt="CSV" style="width:5%;height:5%">(Click Here) For Future Year Origins Total File (csv)</a></span>
+<br><span class="title1"><a href="Docs/destination_futurecsv.csv"><img src="img/SmallCSV.jpg" alt="CSV" style="width:5%;height:5%"> (Click Here) For Future Year Destinations Total File (csv) </a></span>
+<br><span class="title1"><a href="Docs/base_matrixcsv.csv"><img src="img/SmallCSV.jpg" alt="CSV" style="width:5%;height:5%"> (Click Here) For Base Year O-D Matrix File (csv) </a></span></td>
+<td align="center" valign="top">
+<span class="title1">All CSV Files in zip format</span>
+<p><a href=".Docs/CategoryAnalysisCSV.zip"><img style="display: block; margin-left: auto; margin-right: auto;width:10%;height:10%" src="img/CSV.JPG" alt="CSV"></a></p>
+</td>
+</tr>
+</table>
+						</div>
+                    </div>
+                </section>
+
+                <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Procedure
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-4-content">
+                        <div class="divContent">
+							<hr>
+							<br>
+							<p style="text-align:justify;color:blue"><b>Step 1 </b></p>
+							<hr>
+							<br>
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            &nbsp;<b>Click on ‘Click Here To Perform Experiment with GUI’.<br>
+In order to start with the experiments make sure that the input files are available in the format given in the default file. The default file can be downloaded from the table as shown in the image </b></span></p>
+<hr>
+							
+						<br><center><img src="img/figure_1.bmp"></center>
+							<br>
+							<br>
+							<br>
+							<p style="text-align:justify;color:blue"><b>Step 2 </b></p>
+							<hr>
+							
+                            <p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            Go to Methods to select the type of experiment to be performed. There are three types of Growth factor method experiment </span></p>
+							<br>
+							<ul>
+								<li> Uniform Growth Factor Method </li>
+								<li>  Singly constrained Growth Factor Method</li>
+								<ol type="1">
+									<li>Origin Constrained </li>
+									<li>Destination Constrained</li>
+								</ol>
+								<li>  Fratar Growth Factor Method  </li>
+							</ul>
+							<br>
+							<center><img src="img/figure_2.bmp"></center>
+							<br>
+							<br>
+							<br>
+							<p style="text-align:justify;color:blue"><b>Step 3</b></p>
+							<hr>
+							<p style="text-align:justify"> Give the input file after selecting the experiment. </p><br>
+							
+							<p style="text-align:justify"> Browse the input file from the required folder and enter the growth factor. Select ‘OK’ after all the input is given </p><br>
+							
+							<p style="text-aslign:justify">Example of Uniform Growth Factor Method is given below</p><br>
+							<br>
+							<br>
+							
+							<center><img src="img/figure_3.bmp"></center>
+							<br>
+							<br>
+							<p style="text-align:justify">Browse the required input file and then click ‘OK’ in order to get output . Sample of Output is given below.</p>
+							<center><img src="img/figure_4.bmp"></center>
+							<br>
+							<br>
+							<p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+								Demo Video to run PHP Based Experiment</span></p>
+							<hr>
+							<br>
+							
+							<center>
+<video id="0" controls="" height="400" width="640">
+  <source src="video/gf.mp4" type="video/mp4">
+  <source src="video/gf.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/gf.webm" type="video/webm">
+  <object data="video/gf.mp4" height="400" width="640">
+    <embed src="video/gf.swf" height="400" width="640">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+							<br>
+							<br>
+							<p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+								Demo Video to run Java Based Experiment</span></p>
+							<hr>
+							<br>
+							<center>
+<video id="0" controls="" height="400" width="640">
+  <source src="video/GrowthFactor.mp4" type="video/mp4">
+  <source src="video/GrowthFactor.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/GrowthFactor.webm" type="video/webm">
+  <object data="video/GrowthFactor.mp4" height="400" width="640">
+    <embed src="video/GrowthFactor.swf" height="400" width="640">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+						</div>
+					</div>
+				</section>
+
+                <section id="experiment-article-section-6">
+                    <div class="icon" id="experiment-article-section-6-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-6-heading">
+                        Self Evaluation
+                    </div>
+					
+                    <div class="content" id=
+                    "experiment-article-section-6-content">
+			<hr>
+						<div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">1)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">If current trips in particular zone are 12000 and growth factor for future 10 yrs is 1.5, then the no. of trips produced after 10 yrs. Are: 
+</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6058" name="ans0"
+                                                        type="radio" value=
+                                                        "6058"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6058">  18000 </label></td>
+                                                    </tr>
+
+													<tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6058" name="ans0"
+                                                        type="radio" value=
+                                                        "6058"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6058">  12500 </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6057" name="ans0"
+                                                        type="radio" value=
+                                                        "6057"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6057"> 20000</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6059" name="ans0"
+                                                        type="radio" value=
+                                                        "6059"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6059"> None of these</label></td>
+                                                    </tr>
+												</table>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">2)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">If the growth factor is 20% then each cell of the trip distribution matrix will be multiplied by _______? 
+                                            </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 0.5</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> 0.2</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6062" name="ans1"
+                                                        type="radio" value=
+                                                        "6062"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6062">1.2</label></td>
+                                                    </tr>
+													
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6062" name="ans1"
+                                                        type="radio" value=
+                                                        "6062"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6062">1.8</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                  <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">3)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Fratar growth factor method is an iterative method. </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">False</label></td>
+                                                    </tr>
+												</table>
+													</tr>
+                                    </table>
+
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">4)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">When the values of trips on the diagonal in trip table are zero it means that-----trips are not considered: </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> Interzonal</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">Intrazonal</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">Both Of These</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">None Of These</label></td>
+                                                    </tr>
+
+                                                </table>
+                                         
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">5)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">When the information about the expected growth originating from each zone is known, which method should be used from the following: </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">   Uniform growth factor</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> Singly constrained growth factor</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">  Doubly constrained growth factor</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">  Fratar growth factor</label></td>
+                                                    </tr>
+
+                                                </table>
+                                         </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">6)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Trip distribution methods can be divided into two types i.e. growth factor methods and synthetic methods.  </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">False</label></td>
+                                                    </tr>
+
+                                                </table>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">7)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">In trip table or matrix table for Fratar growth method following matrix operation are performed: </span></td>
+											<td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">  Column operations only</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> Row operations only</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">  Alternate column and row operations</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">  None of these.</label></td>
+                                                    </tr>
+
+                                                </table>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">8)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">In trip table or matrix table for singly constrained growth method following matrix operation are performed  </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> Column operations only </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> Row operations only</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> Either of the above two.</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">  Alternate column and row operations</label></td>
+                                                    </tr>
+
+                                                </table>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">9)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Consider a table given below. If the growth in traffic in the study area is expected to be 20% increase in the next three years then answer the following question no. 7, 8, 9 , 10 & 11 <br>
+<img src="img/1.png" style="width:97%;height:auto"/> </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 240</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">456</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">306</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">1962</label></td>
+                                                    </tr>
+
+                                                </table>
+                                        </tr>
+                                    </table>
+
+									
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">10)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Consider the table at question no.9, The future number of trips attracted to zone 2 </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 240</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">355</label></td>
+                                                    </tr>
+													
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">620</label></td>
+                                                    </tr>
+													
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">426</label></td>
+                                                    </tr>
+
+                                                </table>
+                                            </tr>
+                                    </table>
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">11)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Consider the table at question no.9, The future number of trips from zone 2 to zone 4 </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">50</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">300</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">360</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">306</label></td>
+                                                    </tr>
+
+                                                </table>
+										</tr>
+									</table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">12)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Consider the table at question no.9, The future number of trips from from zone 4 to zone 3 </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 684</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 300</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 546</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">250</label></td>
+                                                    </tr>
+
+                                                </table>
+										</tr>
+									</table>
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">13)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Consider the table at question no.9,The future number of intrazonal trips for zone 1 </span></td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 6</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 426</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> 5</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">355</label></td>
+                                                    </tr>
+
+                                                </table>
+                                            </tr>
+                                    </table>
+                                    <div id="hint">
+                                        <div id="textHint11" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                   
+                                    <input align="middle" id="loadTime" name=
+                                    "loadTime" type="hidden" value=
+                                    "1379688873/"><br>
+
+                                    <div style="padding-left:40px;">
+                                        <input id="submit1" name="submit1"
+                                        onclick="get_radio_value();" style=
+                                        "width:8%;" type="submit" value=
+                                        "&nbsp;Submit&nbsp;">&nbsp;&nbsp;<input id="cancel1"
+                                        name="cancel1" style="width:8%;" type=
+                                        "reset" value="&nbsp;Cancel&nbsp;">
+                                    </div>
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experiment-article-section-7">
+                    <div class="icon" id="experiment-article-section-7-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-7-heading">
+                        FAQ's
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-7-content">
+                        <div class="divContent">
+                            <h2 style="color: red;"><strong style=
+                            "text-decoration: underline"><span style=
+                            "font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);">
+                            <span style="font-size: large;"></span></span></strong></h2>
+<hr>
+                            <h2>&nbsp;</h2>
+
+                            <p class="MsoNormal" style=
+                            "line-height: 150%; text-align: right;"><a href=
+                            "http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;">
+                            Back To Experiment List</span></a></p>
+
+                            <p>&nbsp;</p><!--[if gte mso 9]&gt;&lt;xml&gt;
+font-size:11.0pt;
+font-family:"Calibri","sans-serif";
+mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;}
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <ul type="1" >
+      <li>What are the assumptions in growth factor methods?<br>
+		  <span class="answers">A trip is a one-way person movement by a mechanized mode of transport, having two trip ends, an origin (the start of the trip) and a destination (the end of the trip).
+journey is a one-way movement from a point of origin to a point of destination.</span></li>
+
+      <li>What are the limitations of the growth factor methods?<br>
+		  <span class="answers">The trip in which at least one of trip ends is home, is called as home based trip.
+The trip in which neither of the end is home, is called as non home based trip.</span></li>
+
+      <li>What is trip distribution analysis ?<br>
+		  <span class="answers">Trip production - this is defined as the home end of an HB trip or as the origin of NHB trip.
+Trip attraction - this is defined as the home end of an HB trip or the destination of NHB trip.
+ </span></li>
+
+      <li>What are zones?<br>
+		  <span class="answers">If one person goes for the work and then from the work place he goes to workshop then zones behaves as trip production and attraction zone</span></li>
+      
+      <li>What are Intra-zonal and Inter-zonal trip ?<br>
+		  <span class="answers">Trip generation rates are average rates used to estimate how much traffic a specific land use will produce. For example, the amount of traffic generated by a group of homes is different from a business park.</span></li>
+      <li>What are other method of trip distribution ?<br>
+		  <span class="answers">Regions within the study area that contain homogenous land uses and can be described accurately by only a few variables.</span></li>
+    </ul>
+                        </div>
+                    </div>
+                </section>
+        </div>
+        </article>
+	
+
+        <footer  class="footer">
+            <!-- Put the content here -->
+            <div style="margin-left:40%; margin-right:40% ">
+            <a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+            </div>
+      </footer> 
+    </div>
+</body>
+</html>

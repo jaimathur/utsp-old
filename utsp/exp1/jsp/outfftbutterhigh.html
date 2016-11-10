@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+
+<script language="JavaScript" type="text/javascript">
+//  Published at: scripts.tropicalpcsolutions.com
+var reloaded = false;
+var loc=""+document.location;
+loc = loc.indexOf("?reloaded=")!=-1?loc.substring(loc.indexOf("?reloaded=")+10,loc.length):"";
+loc = loc.indexOf("&")!=-1?loc.substring(0,loc.indexOf("&")):loc;
+reloaded = loc!=""?(loc=="true"):reloaded;
+
+function reloadOnceOnly() {
+    if (!reloaded)
+        window.location.replace(window.location+"?reloaded=true");
+}
+reloadOnceOnly(); //You can call this via the body tag if desired
+</script>
+<title>Edge Output</title>
+</head>
+
+<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')">
+
+<p>
+<b>ORIGINAL IMAGE</b></p>
+
+<p>
+<img border="0" src="uploads/kkt/out_original_img.jpg"></p>
+<p><b>SPECTRUM MAGNITUDE OF IMAGE</b></p>
+<p>
+<img border="0" src="uploads/kkt/out_magnitude_spectrum_ALL.jpg"></p>
+
+<p>OUTPUT OF BUTTERWORTH FILTER</p>
+<p>
+<img border="0" src="uploads/kkt/out_filtered_image_BW_highpass.jpg"></p>
+
+</body>
+
+</html>

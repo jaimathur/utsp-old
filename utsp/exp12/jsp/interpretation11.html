@@ -1,0 +1,152 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="interpretation11_files/filelist.xml">
+
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of&nbsp; Maximum 
+        Likelihood Classification Outputs</font></b></p>
+        <p class="MsoNormal" style="text-align:justify">The image below is a 
+        composite image generated from Red, Green and Blue bands of sam1.jpg 
+        image. </p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:6in;
+ height:316.5pt'>
+ <v:imagedata src="interpretation11_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=422
+src="interpretation11_files/image002.jpg" v:shapes="_x0000_s1025"><![endif]></b></p>
+        <p class="MsoNormal" style="text-align:justify">You might have noticed 
+        few different features in the color composite image. For example, the 
+        patches in dark red represent forest, light red to pinkish patches 
+        represent vegetation (plants, shrubs etc), black patches represent water 
+        bodies, cyan area represent urban/built-up areas and darkish green 
+        patches along the larger water body (on left) represent muddy lands and 
+        the white shades on the same water body represent turbid water.</p>
+        <p class="MsoNormal" style="text-align:justify">For demonstration 
+        purpose let’s say that there are six features/classes-forest, water 
+        bodies, urban/built-up, muddy lands, vegetation and turbid water. You 
+        will need to take samples of these different features. The sampling 
+        process may look like that is showed in the figure below.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:450pt;height:306pt'>
+ <v:imagedata src="interpretation11_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=600 height=408
+src="interpretation11_files/image004.jpg" v:shapes="_x0000_s1026"><![endif]></p>
+        <p class="MsoNormal">Now, after taking sample training data (pixels 
+        representing features) from the image you will feed this to the MLC 
+        experiment. What you feed is the coordinates of these rectangular 
+        patches. Please refer to the related procedure provided within procedure 
+        tab in main menu.</p>
+        <p class="MsoNormal">The program will generate a classified image (color 
+        image in jpeg format). In addition to this you will also be provided 
+        with generic binary classified image for using it later in accuracy 
+        assessment. Anyway, after classification is successfully implemented on 
+        the above sample image we have the classified image, shown below. Please 
+        notice the different patches are distinguished by different colors. </p>
+        <p class="MsoNormal"><b>CLASSIFIED IMAGE</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:6in;height:316.5pt'>
+ <v:imagedata src="interpretation11_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=422
+src="interpretation11_files/image006.jpg" v:shapes="_x0000_s1027"><![endif]></b></p>
+        <p class="MsoNormal">So, here</p>
+        <p class="MsoNormal">DARK BLUE area- represents FOREST</p>
+        <p class="MsoNormal">CYAN area- represents URBAN/BUILT-UP</p>
+        <p class="MsoNormal">ORANGE area- represents MUDDY LANDS</p>
+        <p class="MsoNormal">YELLOW area – represents TURBID WATER</p>
+        <p class="MsoNormal">LIGHT GREEN –represents clean WATER</p>
+        <p class="MsoNormal">NAVY BLUE –represents VEGETATION</p>
+        <p class="MsoNormal">&nbsp;</td>
+  </tr>
+</table>
+  
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

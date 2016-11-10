@@ -1,0 +1,262 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="interpretation8_files/filelist.xml">
+
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of Indices Outputs</font></b></p>
+<p align="justify">Here we will discuss how to interpret the outputs produced by experiment 
+8, 
+i.e., Indices. So, please follow the steps as shown below to get the sample 
+output for interpretation.</p>
+<p align="justify">1) Select &quot;inputimage&quot; as your experimental image.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage&quot; is a satellite image having 6 bands stored in BIL format as raw 
+image. It has the dimension 801x1401. Since in our discussion we will cover upto 
+its 4th band, so it is necessary to understand that what the first 4 bands of 
+this image represents. The first four bands are as follows: blue, green, red and 
+infra-red respectively.</p>
+<p align="justify">2) Select  operation as &quot;Normalized Difference Vegetation 
+Index&quot;</p>
+<p align="justify">All indices uses simple band arithmetic's like band addition, 
+subtraction, division. For simple division, one can operate &quot;Simple Ration&quot; 
+while other operations uses these simple band arithmetic's in combination. Here 
+we are going to interpret the output of Normalized difference vegetation index 
+according to the mathematical expression behind it. Other operation can also be 
+interpreted in similar way.&nbsp;&nbsp; </p>
+<p align="justify">3) Select &quot;3&quot; as Red band and &quot;4&quot; as NIR band</p>
+<p align="justify">Each operation requires specific bands to be supplied. Here 
+we will need Red band and Near infrared band. In our image &quot;inputimage&quot;, 4th 
+band corresponds to NIR band while 3rd band corresponds to Red band. </p>
+<p align="justify">4) Click on &quot;Process&quot; button</p>
+<p align="justify">You will get following images as output :</p>
+<p align="justify"><i><b>Bands used for indexing :</b></i></p>
+<p align="justify"><b><i>Red band</i></b> </p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp8_red.jpg" width="647" height="372"></p>
+<p align="justify">
+<i><b>NIR band</b></i></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp8_nir.jpg" width="647" height="370"></p>
+<p align="justify">
+<i><b>Output of Normalized difference vegetation index :</b></i></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp8_ndvi.jpg" width="647" height="374"></p>
+<p align="justify"><i><b>Interpretation of NDVI</b></i></p>
+<p align="justify">NDVI is calculated at each pixel NDVI(m,n) as:</p>
+<p align="justify">NDVI(m,n) = [IR (m, n) &#8722; Red (m, n)] / [IR (m, n) + Red (m, 
+n)]</p>
+<p align="justify">where m and n are row and column position of pixel in the 
+image, IR and Red are infrared band and red band in the image respectively.</p>
+<p align="justify"><b>Why Red and Infrared band?</b></p>
+<p align="justify">Normalized difference vegetation index sets the pixel values 
+to peek for pixels corresponding to high vegetation. From the graph below one 
+can can notice that for vegetation the spectral response is very high in near 
+infrared region while it is very low in red wave band. So the difference in near 
+infrared and red band is highest for the pixels corresponding to high vegetation 
+area. That is the reason we are performing (IR-Red) in the numerator of NDVI. 
+The denomenator (IR +&nbsp; Red) is used to normalize the values of (IR-Red) to 
+have the NDVI values in the range of -1 to +1.</p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp8_graph.jpg" width="625" height="341"></p>
+<p align="justify">For displaying the NDVI result as an image scaling of NDVI 
+values has to be done so that pixel values will range from 0 to 255 according to 
+their NDVI values.</p>
+<p align="justify">From the output NDVI image for our experiment you can easily 
+say that the brightest regions are region of high vegetation and as the 
+brightness fades out the strength of vegetation is decreases.</p>
+        <p class="MsoNormal"><b>Mathematical Operations and Vegetation Indices</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:6in;
+ height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image002.jpg" v:shapes="_x0000_s1025"><![endif]></b></p>
+        <p class="MsoNormal">The image shown above is a false color composite of 
+        sample image “inputimage”. Please note that reddish regions are all 
+        vegetation.</p>
+        <p class="MsoNormal"><b>Simple ratio</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:6in;height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image004.jpg" v:shapes="_x0000_s1026"><![endif]></b></p>
+        <p class="MsoNormal" style="text-align:justify">You can easily make out 
+        that the vegetation areas are highlighted here. These areas are more 
+        brighter than other areas. This is one of the use of simple ratioing of 
+        two bands to highlight the large difference in corresponding gray 
+        values. All the white colored areas represent vegetation. Also the 
+        health of the vegetation can be inferred from the brightness levels. For 
+        example more bright areas represent very healthy vegetation and this 
+        health decreases as the brightness values decrease.</p>
+        <p class="MsoNormal"><b>Square Root&nbsp;</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:6in;height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image006.jpg" v:shapes="_x0000_s1027"><![endif]></b></p>
+        <p class="MsoNormal" style="text-align:justify">Comparatively the square 
+        root method highlights vegetation areas more outstandingly than the 
+        previous method. All the white colored areas represent vegetation. Also 
+        the health of the vegetation can be inferred from the brightness levels. 
+        For example more bright areas represent very healthy vegetation and this 
+        health decreases as the brightness values decrease.</p>
+        <p class="MsoNormal"><b>Normalised Difference Vegetation Index</b></p>
+        <p class="MsoNormal" style="text-align:justify">It is another technique 
+        for studying vegetation over a certain area. It gives much better 
+        results than ratio or square root methods. An NDVI image is shown below. 
+        All the white colored areas represent vegetation. Also the health of the 
+        vegetation can be inferred from the brightness levels. For example more 
+        bright areas represent very healthy vegetation and this health decreases 
+        as the brightness values decrease.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='width:6in;height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image008.jpg" v:shapes="_x0000_s1028"><![endif]></p>
+        <p class="MsoNormal"><b>Vegetation Index</b></p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shape
+ id="_x0000_s1029" type="#_x0000_t75" style='width:6in;height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image010.jpg" v:shapes="_x0000_s1029"><![endif]></b></p>
+        <p class="MsoNormal" style="text-align:justify">Vegetation Index is also 
+        a measure of vegetation present over an area. All the white colored 
+        areas represent vegetation. Also the health of the vegetation can be 
+        inferred from the brightness levels. For example more bright areas 
+        represent very healthy vegetation and this health decreases as the 
+        brightness values decrease.</p>
+        <p class="MsoNormal"><b>Normalized Difference Water Index</b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1030" type="#_x0000_t75" style='width:6in;height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image012.jpg" v:shapes="_x0000_s1030"><![endif]></p>
+        <p class="MsoNormal">Water content in vegetation can estimated by NDWI. 
+        Vegetation with lower water content is brighter compared to others.</p>
+        <p class="MsoNormal"><b>Enhanced Vegetation Index</b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1031" type="#_x0000_t75" style='width:6in;height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image013.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image014.jpg" v:shapes="_x0000_s1031"><![endif]></p>
+        <p class="MsoNormal">Pixels representing vegetation will have lower EVI 
+        values. It can observed from the figure that builtup area are 
+        highlighted while vegetation areas are dark.</p>
+        <p class="MsoNormal"><b>Soil Adjusted Vegetation Index (SAVI) and 
+        Modified SAVI</b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1032" type="#_x0000_t75" style='width:6in;height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image015.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image016.jpg" v:shapes="_x0000_s1032"><![endif]></p>
+        <p class="MsoNormal" style="text-align:justify">Image shown above is the 
+        soil adjusted vegetation index which means soil reflectance is taken 
+        into account. This is to improve assessing vegetation canopy. All the 
+        white colored areas represent vegetation. Also the health of the 
+        vegetation can be inferred from the brightness levels. For example more 
+        bright areas represent very healthy vegetation and this health decreases 
+        as the brightness values decrease.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1033" type="#_x0000_t75" style='width:6in;height:246.75pt'>
+ <v:imagedata src="interpretation8_files/image017.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=576 height=329
+src="interpretation8_files/image018.jpg" v:shapes="_x0000_s1033"><![endif]></p>
+        <p class="MsoNormal" style="text-align:justify">The image shown above is 
+        modified soil adjusted vegetation index image. This is considered to be 
+        best way to evaluate vegetation canopy over an area. The pixels with 
+        vegetation have higher MSAVI than others. Thus the brighter portions are 
+        all vegetation.</td>
+  </tr>
+</table>
+   
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Viewing Satellite Images in different Band Combinations</title>
+<script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" colspan="3">
+    <p style="margin-bottom: 14"><b><font size="5">Frequently Asked Questions</font></b></td>
+  </tr>
+  <tr>
+    <td>
+    <p style="line-height: 150%">
+    <b>
+    <font color="#000000">Q 1. What does user requires to have to be able to use 
+    virtual satellite image processing and analysis lab?</font></b></p>
+    
+
+    <p style="line-height: 150%" align="justify">
+    Ans : Virtual Satellite image processing and analysis lab setup only 
+    requires internet connection and a web browser at the student's end to 
+    connect to the lab. The lab is self-contained, with sample images, aim, 
+    theory, procedure, actual experiment and interpretation of the results. It 
+    is highly recommended to use v-SIPAL in mozilla firefox or google chrome and 
+    have adobe flash player installed in you PC.</p>
+    
+
+    <p style="line-height: 150%" align="justify">
+    <b>Q
+    <font color="#000000">2. Which image formats are supported?</font></b></p>
+    
+
+    <p style="line-height: 150%" align="justify">
+    Ans : v-SIPAL supports all basic image formats like JPEG, BMP, TIFF, geoTIFF. 
+    In addition to these, raw satellite images can also be used with header file 
+    having an extension (.hdr)</p>
+    <p style="line-height: 150%" align="justify">
+    <b>Q
+    <font color="#000000">3. Are sample images there for users?</font></b></p>
+    <p style="line-height: 150%" align="justify">
+    Ans : Each user is provided with two sample images :&nbsp; Sample 1 is a raw 
+    satellite image with 6 bands, Sample 2 is a jpeg file with 3 bands.</p>
+    <p style="line-height: 150%" align="justify">
+    <b>Q
+    <font color="#000000">4. Is there any restriction on image size to upload?</font></b></p>
+    <p style="line-height: 150%" align="justify">
+    Ans : One can upload images of any size. But it is highly recommended to not 
+    upload images having dimensions more than 2048x2048.</p>
+    <p style="line-height: 150%" align="justify">
+    <b>Q
+    <font color="#000000">5. Can user download the output images?</font></b></p>
+    <p style="line-height: 150%" align="justify">
+    Ans : Yes. User can download output images and histograms by just right 
+    clicking on them and then clicking on &quot;Save image as&quot;.</p>
+    </td>
+    
+  </tr>
+</table>
+
+
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+
+
+</body>
+<script language = "javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+
+function changeAim1()
+{
+	document.getElementById("label_detail").innerHTML="To view single band or color composite, subset image and its pixel data of raw satellite image or general image formats with image histogram.";
+	
+}
+function changeAim2()
+{
+	document.getElementById("label_detail").innerHTML="To enhance the contrast of input raw satellite image or image with general formats through various enhancement methods such as Linear Stretching, enhancement using Standard Deviation, Histogram Equalization, etc.";
+	
+}
+function changeAim3()
+{
+	document.getElementById("label_detail").innerHTML="To smoothen the input raw satellite image or image with general formats using various smoothing filters such as Average filter, Weighted Average filter, Gaussian Smoothing, etc.";
+	
+}
+function changeAim4()
+{
+	document.getElementById("label_detail").innerHTML="To generate Principal components of the input raw satellite image or image with general formats and also get the inverse PCA with required number of principal components.";
+	
+}
+function changeAim5()
+{
+	document.getElementById("label_detail").innerHTML="To get edge magnitude image from the corresponding input raw satellite image or image with general formats through various edge operators such as Robert operator, Sobel operator, Prewitt operator, etc.";
+	
+}
+function changeAim6()
+{
+	document.getElementById("label_detail").innerHTML="To get fourier spectrum of the input raw satellite image or image with general formats, apply gaussian and butterworth filtering to the same.";
+	
+}
+function changeAim7()
+{
+	document.getElementById("label_detail").innerHTML="To apply various morphological operations, such as Erosion, Dilation, Boundary Detection, Top-hat tranform,etc., on specific bands of the input raw satellite image or image with general formats.";
+	
+}
+function changeAim8()
+{
+	document.getElementById("label_detail").innerHTML="To apply band arithmetic and get standard indices, such as Normalized Vegetation Index, Soil Adjusted Vegetation Index, etc., on the input raw satellite image or image with general formats.";
+	
+}
+function changeAim9()
+{
+	document.getElementById("label_detail").innerHTML="To apply K-means clustering with user defined number of classes and maximum number of iterations on the input raw satellite image or image with general formats.";
+	
+}
+
+function blankAim()
+{
+	document.getElementById("label_detail").innerHTML="";
+
+}
+</script>
+
+</html>

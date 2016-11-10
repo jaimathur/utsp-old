@@ -1,0 +1,226 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="interpretation6_files/filelist.xml">
+
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of Discrete 2D Fourier Transform Outputs</font></b></p>
+<p align="justify">Here we will discuss how to interpret the outputs produced by experiment 
+6, 
+i.e., Discrete 2D Fourier Transform. So, please follow the steps as shown below to get the sample 
+output for interpretation.</p>
+<p align="justify">1) Select &quot;inputimage&quot; as your experimental image.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage&quot; is a satellite image having 6 bands stored in BIL format as raw 
+image. It has the dimension 801x1401. Since in our discussion we will cover up 
+to 
+its 4th band, so it is necessary to understand that what the first 4 bands of 
+this image represents. The first four bands are as follows: blue, green, red and 
+infra-red respectively.</p>
+<p align="justify">2) Select band 4 for red band, band 3 for green band and band 2 for blue 
+band.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+As according to the theory described in theory section of Virtual Lab, we 
+already know that a standard FCC uses infra-red wave band as red display, red 
+wave band as green display and green wave band as blue display. So, the same we 
+are doing here to get the standard FCC of &quot;inputimage&quot;.</p>
+<p align="justify">3) Select &quot;Spectrum Only&quot; for operation option</p>
+<p align="justify">In Fourier transform actually what we are intended to do is 
+to get the magnitude of fourier transform as image. i.e., magnitude spectrum of 
+fourier transform. After understanding the basics of magnitude spectrum of 
+fourier transform, one can perform any filtering operation which can work in 
+frequency domain rather than time domain. Here, we are going to describe the 
+spectrum in terms of what the centre point of spectrum reveals?, where low and 
+high frequency components reside?</p>
+<p align="justify">4) For getting spectrum of a particular band in addition to 
+combined spectrum of three bands, select band. Here we will select &quot;Red&quot;</p>
+<p align="justify">5) Click on &quot;Process&quot; button</p>
+<p align="justify">You will get following as outputs :</p>
+<p align="justify">Original Image </p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp1_fcc.jpg" width="652" height="363"></p>
+<p align="justify"><i><b>Magnitude spectrum for the color composite</b></i></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp6_spectrum_All.jpg" width="652" height="377"></p>
+<p align="justify"><i><b>Magnitude spectrum for Red band</b></i></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp6_spectrum1.jpg" width="651" height="374"></p>
+<p align="justify"><i><b>Interpretation from spectrum</b></i></p>
+<p align="justify">The spectrums shown to you as outputs are actually 
+transformed spectrums. The (0,0) in original spectrum lies at top left corner 
+while for better understanding it is transformed to the centre of spectrum.</p>
+<p align="justify"><i><b>High frequency components of image</b></i></p>
+<p align="justify">The centre of the spectrum shows the lowest frequency 
+component in the original image and increases radially away from the centre.</p>
+<p align="justify"><i><b>Low frequency components of image</b></i></p>
+<p align="justify">Points away from the centre shows the high frequency 
+components in the original image.</p>
+<p align="justify"><i><b>Edges</b></i></p>
+<p align="justify">If you are able to see some linear features in the spectrum 
+then those are revealing edge components in image and there directions shows the 
+major edge directions in image.</p>
+<p align="justify"><i><b>How to perform filtering?</b></i></p>
+<p align="justify">Using any filter which can operate in frequency domain like 
+Gaussian and Butterworth filter (see theory for details), can be used to perform 
+two basic filtering operations : Low pass filtering and High pass filtering.</p>
+<p align="justify"><i><b>Low pass filtering</b></i></p>
+<p align="justify">Low pass filtering using spectrum is done as :</p>
+<p align="justify">First we choose the low pass band according to the parameters 
+specific to applied method (Gaussian or Butterworth)</p>
+<p align="justify">Then we have to take the inverse fourier transform for the 
+output of first step and we get the desired low pass filtered image</p>
+<p align="justify"><i><b>High pass filtering</b></i></p>
+<p align="justify">High pass filtering using spectrum is done as :</p>
+<p align="justify">First we choose the high pass band according to the 
+parameters specific to applied method (Gaussian or Butterworth)</p>
+<p align="justify">Then we have to take the inverse fourier transform for the 
+output of first step and we get the desired high pass filtered image.</p>
+        <p class="MsoNormal"><b><span style="font-size:14.0pt">Gaussian 
+        filtering in frequency domain</span></b></p>
+        <p class="MsoNormal">The first figure represents the original image (quickbird.jpg) 
+        while second is the <b>lowpass</b> filtered image. Observe the blurring 
+        in areas enclosed in oval figures by comparing both images. All the high 
+        frequency components that fall beyond the radius specified (sigma1) are 
+        attenuated and low frequency components are kept in tact.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:173.25pt;
+ height:208.5pt'>
+ <v:imagedata src="interpretation6_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation6_files/image002.jpg" v:shapes="_x0000_s1025"><![endif]></p>
+        <p class="MsoNormal">&nbsp;</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:420pt;height:297.75pt'>
+ <v:imagedata src="interpretation6_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=560 height=397
+src="interpretation6_files/image004.jpg" v:shapes="_x0000_s1026"><![endif]></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation6_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation6_files/image006.jpg" v:shapes="_x0000_s1027"><![endif]></p>
+        <p class="MsoNormal">The figure above represents <b>Gaussian high pass 
+        filtering</b> in frequency domain. The edges are associated with high 
+        frequency components. Similarly there are other areas where one would 
+        find abrupt changes in gray levels. All such areas correspond to high 
+        frequency components. In high pass filtering the low frequency 
+        components which fall within a radius specified by sigma are cut off 
+        from the image. Hence only high frequency components remain. Observe 
+        that edges and other areas come up in the above image.&nbsp;</p>
+        <p class="MsoNormal"><b><span style="font-size:14.0pt">Butterworth 
+        filtering in frequency domain</span></b></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation6_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation6_files/image008.jpg" v:shapes="_x0000_s1028"><![endif]></p>
+        <p class="MsoNormal">The image shown above is <b>butterworth lowpass</b> 
+        filtered image of quickbird.jpg sample image. Observe the blurring 
+        effect the lowpass filtering has produced. This filtering was done with 
+        sigma1=2 and sigma2=2. You should note in lowpass filtering the high 
+        frequency components are suppressed. Hence the edges, which belong to 
+        high frequency components are blurred or made less sharp.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1029" type="#_x0000_t75" style='width:175.5pt;height:208.5pt'>
+ <v:imagedata src="interpretation6_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=234 height=278
+src="interpretation6_files/image010.jpg" v:shapes="_x0000_s1029"><![endif]></p>
+        <p class="MsoNormal">The image shown above is the result of <b>high pass 
+        butterworth</b> filtering. All the low frequency components are 
+        suppressed here. Edges and other regions associated with high frequency 
+        components are improved.</p>
+<p align="justify">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+   
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

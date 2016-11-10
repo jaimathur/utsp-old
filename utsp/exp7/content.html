@@ -1,0 +1,1239 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category Analysis | Trip Generation</title>
+</head>
+
+<body>
+    <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in 
+      text-->
+            <img src="../images/logo.jpg"></div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+                <a href="../index.html">Civil Lab</a>
+            </div><!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+        </header><!-- The lab article is the main content area where all the 
+   content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+              Calibration of Doubly Constrained Gravity Model
+            </header><!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav><!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+
+            <div id="experiment-article-sections">
+                <!-- First section of the article-->
+
+                <section id="experiment-article-section-1">
+                    <div class="icon" id="experiment-article-section-1-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/introduction.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-1-heading">
+                        Aim
+                    </div><!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+
+                    <div class="content" id=
+                    "experiment-article-section-1-content">
+                        <div class="divContent">
+                          
+                            <p><span style=
+                            "font-size: medium; font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To determine the numerical value of the parameter α or β or c depending on the friction factor function that fixes the model to one that produces the base year observations.</span></p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><span style=
+                            "font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            <strong><span style=
+                            "font-size: large;">Objective:-</span></strong></span></p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><!-- p { margin-bottom: 0.21cm; } --></p>
+
+                            <p style="margin-bottom: 0cm;"><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>1.To understand the calibration of Singly Constrained Gravity Model. <br />2.To solve example of Singly Constrained Gravity Model through calibration.<br/></span></p>
+
+                            <!--<p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;"><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.
+                            Study effect of various parameters on RTD
+                            performance<br></span></p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(0, 0, 0);">
+                            <br></span></p> -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Second section of the article-->
+        <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/objective.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-3-heading">
+                        Theory 
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-3-content">
+                        <div class="divContent">
+                            <p><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+&lt;w:Zoom&gt;0&lt;/w:Zoom&gt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";}
+&lt;/style&gt;
+&lt;![endif]--></p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            &nbsp;</p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            Introduction <hr></span></b> <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            </span></b><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;/w:LatentStyles&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 10]&gt;
+&lt;style&gt;
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+&lt;![endif]--><span lang="EN-IN" style=
+'font-size: 12pt; font-family: "Verdana","sans-serif";'><br></span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'><br></span></p>
+
+                            <p class="MsoNormal" style=
+                            "line-height: 150%; text-align: right;"><a href=
+                            "http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;">
+                            Back To Experiment List</span></a></p>
+                            <!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <p class="PreformattedText"><span style='font-size: 12pt; font-family: "Verdana","sans-serif";'>
+Calibration is an important step as it estimates the value of α or β or c depending on the friction factor function in the gravity equation given below such that the model best fits the base year observations. Thus proper value of c fixes the relationship between the travel time factor and the interzonal impedance. Initially a value of c is assumed and applied using a base year observation of production, attraction and impedance to compute interzonal volumes which are then compared with the observed volume of the base year condition. If the value obtained of c gives close to the observed value then it can be used otherwise its value is changed and further iteration is done. Iteration is carried until sufficient convergence value of c is obtained. For calibration generally friction factor F is used rather than parameter c.</span>
+								</p>
+								<br/> 
+<img src="img/1.png"> <br/> 
+<img src="img/2.png"> <br/>																																																	
+<p> If the calibration is correct the observed and the simulated calculations will match but if they donot then a set of values of Friction Factor is calculated using the following expression: <br>
+F′=FOD%GM% <br>
+F' = Friction factor to be used in next iteration <br/>
+F = Friction used in calibration just completed <br>
+OD% = Percentage of total trips occuring for a given travel time observed in a travel survey <br>
+GM% = Percentage of total trips occuring for a given travel time obtained from Gravity model <br>
+							</p>
+							<p>
+This iteration is carried on till the trip length frequency curve of the observed and calculated value is obtained. The final phase of calibration procedure includes the calculation of zone to zone adjustment factor.<br>
+kij=rij[(1−xi)(1−xirij)]<br>
+kij = Adjustment factor applied to movements between zone i and j<br>
+rij = (number of trips obtained from OD survey ) / (number of trips obtained from gravity model)<br>
+xi = (Number of trips obtained from OD survey) / pi<br>
+The mathematical models used for Trip Distribution Model are as follows:<br>
+
+    1.Calibration of single constrained gravity model.<br/>
+    2.Calibration of doubly constrained gravity model.<br/>
+		</p>
+							<p style="color:Blue">Calibration of Singly Constrained Gravity Model</p><hr>
+							The steps involved for calibration of doubly constraint model is given below:<br/>
+			<ol>				<li>.Assume a trial value of β.</li>
+    		<li>.Constraint any one either Trip Production (Origin) or Trip Attraction (Destination), suppose Origin is constraint (Remember: constraint is with respect to future trips).</li>
+    <li>A mathematical function that is selected in order to find the friction factor is calculated.</li>
+    <li>These values are substituted in the gravity model, the calculated destination values are compared with the future values, and the error between the two is calculated with the help of Residual Standard Square of Errors.</li>
+    <li>This error is minimised for an optimised value of β.</li>
+	<li>At the end of the calibration we get an optimised value of β.</li> 
+							</ol>				
+<br>																												
+							<p style="color:Blue">Example</p><hr><br/><br/>Calibration of Singly Constrained Gravity Model (Origin)<br/>
+<img src="img/3.png" ><br/>
+<table class="table table-bordered table-hover">
+<caption>Trip Matrix with respect to Optimal Beta Value (Minimum SSE)</caption>
+<tbody><tr><th>Zone</th><th>1</th><th>2</th><th>3</th></tr>
+<tr><td>1</td><td>1794</td><td>735</td><td>1240</td></tr>
+<tr><td>2</td><td>661</td><td>220</td><td>562</td></tr>
+<tr><td>3</td><td>745</td><td>182</td><td>1601</td></tr>
+</tbody></table><br/>
+Minimum Residual = 4567836.6438594 <br/>
+Optimal Beta = 0.103 <br/>
+<img src="img/4.png"><br/> <br/>
+<p style="color:Blue" >References </p><hr> <br/><p style="color:Blue" > Books </p>
+<p style="text-align:justify">1.J. De D. Ortuzar and L.G. Willumsen (1996), Modelling Transport. Wiley Publications, London. <br/>
+2.C. S. Papacostas and P. D. Prevedouros (2001), Transportation Engineering & planning. Prentice-Hall of India, New Delhi.<br/>
+</p>
+</div>
+</div>
+</section>              <section id="experiment-article-section-5">
+                    <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-5-heading">
+                        Experiment
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-5-content">
+                        <div class="divContent">
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>Input files needed </span></p>
+							<hr>
+						 <br>
+							<ul>
+								<li> 
+   Origin Destination trip data for base year. 
+								</li>
+								
+								<li> 
+   Origin Destination trip cost for base year. 
+								</li>
+							</ul>
+							<br>
+				
+							<br>
+							<p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>Experiment </span></p>
+							<hr>
+							<br>
+<p><span class="title1"><a href="applet/CaliGrav.php" onclick="fullScreen('applet/CaliGrav.php')" ;="" style="text-decoration: underline;">Click Here to Perform Experiment with JAVA based Simulation</a></span></p>					<br>		
+<p><span class="title1"><a href="CaliSingMod.php" style="text-decoration: underline;">Click Here to Perform Experiment with PHP based Simulation</a></span></p>							<br><p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";color: blue'>See the default Excel / CSV input files for file format:</span></p>
+							<hr>
+					<br><br><table>
+<tr>
+<th>Download &amp;<br> Save each of these files to perform experiment.</th>
+<th>Click on the icon to download &amp;<br> Save all XLS/CSV files in zip format.</th>
+</tr>
+<tr>
+<td>
+<span class="title1"><a href="Docs/cost_clab.xls"><img src="img/SmallXLS.jpg" alt="Excel" style="width:5%;height:5%">  (Click Here) For Cost Matrix File (xls)</a></span>
+<br><span class="title1"><a href="Docs/trip_calib.xls"><img src="img/SmallXLS.jpg" alt="Excel" style="width:5%;height:5%"> (Click Here) For Base Year Trip Matrix File (xls)</a></span>
+<td align="center" valign="top">
+<span class="title1">All XLS Files in zip format</span>
+<p><a href="Docs/CategoryAnalysis.zip"><img style="display: block; margin-left: auto; margin-right: auto;width:10%;height:10%" src="img/XLS.JPG" alt="Excel"></a></p>
+</td>
+</tr>
+<tr><td>
+<span class="title1"><a href="Docs/cost_calbcsv.csv"><img src="img/SmallCSV.jpg" alt="CSV" style="width:5%;height:5%">(Click Here) For Cost Matrix File (csv)</a></span>
+<br><span class="title1"><a href="Docs/trip_calibcsv.csv"><img src="img/SmallCSV.jpg" alt="CSV" style="width:5%;height:5%"> (Click Here) For Base Year Trip Matrix File (csv)  </a></span>
+<td align="center" valign="top">
+<span class="title1">All CSV Files in zip format</span>
+<p><a href=".Docs/CategoryAnalysisCSV.zip"><img style="display: block; margin-left: auto; margin-right: auto;width:10%;height:10%" src="img/CSV.JPG" alt="CSV"></a></p>
+</td>
+</tr>
+</table>
+						</div>
+                    </div>
+                </section>
+
+				
+				
+				
+				
+				
+                <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Procedure
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-4-content">
+                        <div class="divContent">
+							<hr>
+							<br>
+							<p style="text-align:justify;color:blue"><b>Step 1 </b></p>
+							<hr>
+							<br>
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            &nbsp;<b>Click on ‘Click Here To Perform Experiment with GUI’.<br>
+In order to start with the experiments make sure that the input files are available in the format given in the default file. The default file can be downloaded from the table as shown in the image </b></span></p>
+<hr>
+							
+						<br><center><img src="img/img_1.bmp"></center>
+							<br>
+							<br>
+							<br>
+							<p style="text-align:justify;color:blue"><b>Step 2 </b></p>
+							<hr>
+							
+                            <p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            Go to Model in order to perform Calibration of Doubly Constrained Gravity Model. Browse the required input file.</span></p>
+							<br>
+							<center><img src="img/img_2.bmp"></center>
+							<br>
+							<br>
+							<br>
+							
+							<p style="text-align:justify"> Select the required Frictional Function among the two functions given below </p><br>
+						
+							<br>
+							<br>
+							
+							<center><img src="img/img_3.bmp"></center>
+							<img src="img/19.png" style="height:10%;width:97%;">
+							
+							<br>
+							<br>
+							<p style="text-align:justify">Individual Cell or All cells Model can be performed according to the requirement the select the percentage of accuracy. After given the required data click on 'OK' in order to get the output. </p>
+							<br>
+							<br>
+							<p style="text-align:justify;color:blue"><b>Step 3</b></p>
+							<hr>
+								
+                            <p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            Sample of the output is given below. Save the output by clicking on ‘File‘. The graph can also be saved in the form of image(.png).</span></p>
+							<br>
+							<center><img src="img/img_4.bmp"></center>
+							<br>
+							<br>
+								
+                            <p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+Graphical representation of the output while finding optimal Beta value can also be viewed. Sample image is given below.</span></p>
+							<br>
+							<center><img src="img/img_5.bmp"></center>
+							<br>
+							<br>
+							
+							
+							
+							<p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+								Demo Video to run PHP Based Experiment</span></p>
+							<hr>
+							<br>
+							
+		<center>
+<video id="0" controls="" width="640" height="400">
+  <source src="video/CaliberationPHP.mp4" type="video/mp4">
+  <source src="video/CaliberationPHP.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/CaliberationPHP.webm" type="video/webm">
+  <object data="video/CaliberationPHP.mp4" width="640" height="400">
+    <embed src="video/CaliberationPHP.swf" width="640" height="400">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+							<br>
+							<br>
+							<p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%"><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+								Demo Video to run Java Based Experiment</span></p>
+							<hr>
+							<br>
+				<center>
+<video id="0" controls="" width="640" height="400">
+  <source src="video/Caliberation2.mp4" type="video/mp4">
+  <source src="video/Caliberation2.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/Caliberation2.webm" type="video/webm">
+  <object data="video/Caliberation2.mp4" width="640" height="400">
+    <embed src="video/Caliberation2.swf" width="640" height="400">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+						</div>
+					</div>
+				</section>
+
+                <section id="experiment-article-section-6">
+                    <div class="icon" id="experiment-article-section-6-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-6-heading">
+                        Self Evaluation
+                    </div>
+					
+                    <div class="content" id=
+                    "experiment-article-section-6-content">
+			<hr>
+						<div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">1)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Estimation of β is an iterative procedure.
+
+ 
+												</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6058" name="ans0"
+                                                        type="radio" value=
+                                                        "6058"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6058">True</label></td>
+                                                    </tr>
+
+													<tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6058" name="ans0"
+                                                        type="radio" value=
+                                                        "6058"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6058">False</label></td>
+                                                    </tr>
+
+                          
+												</table>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">2)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Which of the following are friction functions? </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> Exponential function</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> Power Function</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6062" name="ans1"
+                                                        type="radio" value=
+                                                        "6062"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6062">All of these</label></td>
+                                                    </tr>
+													
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6062" name="ans1"
+                                                        type="radio" value=
+                                                        "6062"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6062">None of these</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                  <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">3)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Calibration of gravity model is same as the calibration of simple linear regression model.  </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">  True </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> False</label></td>
+                                                    </tr>
+												</table>
+													</tr>
+                                    </table>
+                                  <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">4)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">The observed trip distribution is same as the estimated trip distribution matrix at convergence of β. </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> False</label></td>
+                                                    </tr>
+												</table>
+													</tr>
+                                    </table>
+
+
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">5)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Calibration mainly depends on </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> Frictional function  </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> Impedance function </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">  Both  </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> Neither</label></td>
+                                                    </tr>
+
+                                                </table>
+                                        </tr>
+                                    </table>
+
+									
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">6)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Optimal Beta value is obtained when  </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">    Residual error is maximum   </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">   Residual error is minimum  </label></td>
+                                                    </tr>
+													
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">  Maximum no of iteration  </label></td>
+                                                    </tr>
+													
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060">  None of the above</label></td>
+                                                    </tr>
+
+                                                </table>
+                                            </tr>
+                                    </table>
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">7)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">The value of Beta obtained from Origin Constrained and from destination Constrained are same </span></td>
+
+                                            <td colspan="3" width="3%"
+                                            &nbsp;></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">True </label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061"> False </label></td>
+                                                    </tr>
+                                                </table>
+										</tr>
+									</table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">8)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">If future year Trip Matrix file is used as input file for this experiment, the value of beta changes  </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">  True</label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">  False </label></td>
+                                                    </tr>
+                                                </table>
+										</tr>
+									</table>
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">9)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Travel cost matrix is calculated using which factors  </span></td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="90%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">  Time and distance  </label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">   Number of trips  </label></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6061" name="ans1"
+                                                        type="radio" value=
+                                                        "6061"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6061">   Number of person per household  </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6060" name="ans1"
+                                                        type="radio" value=
+                                                        "6060"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6060"> Difference between the travel cost of the trips produced and attracted for a pair of zones  </label></td>
+                                                    </tr>
+
+                                                </table>
+                                            </tr>
+                                    </table>
+                                    <div id="hint">
+                                        <div id="textHint11" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                   
+                                    <input align="middle" id="loadTime" name=
+                                    "loadTime" type="hidden" value=
+                                    "1379688873/"><br>
+
+                                    <div style="padding-left:40px;">
+                                        <input id="submit1" name="submit1"
+                                        onclick="get_radio_value();" style=
+                                        "width:8%;" type="submit" value=
+                                        "&nbsp;Submit&nbsp;">&nbsp;&nbsp;<input id="cancel1"
+                                        name="cancel1" style="width:8%;" type=
+                                        "reset" value="&nbsp;Cancel&nbsp;">
+                                    </div>
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div>
+                </section>
+<section id="experiment-article-section-8">
+                    <div class="icon" id="experiment-article-section-8-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-8-heading">
+                        Faqs
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-8-content">
+                        <div class="divContent">
+                            <p><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin:0in;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";}
+&lt;/style&gt;
+&lt;![endif]-->
+
+                          
+                          <p><b> 1.What is SSE?
+</b><br/>
+SSE stands for the sum of squares due to error (SSE). This statistic measures the total deviation of the response values from the fit to the response values. It is also called the summed square of residuals and is usually labelled as SSE. A value closer to 0 indicates that the model has a smaller random error component, and that the fit will be more useful for prediction. <br/><br/>
+
+<p> <b>2.What is the criterion for β convergence?</b></p>
+At convergence the β value satisfies the equality between the estimated trip distribution matrix and the observed trip distribution matrix. <br/>
+                        </div>
+                    </div>
+                </section>
+
+        </div>
+        </article>
+	
+
+        <footer  class="footer">
+            <!-- Put the content here -->
+            <div style="margin-left:40%; margin-right:40% ">
+            <a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+            </div>
+      </footer> 
+    </div>
+</body>
+</html>

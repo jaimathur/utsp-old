@@ -1,0 +1,160 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Viewing Satellite Images in different Band Combinations</title>
+<script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%" height="481">
+  <tr>
+    <td width="100%" colspan="3">
+    <p style="margin-bottom: 14"><b><font size="5">References</font></b></td>
+  </tr>
+  <tr>
+    <td>
+    <p style="line-height: 150%">
+    For further studies, you can go through following references :</p>
+    
+
+    <p style="line-height: 150%" align="justify">
+    <font face="Times New Roman">[1] Rafael C. Gonzalez, Richard E. Woods and 
+    Steven L. Eddins (2004), <i>Digital Image Processing using MATLAB</i>, 
+    Pearson Education</font></p>
+    
+
+    <p style="line-height: 150%" align="justify">
+    <font face="Times New Roman"><span class="citation book">[2] </span></font>
+	<span lang="EN-IN" style="font-family: Times New Roman">J.A. Richards and X. 
+	Jia, Remote Sensing Digital Image Analysis, 4<sup>th</sup> edition, 
+	Springer, Berlin, 2006</span></p>
+	<p style="line-height: 150%" align="justify">
+    <span style="font-family: Calibri,sans-serif; font-size: 11pt">[3] </span>
+	<span lang="EN-IN">R. Schowengerdt, Remote Sensing: Models and Methods for 
+	Image Processing, 3<sup>rd</sup> edition, Academic Press, Mass., 2007</span></p>
+	<p style="line-height: 150%" align="justify">
+    [4] <span lang="EN-IN">J.R. Jensen, Digital Image Processing: A Remote 
+	Sensing Perspective, 4<sup>th</sup> edition, Prentice-Hall, NJ, 2005</span></p>
+	<p style="line-height: 150%" align="justify">
+    [5] <span lang="EN-IN">P.M. Mather and M. Koch, Computer Analysis of 
+	Remotely Sensed Images,&nbsp; John Wiley, NY, 2011</span></p>
+	<p style="line-height: 150%" align="justify">
+    [6] <span lang="EN-IN">B. Tso and P.M. Mather, Classification Methods for 
+	Remotely Sensed Images, 2<sup>nd</sup> edition, CRC Press, 2009</span></p>
+	<p style="line-height: 150%" align="justify">
+    <font face="Times New Roman"><span class="citation book">[7] Tim Morris 
+    (2004), <i>Computer Vision and Image Processing</i>, Palgrave Macmillan</span></font></p>
+    
+
+    <font face="Times New Roman">
+    <p ALIGN="justify">[8] Bhabatosh Chanda and Dwijest Dutta Majumder (2002),
+    <i>Digital Image Processing and Analysis</i></p>
+    <p ALIGN="justify">[9] A. K. Jain (1989), <i>Fundamentals of Digital Image 
+    Processing. </i>Englewood Cliffs, NJ: Prentice Hall</p>
+    <p align="justify">[10] Raman Maini and Himanshu Aggarwal (2010), <i>A 
+    comprehensive review of image enhancement techniques</i>, Journal of 
+    computing, Vol. 2, Issue. 3, pno 8-13, 2010</font></td>
+    
+  </tr>
+</table>
+
+
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+
+
+</body>
+<script language = "javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+
+function changeAim1()
+{
+	document.getElementById("label_detail").innerHTML="To view single band or color composite, subset image and its pixel data of raw satellite image or general image formats with image histogram.";
+	
+}
+function changeAim2()
+{
+	document.getElementById("label_detail").innerHTML="To enhance the contrast of input raw satellite image or image with general formats through various enhancement methods such as Linear Stretching, enhancement using Standard Deviation, Histogram Equalization, etc.";
+	
+}
+function changeAim3()
+{
+	document.getElementById("label_detail").innerHTML="To smoothen the input raw satellite image or image with general formats using various smoothing filters such as Average filter, Weighted Average filter, Gaussian Smoothing, etc.";
+	
+}
+function changeAim4()
+{
+	document.getElementById("label_detail").innerHTML="To generate Principal components of the input raw satellite image or image with general formats and also get the inverse PCA with required number of principal components.";
+	
+}
+function changeAim5()
+{
+	document.getElementById("label_detail").innerHTML="To get edge magnitude image from the corresponding input raw satellite image or image with general formats through various edge operators such as Robert operator, Sobel operator, Prewitt operator, etc.";
+	
+}
+function changeAim6()
+{
+	document.getElementById("label_detail").innerHTML="To get fourier spectrum of the input raw satellite image or image with general formats, apply gaussian and butterworth filtering to the same.";
+	
+}
+function changeAim7()
+{
+	document.getElementById("label_detail").innerHTML="To apply various morphological operations, such as Erosion, Dilation, Boundary Detection, Top-hat tranform,etc., on specific bands of the input raw satellite image or image with general formats.";
+	
+}
+function changeAim8()
+{
+	document.getElementById("label_detail").innerHTML="To apply band arithmetic and get standard indices, such as Normalized Vegetation Index, Soil Adjusted Vegetation Index, etc., on the input raw satellite image or image with general formats.";
+	
+}
+function changeAim9()
+{
+	document.getElementById("label_detail").innerHTML="To apply K-means clustering with user defined number of classes and maximum number of iterations on the input raw satellite image or image with general formats.";
+	
+}
+
+function blankAim()
+{
+	document.getElementById("label_detail").innerHTML="";
+
+}
+</script>
+
+</html>

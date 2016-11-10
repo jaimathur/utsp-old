@@ -1,0 +1,1713 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in 
+      text-->
+            <img src="../images/logo.jpg"></div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+                <a href="../index.html">Civil Lab</a>
+            </div><!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+        </header><!-- The lab article is the main content area where all the 
+  experiment content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+                Singly Constrained Gravity Model
+            </header><!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav><!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+
+            <div id="experiment-article-sections">
+                <!-- First section of the article-->
+
+                <section id="experiment-article-section-1">
+                    <div class="icon" id="experiment-article-section-1-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/introduction.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-1-heading">Aim
+                    </div><!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+
+                    <div class="content" id=
+                    "experiment-article-section-1-content"><div class="divContent">
+                            <h2 style="color: Red;"><strong style=
+                            "text-decoration: underline"><span style=
+                            "font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);">
+                            <span style=
+                            "font-size: large;"></span></span></strong></h2>
+
+                            <p>&nbsp;</p>
+
+                            <p class="MsoNormal" style=
+                            "line-height: 150%; text-align: right;"><a href=
+                            "http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;">
+                            Back To Experiment List</span></a></p>
+
+                            <p><span style=
+                            "font-size: medium; font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To allocate trips from Production Attraction Table based on the impedance data.</span></p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><span style=
+                            "font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            <strong><span style=
+                            "font-size: large;">Objective:-</span></strong></span></p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><!-- p { margin-bottom: 0.21cm; } --></p>
+
+                            <p style="margin-bottom: 0cm;"><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>1.To understand gravity model. <br />2.To understand basic theory of singly constraint gravity model.<br/>3.To solve singly constraint gravity model example.<br/></span></p>
+
+                            <!--<p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;"><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.
+                            Study effect of various parameters on RTD
+                            performance<br></span></p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p style="margin-bottom: 0cm;">&nbsp;</p>
+
+                            <p><span style=
+                            "font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(0, 0, 0);">
+                            <br></span></p> -->
+                        </div>
+                    </div>
+                </section>
+                <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/objective.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-3-heading">Theory 
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-3-content">
+                        <div class="divContent">
+                            <p><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+&lt;w:Zoom&gt;0&lt;/w:Zoom&gt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";}
+&lt;/style&gt;
+&lt;![endif]--></p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            &nbsp;</p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            Introduction <hr></span></b> <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            </span></b><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;/w:LatentStyles&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 10]&gt;
+&lt;style&gt;
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+&lt;![endif]--><span lang="EN-IN" style=
+'font-size: 12pt; font-family: "Verdana","sans-serif";'><br></span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'><br></span></p>
+
+                            <p class="MsoNormal" style=
+                            "line-height: 150%; text-align: right;"><a href=
+                            "http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;">
+                            Back To Experiment List</span></a></p>
+                            <!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            This model is a classic travel demand model which is originally developed from the Newton's Law of Gravitation. It is written in the form as shown below: <br/> 
+<img src="1.png" ><br/>
+The above formula states that the interchange volume between production zone i and an attracting zone j is directly proportional to the magnitude trips produced from zone i and attracted to zone j and inversely proportional to impedance W. The sum over all trip attracting zones j of the interchange volumes that share i as the trip producing zone must be equal to total trip productions of zone i i.e., <br/>
+<img style="width: 760px;
+height: 348px"  src="2..png" ><br/>
+Finally introducing a set of interzonal socio economic adjustment factors Kij <br/>
+<img src="3..png" ><br/>
+Ajk = Adjusted trip attraction for kth iteration.<br/>
+cj = desired trip attraction j.<br/>
+Aj(k−1) = Adjusted trip attraction for iteraction (k-1).<br/>
+cj(k−1) = calculated trip attraction for iteration (k-1) (obtained from gravity model calculation (6)) j Iteration is carried on till the<br/> satisfactory value of trip attraction is obtained.<br/><br/>
+<p style="color:Blue" >Singly constrained gravity model <hr> </p>
+<br/> Singly Constraint Gravity Model is a type when either the origin (production) or destination (Attraction) is constraint. Equation (5) is derived when Trip Production is constraint. In the equation (5) the proportionality constant k is chosen such that the sum over all the trip attracting zones j interchanging volume with the trip producing volume i is indicated as the total number of trips. <br/>
+Pi=∑jTij <br/>
+Similarly k can also be defined by stating that sum of all the trips exchanged by Trip Attracting zone j with all other Trip Producing zone i.<br/>
+
+The sum over all trip attracting zones j of the interchange volumes that share i as the trip producing zone must be equal to total trip productions of zone i i.e., K proportionality constant, equation 5 is modified with respect to Trip Production. Other constraint is adjusted with the help of iterative procedure. The model has one constraint thus it is called Singly Constraint Model.<br/>
+Tij=PiFijAj∑jFijAj <br/> <br/>
+<p style="color:Blue" >Example <hr> <br/> </p>
+The future Oi & Dj and cost matrix is given below <br/>
+[Ofi]=[10158] <br/>
+[Dfj]=[71610] <br/>
+<img src="4..png"><br/>
+<img src="5.png"><br/>
+<img src="6..png"><br/>
+<table class="table table-bordered table-hover">
+   <caption><span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-58-Frame" class="MathJax"><nobr><span id="MathJax-Span-1051" class="math"><span style="display: inline-block; position: relative; width: 25px; height: 0px; font-size: 130%;"><span style="position: absolute; clip: rect(1.438em, 1000em, 2.698em, -0.412em); top: -2.26em; left: 0em;"><span id="MathJax-Span-1052" class="mrow"><span id="MathJax-Span-1053" class="msubsup"><span style="display: inline-block; position: relative; width: 1.205em; height: 0px;"><span style="position: absolute; clip: rect(1.631em, 1000em, 2.596em, -0.412em); top: -2.452em; left: 0em;"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-1054" class="mi">T<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.12em;"></span></span><span style="display: inline-block; width: 0px; height: 2.452em;"></span></span><span style="position: absolute; top: -2.158em; left: 0.601em;"><span id="MathJax-Span-1055" class="texatom"><span id="MathJax-Span-1056" class="mrow"><span style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-1057" class="mi">i</span><span style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-1058" class="mi">j</span></span></span><span style="display: inline-block; width: 0px; height: 2.308em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.26em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.388em; vertical-align: -0.445em;"></span></span></nobr></span><script id="MathJax-Element-58" type="math/tex">T_{ij}</script></caption>
+<tbody><tr><th>zone</th><th>1</th><th>2</th><th>3</th><th><span class="MathJax_Preview"></span><span style="" aria-readonly="true" role="textbox" id="MathJax-Element-59-Frame" class="MathJax"><nobr><span id="MathJax-Span-1059" class="math"><span style="display: inline-block; position: relative; width: 75px; height: 0px; font-size: 130%;"><span style="position: absolute; clip: rect(1.846em, 1000em, 3.179em, -0.377em); top: -2.74em; left: 0em;"><span id="MathJax-Span-1060" class="mrow"><span id="MathJax-Span-1061" class="texatom"><span id="MathJax-Span-1062" class="mrow"><span style="font-family: MathJax_Size1; vertical-align: 0em;" id="MathJax-Span-1063" class="mo">∑</span><span style="padding-left: 0.167em;" id="MathJax-Span-1064" class="msubsup"><span style="display: inline-block; position: relative; width: 1.181em; height: 0px;"><span style="position: absolute; clip: rect(1.625em, 1000em, 2.596em, -0.4em); top: -2.452em; left: 0em;"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-1065" class="mi">D</span><span style="display: inline-block; width: 0px; height: 2.452em;"></span></span><span style="position: absolute; top: -2.158em; left: 0.817em;"><span style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-1066" class="mi">j</span><span style="display: inline-block; width: 0px; height: 2.308em;"></span></span></span></span><span id="MathJax-Span-1067" class="msubsup"><span style="display: inline-block; position: relative; width: 1.219em; height: 0px;"><span style="position: absolute; clip: rect(1.628em, 1000em, 2.596em, -0.402em); top: -2.452em; left: 0em;"><span style="font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-1068" class="mi">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.106em;"></span></span><span style="display: inline-block; width: 0px; height: 2.452em;"></span></span><span style="position: absolute; top: -2.158em; left: 0.615em;"><span id="MathJax-Span-1069" class="texatom"><span id="MathJax-Span-1070" class="mrow"><span style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-1071" class="mi">i</span><span style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;" id="MathJax-Span-1072" class="mi">j</span></span></span><span style="display: inline-block; width: 0px; height: 2.308em;"></span></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.74em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.483em; vertical-align: -0.445em;"></span></span></nobr></span><script id="MathJax-Element-59" type="math/tex">{\sum D_j F_{ij}}</script></th><th>Future year origin Total</th></tr>
+<tr><td>1</td><td>3.617</td><td>4.8632</td><td>1.5198</td><td>10</td><td>10</td></tr>
+<tr><td>2</td><td>2.561</td><td>8.7805</td><td>3.6585</td><td>15</td><td>15</td></tr>
+<tr><td>3</td><td>0.8116</td><td>3.7101</td><td>3.4783</td><td>8</td><td>8</td></tr>
+</tbody></table><br/>
+<p style="color:Blue" >References </p><hr> <br/><p style="color:Blue" > Books </p>
+1.J. De D. Ortuzar and L.G. Willumsen (1996), Modelling Transport. Wiley Publications, London. <br/>
+2.C. S. Papacostas and P. D. Prevedouros (2001), Transportation Engineering & planning. Prentice-Hall of India, New Delhi.<br/>
+</span></p></section>
+
+                          <!--  <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="PreformattedText" style=
+                            "margin-left: 0.5in; text-indent: -0.25in;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            <span style="">1.<span style=
+                            'font: 7pt "Times New Roman";'>&nbsp;&nbsp;</span></span></span>
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            Importance of temperature measurement.</span></p>
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="PreformattedText" style=
+                            "margin-left: 0.5in; text-indent: -0.25in;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            <span style="">2.<span style=
+                            'font: 7pt "Times New Roman";'>&nbsp;&nbsp;</span></span></span>
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            Various units of temperature measurement and
+                            conversion of one unit to another.</span></p>
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="PreformattedText" style=
+                            "margin-left: 0.5in; text-indent: -0.25in;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            <span style="">3.<span style=
+                            'font: 7pt "Times New Roman";'>&nbsp;&nbsp;</span></span></span>
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            Knowledge of various methods of temperature
+                            measurement.</span></p>
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="PreformattedText" style=
+                            "margin-left: 0.5in; text-indent: -0.25in;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            <span style="">4.<span style=
+                            'font: 7pt "Times New Roman";'>&nbsp;&nbsp;</span></span></span>
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            Meaning of terms like process lag, positive and
+                            negative temperature coefficient, negative
+                            temperature, virtual temperature, etc.</span></p>
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span></p>
+
+                            <p class="PreformattedText" style=
+                            "margin-left: 0.5in; text-indent: -0.25in;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            <span style="">5.<span style=
+                            'font: 7pt "Times New Roman";'>&nbsp;&nbsp;</span></span></span>
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            Knowledge of active and passive
+                            transducers.</span></p>
+
+                            <p class="PreformattedText"><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            &nbsp;</span><span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif";'><br></span><span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'><br>
+                            &nbsp;</span> <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            Temperature</span></b></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 0.0001pt; line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            Temperature is a measure of the average heat or
+                            thermal energy of the particles in a substance.
+                            Since it is an average measurement, it does not
+                            depend on the number of particles in an object. In
+                            that sense it does not depend on the size of it.
+                            For example, the temperature of a small cup of
+                            boiling water is the same as the temperature of a
+                            large pot of boiling water. Even if the large pot
+                            is much bigger than the cup and has millions and
+                            millions more water molecules. The basic unit of
+                            temperature (T) in the International System of
+                            Units (SI) is the Kelvin (K). The commonly used
+                            other units of temperature are Degree Celsius (°C)
+                            and Degree Fahrenheit (°F).</span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 0.0001pt; line-height: 150%;">
+                            &nbsp;</p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            &nbsp;<b>&nbsp; Electrical
+                            Resistance</b></span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 0.0001pt; line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            The electrical resistance of an object is a measure
+                            of its opposition to the flow of an electric
+                            current. For a wide range of materials and
+                            conditions, the electrical resistance does not
+                            depend on the amount of current through or the
+                            potential difference (voltage) across the object.
+                            That means the resistance R is constants for the
+                            given temperature and material. Therefore, the
+                            resistance of an object can be defined as the ratio
+                            of voltage to current, in accordance with Ohm’s
+                            Law:</span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 0.0001pt; line-height: 150%;">
+                            &nbsp;</p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 0.0001pt; line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            &nbsp;</span><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            R = V/I</span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 13.5pt; line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            The unit of resistance is ohm (Ω).</span></p>
+
+                            <p class="MsoNormal" style=
+                            "font-weight: bold; line-height: 150%; margin-bottom: 13.5pt">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            &nbsp;</span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 13.5pt; line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            &nbsp;</span></b><b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>Temperature
+                            Measurement using RTD</span></b></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 13.5pt; line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            For measurement of Temperature number of sensors
+                            are available. One of the most linear, stable, and
+                            reproducible temperature sensors is the RTD,
+                            Resistance Temperature Detector. In RTD, the&nbsp;
+                            output resistance changes with temperature. RTD is
+                            a positive temperature coefficient device. The
+                            resistance of the metal increases with temperature.
+                            The resistive property of the metal is called its
+                            resistivity. The resistive property defines length
+                            and cross sectional area required to fabricate an
+                            RTD of a given value. The resistance is
+                            proportional to length and inversely proportional
+                            to the cross sectional area and is given by the
+                            relationship</span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 13.5pt; line-height: 150%; text-align: center;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            R = ρl/A</span><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>&nbsp;&nbsp;</span></p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span style=
+                            "font-size: 12pt; line-height: 150%;">&nbsp;</span><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+&lt;w:Zoom&gt;0&lt;/w:Zoom&gt;
+&lt;w:TrackMoves /&gt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";}
+&lt;/style&gt;
+&lt;![endif]<span style=
+'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>Where
+'R' is resistance of the metal,</span> <span class="apple-converted-space">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            '</span></span><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>ρ'
+                            is the resistivity of the metal</span><span class=
+                            "apple-converted-space"><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>,
+                            'l'</span></span> <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            is the length of the metal and 'A' is the area of
+                            cross section of the metal.</span></p>
+
+                            <p class="MsoNormal" style=
+                            "line-height: 150%; text-align: center;">
+                            &nbsp;<img alt="" height="169" src=
+                            "../images/userfiles/5/image/COEP_SMS_Lab/RTD_resi%20element%281%29.jpg"
+                            width="261"></p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <!--[if !mso]&gt;
+&lt;style&gt;
+v:* {behavior:url(#default#VML);}
+o:* {behavior:url(#default#VML);}
+w:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+&lt;/style&gt;
+&lt;![endif]--><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+&lt;w:Zoom&gt;0&lt;/w:Zoom&gt;
+&lt;w:TrackMoves&gt;false&lt;/w:TrackMoves&gt;
+&lt;w:TrackFormatting /&gt;
+&lt;w:PunctuationKerning /&gt;
+&lt;w:ValidateAgainstSchemas /&gt;
+&lt;w:SaveIfXMLInvalid&gt;false&lt;/w:SaveIfXMLInvalid&gt;
+&lt;w:IgnoreMixedContent&gt;false&lt;/w:IgnoreMixedContent&gt;
+&lt;w:AlwaysShowPlaceholderText&gt;false&lt;/w:AlwaysShowPlaceholderText&gt;
+&lt;w:DoNotPromoteQF /&gt;
+&lt;w:LidThemeOther&gt;EN-US&lt;/w:LidThemeOther&gt;
+&lt;w:LidThemeAsian&gt;X-NONE&lt;/w:LidThemeAsian&gt;
+&lt;w:LidThemeComplexScript&gt;X-NONE&lt;/w:LidThemeComplexScript&gt;
+&lt;w:Compatibility&gt;
+&lt;w:BreakWrappedTables /&gt;
+&lt;w:SnapToGridInCell /&gt;
+&lt;w:WrapTextWithPunct /&gt;
+&lt;w:UseAsianBreakRules /&gt;
+&lt;w:DontGrowAutofit /&gt;
+&lt;w:SplitPgBreakAndParaMark /&gt;
+&lt;w:DontVertAlignCellWithSp /&gt;
+&lt;w:DontBreakConstrainedForcedTables /&gt;
+&lt;w:DontVertAlignInTxbx /&gt;
+&lt;w:Word11KerningPairs /&gt;
+&lt;w:CachedColBalance /&gt;
+&lt;/w:Compatibility&gt;
+&lt;w:BrowserLevel&gt;MicrosoftInternetExplorer4&lt;/w:BrowserLevel&gt;
+&lt;m:mathPr&gt;
+&lt;m:mathFont m:val="Cambria Math" /&gt;
+&lt;m:brkBin m:val="before" /&gt;
+&lt;m:brkBinSub m:val="&#45;-" /&gt;
+&lt;m:smallFrac m:val="off" /&gt;
+&lt;m:dispDef /&gt;
+&lt;m:lMargin m:val="0" /&gt;
+&lt;m:rMargin m:val="0" /&gt;
+&lt;m:defJc m:val="centerGroup" /&gt;
+&lt;m:wrapIndent m:val="1440" /&gt;
+&lt;m:intLim m:val="subSup" /&gt;
+&lt;m:naryLim m:val="undOvr" /&gt;
+&lt;/m:mathPr&gt;&lt;/w:WordDocument&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267"&gt;
+&lt;w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" /&gt;
+&lt;w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 7" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 8" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" Name="toc 9" /&gt;
+&lt;w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" /&gt;
+&lt;w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" /&gt;
+&lt;w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" /&gt;
+&lt;w:LsdException Locked="false" Priority="0" Name="Body Text" /&gt;
+&lt;w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" /&gt;
+&lt;w:LsdException Locked="false" Priority="0" Name="Hyperlink" /&gt;
+&lt;w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" /&gt;
+&lt;w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" /&gt;
+&lt;w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" /&gt;
+&lt;w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" /&gt;
+&lt;w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" /&gt;
+&lt;w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" /&gt;
+&lt;w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" /&gt;
+&lt;w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" /&gt;
+&lt;w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" /&gt;
+&lt;w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" /&gt;
+&lt;w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" /&gt;
+&lt;w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" /&gt;
+&lt;w:LsdException Locked="false" Priority="37" Name="Bibliography" /&gt;
+&lt;w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" /&gt;
+&lt;/w:LatentStyles&gt;
+&lt;/xml&gt;&lt;![endif]--><!--[if gte mso 10]&gt;
+&lt;style&gt;
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin-top:0in;
+mso-para-margin-right:0in;
+mso-para-margin-bottom:10.0pt;
+mso-para-margin-left:0in;
+line-height:115%;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";
+mso-fareast-font-family:"Times New Roman";}
+&lt;/style&gt;
+&lt;![endif]</p>
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            &nbsp;Resistance Temperature Detector
+                            (RTD)</span></b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'><br></span><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'><br></span><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>Resistance
+                            Temperature Detector (RTD), as the name implies, is
+                            a sensor used to measure temperature by correlating
+                            the resistance with temperature. Most RTD elements
+                            consist of a length of fine coiled wire wrapped
+                            around a ceramic or glass core. The element is
+                            usually quite fragile, so it is often placed inside
+                            a sheathed probe to protect it. The RTD element is
+                            made from a pure metals as mentioned below. The
+                            material property to have predictable change in
+                            resistance as the temperature
+                            changes</span><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>,
+                            is used to determine temperature.</span></p>
+
+                            <p class="MsoNormal" style=
+                            "margin-bottom: 0.0001pt; line-height: 150%; text-align: justify;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            <br>
+                            Commonly used RTD Materials:<br>
+                            • Platinum (most popular and accurate)<br>
+                            • Nickel<br>
+                            • Copper<br>
+                            • Balco (rare)<br>
+                            • Tungsten (rare)<br>
+                            <br> -->
+ 
+
+                <!-- <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab
+                    <img src="../images/simulation.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Simulator
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-4-content">
+                        <div class="divContent">
+                            <p><a href=
+                            "http://coepvlab.ac.in:8080/COEP/Vlabs/Simulators/ElectricalLab/SensorLab/Rtd/index.html"
+                            target="_blank">Click here for Simulator</a></p>
+                        </div>
+                    </div>
+                </section>-->
+
+                <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">Procedure
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-4-content">
+                        <div class="divContent">
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <span lang="EN-IN" style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                            &nbsp;</span></p>
+<p style="color:Blue">Step 1 <hr> <br/> </p>
+Click on ‘Click Here To Perform Experiment with GUI’.
+In order to start with the experiments make sure that the input files are available in the format given in the default file. The default file can be downloaded from the table as shown in the image.<br/> <br/>
+<img src="7.png" > <br/> <br/>
+<p style="color:Blue"> Step 2 <hr> </p><br/> <br/>
+Go to Methods to select the type of experiment to be performed. Browse the required input file <br/>
+<img src="8.png"><br/>
+There four types of Impedance Functions <br/>
+
+Power Function : Fij=Cβij  <br/>
+Exponential Function : Fij=e-β1Cij<br/>
+Gamma Function : Fij=e-β1CijC-β2ij<br/>
+Linear Function : Fij=β1+β2Cij<br/>
+
+Select the required impedance function and value of β1, β2,Cij Then click 'OK' to get the output.<br/>
+
+Example of the output file of Origin Constrained experiment	<br/><br/>
+<img src="9.png"><br/> <br/>
+<img src="10.png"><br/> 
+
+<p style="color:Blue"> Demo Video to run PHP Based Experiment <hr> </p>
+<center>
+<video id="0" controls="" width="640" height="400">
+  <source src="video/gravityPHP.mp4" type="video/mp4">
+  <source src="video/gravityPHP.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/gravityPHP.webm" type="video/webm">
+  <object data="video/gravityPHP.mp4" width="640" height="400">
+    <embed src="video/gravityPHP.swf" width="640" height="400">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+<br/> 
+<p style="color:Blue">Demo Video to run Java Based Experiment <hr> </p> </br>
+<center>
+<video id="0" controls="" width="640" height="400">
+  <source src="video/GravityMethod2.mp4" type="video/mp4">
+  <source src="video/GravityMethod2.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/GravityMethod2.webm" type="video/webm">
+  <object data="video/GravityMethod2.mp4" width="640" height="400">
+    <embed src="video/GravityMethod2.swf" width="640" height="400">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center> <br/>
+						
+						</div>
+					</div>
+				</section>
+
+<section id="experiment-article-section-7">
+                    <div class="icon" id="experiment-article-section-7-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-7-heading">Experiment
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-7-content">
+                        <div class="divContent">
+                           <!-- <h2 style="color: red;"><strong style=
+                            "text-decoration: underline"><span style=
+                            "font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);">
+                            <span style="font-size: large;">Review
+                            Questions</span></span></strong></h2> -->
+
+                            <p style="color:Blue">Input Files Needed <hr> <br/>
+				
+    1.Origin Destination trip data for base year.<br/>
+    2.Origin totals for future year.<br/>
+    3.Destination totals for future year.<br/>
+
+*Default input files with specified format are given below.<br/></br>
+
+			<p style="color:Blue">Experiment <hr><br/>
+<a style="text-decoration: underline;" ;="" onclick="fullScreen('applet/GravModel.php')" href="applet/GravModel.php">Click Here to perform experiment with Java based Simulation</a><br/><br/>
+<a style="text-decoration: underline;" href="SigGravMod.php">Click Here to perform experiment with PHP based Simulation</a><br/> <br/>
+<p style="color:Blue" > <hr> See the default Excel / CSV input files for file format: </p> <br/> <br/>
+<table class="table table-bordered ">
+<tbody><tr>
+<th>Download &amp; Save each of these files to&nbsp; perform experiment.</th>
+<th>Click on the icon to download &amp; Save all XLS/CSV files in zip format.</th>
+</tr>
+<tr>
+<td>
+<span class="title1"><a href="../Docs/costmatrix.xls"><img src="img/SmallXLS.jpg" alt="Excel" width="16" height="16">(Click Here) For Base Year O-D Cost Matrix File (xls)</a></span>
+<span class="title1"><a href="../Docs/Origin_gravity.xls"><img src="img/SmallXLS.jpg" alt="Excel" width="16" height="16">(Click Here) For Future Year Origin Total File (xls)</a></span>
+<span class="title1"><a href="../Docs/destination_gravity.xls"><img src="img/SmallXLS.jpg" alt="Excel" width="16" height="16">(Click Here) For Future Year Destination Total File (xls)</a></span>
+</td>
+<td align="center" valign="top">
+<span class="title1">All XLS Files in zip format</span>
+<p><a href="../Docs/Gravity Model XLS.zip"><img style="display: block; margin-left: auto; margin-right: auto;" src="img/XLS.JPG" alt="Excel" width="56" height="56"></a></p>
+</td>
+</tr>
+<tr><td>
+<span class="title1"><a href="../Docs/costmatrixcsv.csv"><img src="img/SmallCSV.jpg" alt="CSV" width="16" height="16">(Click Here) For Base Year O-D Cost Matrix File (csv)</a></span>
+<span class="title1"><a href="../Docs/origin_futurecsv.csv"><img src="img/SmallCSV.jpg" alt="CSV" width="16" height="16">(Click Here) For Future Year Origin Total File (csv) </a></span>
+<span class="title1"><a href="../Docs/destination_gravitycsv.csv"><img src="img/SmallXLS.jpg" alt="Excel" width="16" height="16">(Click Here) For Future Year Destination Total File (csv)</a></span>
+</td>
+<td align="center" valign="top">
+<span class="title1">All CSV Files in zip format</span>
+<p><a href="../Docs/Gravity Model CSV.zip"><img style="display: block; margin-left: auto; margin-right: auto;" src="img/CSV.JPG" alt="CSV" width="56" height="56"></a></p>
+</td>
+</tr>
+</tbody></table>
+
+                            
+                        </div>
+                    </div>
+                </section>
+
+                
+          
+                <section id="experiment-article-section-8">
+                    <div class="icon" id="experiment-article-section-8-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-8-heading">FAQS
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-8-content"><div class="divContent">
+                            <p><!--[if gte mso 9]&gt;&lt;xml&gt;
+&lt;w:WordDocument&gt;
+&lt;w:View&gt;Normal&lt;/w:View&gt;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin:0in;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";}
+&lt;/style&gt;
+&lt;![endif]-->
+
+                            <p class="PreformattedText"><b style=""><span lang=
+                            "EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                            </span></b><span lang="EN-IN" style=
+                            'font-size: 12pt; font-family: "Verdana","sans-serif";'></span></p>
+
+                          <p><b> 1.When to use origin constrained and destination constrained model?
+</b><br/>
+Origin constrained model can be used when sum of all the trips attracted to all the attraction zones will be equal to the total number of trips produced in a production zone. Mathematically:<br/>
+∑jTij=Oi<br/>
+Destination constrained model can be used when sum of trips produced for all the trip production zones will be equal to the number of trips attracted to a destination zone. Mathematically:<br/>
+∑jTij=Di  <br/></p>
+<p><b>2.What is Travel Impedance?</B></br>
+Travel Impedance is known as generalized cost for travel. Travel impedance of generalized cost is a function of in-vehicle-travel-time, waiting time, fare, discomfort level, transfer time, walk time etc.
+</p>
+                        </div>
+                    </div>
+                </section>
+
+          
+<section id="experiment-article-section-9">
+                    <div class="icon" id="experiment-article-section-9-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+                  <div class="heading" id=
+                    "experiment-article-section-9-heading">Self Evaluation 
+                    </div><!-- Write the section content inside a paragraph 
+
+        element, we can also include images with &lt;img&gt; tag -->
+
+                    <div class="content" id=
+
+                    "experiment-article-section-2-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                    <table border="0" style="width:96%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">1)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Choose the pairs considering analogous parameters of Newton's gravity model to gravity model in transportation </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans5998" name="ans0"
+                                                        type="radio" value=
+                                                        "5998"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+
+                                                        "padding-left:3px;">
+                                                        <label for=
+
+                                                        "ans5998">(Fij,Tij)( mi,pi)(dij,tij)</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans5999" name="ans0"
+                                                        type="radio" value=
+
+                                                        "5999"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans5999">(Fij,Tij)( mi,pi)(dij,tij)</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+
+                                                        "ans6000" name="ans0"
+                                                        type="radio" value=
+
+                                                        "6000"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6000">(Fij,Tij)( mi,tij)(dij,pi)</label></td>
+
+						<tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans0"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">(dij,Tij)( mi,pi)(Fij,tij)</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:96%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">2)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Origins Constrained gravity model should satisfy............ ? </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">∑iTij = Oi</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002">∑iTij = Dj</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6003" name="ans1"
+                                                        type="radio" value=
+
+                                                        "6003"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+
+                                                        "ans6003">∑iTij = Oi,ΣiTij = Dj</label></td>
+						<tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6004" name="ans1"
+                                                        type="radio" value=
+                                                        "6004"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6004">None of the above</label></td>
+						
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+					<div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:96%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">3)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">In cases where more data is available to support trip attraction than trip production, the attraction constrained gravity model should be adopted.
+ </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002">False</label></td>
+                                                    </tr>
+					  </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+<div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:96%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">4)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">The equivalent of body masses in gravity model can be populations or trip origins and trip destination total. 
+ </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">True</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002">False</label></td>
+                                                    </tr>
+					  </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+					   <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:96%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">5)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Which of the following option is correct? 
+ </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">Linear Function ( Fij = e-βCij )</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002">Exponential Function ( Fij = Cijβ )</label></td>
+                                                    </tr>
+						    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6003" name="ans1"
+                                                        type="radio" value=
+                                                        "6003"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6003">Gamma Function Fij = ( e-β1Cij Cijβ2 )</label></td>
+                                                    </tr>
+						    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6004" name="ans1"
+                                                        type="radio" value=
+                                                        "6004"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6004">Power Function Fij =( β1 + β2Cij )</label></td>
+                                                    </tr>
+					  </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+					<div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:96%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">6)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Which is the step after finding trips by performing singly constraint gravity model in order to make the calculated trip Production Attraction equal?
+
+ </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">Residue Standard of Square of Error </label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002"> Normalisation method</label></td>
+                                                    </tr>
+						    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6003" name="ans1"
+                                                        type="radio" value=
+                                                        "6003"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6003">Growth Factor method</label></td>
+                                                    </tr>
+						    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6004" name="ans1"
+                                                        type="radio" value=
+                                                        "6004"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6004">Calibration</label></td>
+                                                    </tr>
+					  </table>
+                                            </td>
+                                        </tr>
+                                    </table><div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:96%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">7)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">The impedance matrix is in the form of  </span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">Cost Matrix</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002">Distance Matrix</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6003" name="ans1"
+                                                        type="radio" value=
+                                                        "6003"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6003">Time Matrix</label></td>
+						<tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6004" name="ans1"
+                                                        type="radio" value=
+                                                        "6004"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6004">All of the above</label></td>
+						
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+				                                    <div id="hint">
+                                        <div id="textHint11" style=
+
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    
+                                    <div id="hint">
+                                        <div id="textHint14" style=
+
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+                                    <input align="middle" id="loadTime" name=
+
+                                    "loadTime" type="hidden" value=
+
+                                    "1379688870/"><br>
+
+                                    <div style="padding-left:40px;">
+                                        <input id="submit1" name="submit1"
+
+                                        onclick="get_radio_value();" style=
+
+                                        "width:8%;" type="submit" value=
+                                        "&nbsp;Submit&nbsp;">&nbsp;&nbsp;<input id="cancel1"
+                                        name="cancel1" style="width:8%;" type=
+
+                                        "reset" value="&nbsp;Cancel&nbsp;">
+                                    </div>
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </article>
+	
+
+        <footer  class="footer">
+            <!-- Put the content here -->
+            <div style="margin-left:40%; margin-right:40% ">
+            <a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+            </div>
+      </footer> 
+    </div>
+</body>
+</html>

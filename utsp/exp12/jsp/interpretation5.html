@@ -1,0 +1,210 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="interpretation5_files/filelist.xml">
+
+<title>Interpretation Of Image Viewer Outputs</title>
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table id="table2" border="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" cellpadding="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sidet.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornertr.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+    <td width="15">
+    <img border="0" src="images/sidel.jpg" width="100%" height="100%"></td>
+    <td valign="top">
+    
+    
+    
+    <table id="t1" border="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="100%" valign="top" align="justify">
+    	<p align="justify"><b><font size="6">Interpretation Of  Edge Detection Outputs</font></b></p>
+<p align="justify">Here we will discuss how to interpret the outputs produced by experiment 
+5, 
+i.e., Edge Detection. So, please follow the steps as shown below to get the sample 
+output for interpretation.</p>
+<p align="justify">1) Select &quot;inputimage&quot; as your experimental image.</p>
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;inputimage&quot; is a satellite image having 6 bands stored in BIL format as raw 
+image. It has the dimension 801x1401. Since in our discussion we will cover upto 
+its 4th band, so it is necessary to understand that what the first 4 bands of 
+this image represents. The first four bands are as follows: blue, green, red and 
+infra-red respectively.</p>
+<p align="justify">2) Select band for which you want to find the edge output. 
+Here, we are selecting band &quot;5&quot;.</p>
+<p align="justify">3) Select method of edge detection. Here we will choose &quot;Sobel&quot;.
+<i>(already set as default)</i></p>
+<p align="justify">Sobel operator uses two perpendicular masks for detecting 
+horizontal and vertical edges. So, here you have an option to select whether you 
+want only horizontal edges, vertical edges or both. Consequently, you will also 
+have to enter threshold values seperately.</p>
+<p align="justify">4) Enter &quot;Edge threshold value&quot; as &quot;0.05&quot;, &quot;Vertical 
+Threshold&quot; as &quot;0.05&quot; and &quot;Horizontal threshold&quot; as &quot;0.05&quot;.</p>
+<p align="justify">Threshold limits the output to be displayed. By entering 0.05 
+as threshold you are actually limiting it to show only the magnitude and 
+direction where it is above 5% of highest gray level that can be displayed, 
+which is 255.</p>
+<p align="justify">5) Click on &quot;Process&quot; button</p>
+<p align="justify">You will get the output as :</p>
+<p align="justify"><i><b>Edge Detected Image</b></i></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp5_edge.jpg" width="673" height="385"></p>
+<p align="justify"><i><b>Gradient Magnitude Image</b></i></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp5_grad_mag.jpg" width="672" height="387"></p>
+<p align="justify"><i><b>Gradient Direction Image</b></i></p>
+<p align="justify">
+<img border="0" src="interpretation_images/exp5_grad_direction.jpg" width="674" height="389"></p>
+<p align="justify">Here you will get the output at each pixel which corresponds 
+to an edge pixel. You can compare the edge image with the original image 
+produced in any other experiment.</p>
+        <p class="MsoNormal"><b>EDGE DETECTORS</b></p>
+        <p class="MsoNormal">The image shown below is band 1 of sample image “quickbird.jpg”.</p>
+        <p class="MsoNormal"><b><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:173.25pt;
+ height:208.5pt'>
+ <v:imagedata src="interpretation5_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation5_files/image002.jpg" v:shapes="_x0000_s1025"><![endif]></b></p>
+        <p class="MsoNormal"><b>Prewitt operator</b></p>
+        <p class="MsoNormal">Image below highlights the edges present in the 
+        sample band. The <b>bright lines are edges where there is abrupt change 
+        in gray values of the pixels</b>. The prewitt operator is employed with 
+        threshold 0.5, gradient threshold- vertical 0.2 and gradient threshold- 
+        horizontal 0.3. The gradient was computed in both directions. It is to 
+        be noted that whenever gradient values fall above 0.5 then those pixels 
+        are identified as edges.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation5_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation5_files/image004.jpg" v:shapes="_x0000_s1026"><![endif]></p>
+        <p class="MsoNormal">The following two figures represent the gradient 
+        magnitude at a point and gradient direction respectively. Bright pixels 
+        have higher gradient magnitude and gradient direction depicts the 
+        direction in which there is more change in gray value. Here first image 
+        is gradient magnitude and that follows is gradient direction image.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation5_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation5_files/image006.jpg" v:shapes="_x0000_s1027"><![endif]></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation5_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation5_files/image008.jpg" v:shapes="_x0000_s1028"><![endif]></p>
+        <p class="MsoNormal"><b>Robert operator</b></p>
+        <p class="MsoNormal">Threshold value used is 0.2. Values falling above 
+        this threshold are identified as edges. The bright lines represent those 
+        points where values are higher than 0.2. </p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1029" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation5_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation5_files/image010.jpg" v:shapes="_x0000_s1029"><![endif]></p>
+        <p class="MsoNormal"><b>Laplacian of Gaussian (LoG)</b></p>
+        <p class="MsoNormal" style="text-align:justify">Threshold chosen to 
+        generate edge image below is 0.7 and sigma as 0.5. Laplacian filters are 
+        derivative filters and are prone to noise detection. Hence LoG operator 
+        smoothens the test image and then applies the laplacian operator. Hence 
+        the name LoG. </p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1030" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation5_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation5_files/image012.jpg" v:shapes="_x0000_s1030"><![endif]></p>
+        <p class="MsoNormal"><b>Canny operator</b></p>
+        <p class="MsoNormal" style="text-align:justify">Threshold =0.2 and 
+        sigma=0.5. Please note that in the experiment we enter lower threshold 
+        value. The program automatically calculates the higher threshold value (i.e 
+        twice the lower threshold). The image shown below represents edges as 
+        bright lines. The values that fall above higher threshold are labeled as 
+        edges. And those falling below lower threshold are discarded as not 
+        edges. Those falling in-between higher and lower are evaluated for 
+        nearness. Pixels with weak connectivity are not joined whereas pixels 
+        with higher chance of connectivity are connected.</p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1031" type="#_x0000_t75" style='width:173.25pt;height:208.5pt'>
+ <v:imagedata src="interpretation5_files/image013.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=231 height=278
+src="interpretation5_files/image014.jpg" v:shapes="_x0000_s1031"><![endif]></td>
+  </tr>
+</table>
+  
+</td>
+    <td width="15">
+    <img border="0" src="images/sider.jpg" width="100%" height="100%"></td>
+  </tr>
+  <tr>
+   <td width="15" height="15">
+    <img border="0" src="images/cornerbl.jpg" width="100%" height="100%"></td>
+    <td height="15">
+    <img border="0" src="images/sideb.jpg" width="100%" height="100%"></td>
+    <td width="15" height="15">
+    <img border="0" src="images/cornerbr.jpg" width="100%" height="100%"></td>
+  </tr>
+</table>
+
+<script language="javascript">
+{
+var h=document.getElementById("t1").offsetHeight;
+h=h+60;
+document.getElementById("table2").style.height=""+h+"px";
+}
+        </script>
+
+
+
+</body>
+
+</html>

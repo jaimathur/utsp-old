@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<form name="form1" method="POST" action="--WEBBOT-SELF--">
+  <!--webbot bot="SaveResults" u-file="C:\Documents and Settings\krishna\Desktop\_private\form_results.csv" s-format="TEXT/CSV" s-label-fields="TRUE" --><p>
+  <input type="text" name="T1" size="20"><input type="button" value="Submit" name="B1" onclick="writeCookie('username','krishna',1);"><input type="button" value="Reset" name="B2" onclick="readCookie('username');"><input type="button" value="Button" name="B3" onclick="eraseCookie('username');"><a href="new.htm">sadfasd</a></p>
+</form>
+<script language="javascript">
+{
+alert(document.cookie);}
+function writeCookie(name,value,days) {
+    var date, expires;
+    if (days) {
+        date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        expires = "; expires=" + date.toGMTString();
+            }else{
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+   // alert(document.cookie+"");
+}
+function readCookie(name) {
+    var i, c, ca, nameEQ = name + "=";
+    ca = document.cookie.split(';');
+    for(i=0;i < ca.length;i++) {
+        c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1,c.length);
+        }
+        if (c.indexOf(nameEQ) == 0) {
+        	document.form1.T1.value=c.substring(nameEQ.length,c.length);
+		//	alert(c.substring(nameEQ.length,c.length));
+
+           // return c.substring(nameEQ.length,c.length);
+        }
+    }
+    return 'null';
+}
+function eraseCookie(name) {
+		 writeCookie(name,"",-1); 
+		 document.form1.T1.value=document.cookie;
+}
+
+</script>
+</body>
+
+</html>

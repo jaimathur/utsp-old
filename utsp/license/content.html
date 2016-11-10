@@ -1,0 +1,643 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volume, Speed and Delay Study at Intersection</title>
+    <link href="../css/theory.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in 
+      text-->
+            <img src="../images/logo.jpg"></div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+                <a href="../index.html">Urban Transportation System Programming Lab</a>
+            </div><!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+        </header><!-- The lab article is the main content area where all the 
+  experiment content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+                Image Viewer
+            </header><!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+                </ul>
+            </nav><!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+
+            <div id="experiment-article-sections">
+                <!-- First section of the article-->
+
+                <section id="experiment-article-section-1">
+                    <div class="icon" id="experiment-article-section-1-icon">
+                    <!-- Enclose the icon image of your lab -->
+                    <img src="../images/introduction.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+                    <div class="heading" id=
+                    "experiment-article-section-1-heading">
+                        Aim
+                    </div><!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+                    <div class="content" id=
+                    "experiment-article-section-1-content">
+                        <div class="divContent">
+
+                            <p> <span style="font-size: medium; font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To study the flow pattern of a network such that an optimum value of total travel cost of the system is obtained.
+                            <br><br><br>
+                            <b>Objectives</b><br><br>
+                            <ul>
+                            <li>To determine the flow pattern of transportation network that minimizes the total travel cost of network.</li>
+                            </ul>
+                            </span> </p>
+                        </div>
+                    </div>
+                </section><!-- Second section of the article-->
+                
+                
+                
+                 <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/objective.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-3-heading">
+                        Theory
+                    </div>
+
+                    <div class="content" id=
+
+                    "experiment-article-section-3-content">
+                        <div class="divContent">
+                           
+
+                            <p class="MsoNormal" style="line-height: 150%;">
+                            <b><span style=
+                            'font-size: 18pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                         <hr> System Optimal Assignment</span></b><hr> <b><span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                            </span></b>
+
+  
+                        
+               <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                Wardrop (1952) proposed an alternative way of assigning traffic onto a network and this is usually referred to as his second principle: Under social equilibrium condition traffic should be arranged in congested networks in such a way that the average (or total) travel cost is minimised.<br><br>
+
+This is a design principle, in contrast with his first principle which endeavours to model the behavior of individual driver trying to minimize their own trip costs. The second principle is oriented towards transport planners and engineers trying to manage traffic to minimize travel costs and therefore achieve an optimum social equilibrium. In general the flows resulting from the two principles are not the same but one can only expect, in practice, traffic to arrange itself following an approximation to Wardrop's first principle, i.e. selfish or users' equilibrium.<br><br>
+
+Obviously, this is not a behaviourally realistic model, but it can be useful to transport planners and engineers, trying to manage the traffic to minimise travel costs and therefore achieve an optimum social equilibrium.<br><br>
+               </span></p> 
+			    
+			
+                </br>
+                <img src="img/fig1.jpg" style="width:500px; height:350px; margin-left:10%">
+                </br>    
+                
+                 <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                  x<sub>a</sub> equilibrium flows in link a, t<sub>a</sub> travel time on link a, f<sup>rs</sup><sub>k</sub> flow on path k connecting O-D pair r-s, q<sub>rs</sub> trip rate between r and s and δ is a binary function equal to 1 when link a belongs to path of k, otherwise 0.<br><br>
+                  
+                 <b> User Equilibrium and System Optimization</b>
+<ul>
+   <li> UE and SO are similar if congestion is ignored.</li>
+    <li>If the link performance function is independent of link flows then UE objective function is similar to SO objective function.</li>
+    <li>A network with low flow has small marginal link cost as a result UE and SO flows are similar.</li>
+</ul><br><br>
+
+Example<hr><br>
+
+To demonstrate how the most common assignment works, an example network is considered. This network has two nodes having two paths as links.
+
+               </span></p> 
+               
+               	<!------------------------images --------------------------------->
+                </br>
+                <img src="img/exp10.1.jpg" style="width:500px; height:250px; margin-left:10%">
+                </br> 
+                
+                 <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                 Lets take a case where travel time functions for both the links is given by:<br><br> 
+
+t1=10+3x1<br><br>
+
+t2=15+2x2<br><br>
+
+and total flows from 1 to 2.<br><br>
+
+q12=12<br><br>
+
+Substituting the travel time in formulation of system optimal, we get the following:<br><br>
+
+min: Z(x)=x1; 10+3x21+x2(15+2x2)<br><br>
+
+10x1+3x21+15x2+2x22<br><br>
+
+Substituting x2=12−x1 in the above formulations take the following form:<br><br>
+
+10x1+3x21+15(12−x1)+2(12−x1)2<br><br>
+
+Differentiate the above equation w.r.t x1 and equate to zero, and solving for and then x2 leads to the solution x∗i=5.3, x∗2=6.7, and Z(x∗)=327.55.<br><br>
+
+<b>Brass‘s Paradox</b><hr><br> 
+<ul>
+    <li>User Equilibrium assum‘s that driver‘s minimize their own travel cost without considering the impact on the network. Thus there is no guarantee that system travel cost will become less.</li>
+<li>    If the traffic is assigned as per SO, the system travel cost will not increase with the addition of a link.</li>
+</ul>
+
+<b>Example</b>
+
+               </span></p> 
+               
+                </br>
+                <img src="img/bp1.jpg" style="width:400px; height:150px; margin-left:10%">
+                </br> 
+                
+                <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+                  <b>UE Formulation</b><br><br>
+
+50+x1+10x3=50+x4+10x2<br><br>
+
+Path 1 = R−1−5<br><br>
+
+Path 2 = R−2−5<br><br>
+
+Solving we get<br><br>
+x1=x2=x3=x4=3<br><br>
+
+Cost for Path 1 = 83<br><br>
+
+Cost for Path 2 = 83<br><br>
+
+Thus System Cost = 498<br><br>
+
+Add additional link between nodes 1 and 2 with a hope to minimize the System Travel Cost.<br><br>
+
+Cost for Path 3 = 70 , Path 3 = R - 2 - 1 - 5<br><br>
+
+Since the travel cost obtained for one user for Path 3 is less than travel cost for Path 1 and Path 2 , some user's will shift to Path 3. Thus the new UE flow will be :<br><br>
+
+50+x1+10x3=50+x4+10x2=10x2+10+x5+10x3<br><br>
+
+Solving we get x1=2, x2=4, x3=4, x4=2, x5=2<br><br>
+
+Cost for Path 1 = 92, Path 2 = 92 and Path 3 = 92<br><br>
+
+Path cost increases with an introduction of extra link, similarly System cost also increases.<br><br>
+
+               </span></p> 
+               
+                
+                
+                <p class="PreformattedText"><span lang="EN-IN"style= 'font-size: 12pt; font-family: "Verdana","sans-serif";'>
+               <b> References</b><hr> <br>
+               Books<br><br>
+<ul>
+    <li>J. De D. Ortuzar and L.G. Willumsen (1996), Modelling Transport. Wiley Publications, London.</li>
+   <li> Y. Sheffi (1985), Urban Transportation Networks: Equilibrium Analysis with Mathematical Programming Methods. Prentice-Hall Inc., Englewood Cliffs, New Jersey.</li>
+</ul>
+Website<br><br>
+<a href="www.cdeep.iitb.ac.in/nptel/">www.cdeep.iitb.ac.in/nptel/<a>
+                 
+               </span></p> 
+
+			            
+                          <p class="MsoNormal" style=
+                            "margin-bottom: 13.5pt; line-height: 150%;">
+                            <span style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>
+                          </b></b></br></br> </br></br></span></p>
+
+
+                </div></div></section>          
+ 
+                  <section id="experiment-article-section-5">
+                    <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/manual.jpg"></div>
+
+                    <div class="heading" id=
+
+                    "experiment-article-section-5-heading">
+                        Procedure
+                    </div>
+
+                    <div class="content" id=
+
+                    "experiment-article-section-5-content">
+                        <div class="divContent">
+                       <hr>
+ 			 
+			      <b> Step 1 :</b> 
+			      <br><hr>
+			    Select the type of experiment you want to perform. The format of the input file should be according to the default file.  </span> <span lang="EN-IN"
+                            style=
+                            'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>:</span></p>
+
+
+                            </br>
+                             <img src="img/2.8.jpg" style="width:600px; height:600px; margin-left:10%">
+                           
+			</br>
+			
+			 <b> Step 2 :</b> 
+			   <br><hr><br>
+			<img src="img/2.1.jpg" style="width:650px; height:250px; margin-left:10%">
+			<br>
+			Data Analysis can be done in three types<br><br>
+
+    Correlation<br>
+    Description Statistics<br>
+    Plot<br>
+
+			 <b> Step 3 :</b> 
+			   <br><hr><br>
+			   
+			 The Statistics of selected parameters is obtained in the format given below.
+			<br><br><br>			
+			
+ 			<br>
+			<img src="img/2.4.jpg" style="width:750px; height:400px; margin-left:10%">
+			<br>
+                          
+                         <b> Step 4 :</b> 
+			   <br><hr><br>
+			   
+			Output is obtained<br><br>
+			Correlation between different parameters can be determined. The output is represented in the form of a matrix given below.<br><br>
+			
+ 			<br>
+			<img src="img/2.6.jpg" style="width:750px; height:400px; margin-left:10%">
+			<br> 
+                          Example of the output obtained from Linear Regression Model is given below. After obtaining the equation select future data file to obtain future trips.
+                          
+                          <br>
+			<img src="img/2.7.jpg" style="width:750px; height:400px; margin-left:10%">
+			<br> 
+			
+			Demo Video to know the procedure of performing PHP Based experiment
+                         <hr> 
+                         
+                         
+                         <center>
+<video id="0" controls="" height="400" width="640">
+  <source src="video/RegressionPHP.mp4" type="video/mp4">
+  <source src="video/RegressionPHP.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/RegressionPHP.webm" type="video/webm">
+  <object data="video/RegressionPHP.mp4" height="400" width="640">
+    <embed src="video/RegressionPHP.swf" height="400" width="640">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+
+Demo Video to know the procedure of performing Java Based experiment
+<hr><br>
+
+<center>
+<video id="0" controls="" height="400" width="640">
+  <source src="video/Regression.mp4" type="video/mp4">
+  <source src="video/Regression.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+  <source src="video/Regression.webm" type="video/webm">
+  <object data="video/Regression.mp4" height="400" width="640">
+    <embed src="video/Regression.swf" height="400" width="640">
+  </object> 
+  <br>
+  Video may not play properly or be visible, most likely your browser does not support HTML5 video.
+</video>
+</center>
+
+
+
+                            </div>
+                            </div>
+               </section>              
+
+                
+
+               
+
+                <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-4-heading">
+                        Experiment
+                    </div>
+                    
+
+                    <div class="content" id=
+                    "experiment-article-section-4-content">
+                        <div class="divContent">
+                        
+                        
+                    <script language="JavaScript"> 
+function fullScreen(theURL) { 
+	 var width=screen.availWidth-20;//screen.width;
+	 var height=screen.availHeight-70;//screen.height;
+	 theURL= theURL + "?width="+ width + "&height=" + height;
+	 window.open(theURL, '', 'fullscreen=yes,scrollbars=no,resizable=no'); 
+} 
+</script>
+                        
+                           <p><span style="font-family: verdana,geneva; font-size: medium;"><a href="javascript:void(0);" onClick="fullScreen('applet/T-sectionSimulation1.php')"><strong> <span style="text-decoration: underline;">Click Here</span> To Perform Experiment</strong></a></p>
+                        </div>
+                    </div>
+                </section>
+
+          
+                <section id="experiment-article-section-2">
+                    <div class="icon" id="experiment-article-section-2-icon">
+                    <!-- Enclose the icon image of your lab. -->
+                    <img src="../images/theory.jpg"></div>
+                    <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+
+                    <div class="heading" id=
+                    "experiment-article-section-2-heading">
+                        Self Evaluation
+                    </div><!-- Write the section content inside a paragraph 
+
+        element, we can also include images with &lt;img&gt; tag -->
+
+                    <div class="content" id=
+                    "experiment-article-section-2-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">1)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">A gradient operator uses coefficients</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans5998" name="ans0"
+                                                        type="radio" value=
+                                                        "5998"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans5998">that are both positive and negative and add up to zero</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans5999" name="ans0"
+                                                        type="radio" value=
+                                                        "5999"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans5999">That are positive</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6000" name="ans0"
+                                                        type="radio" value=
+                                                        "6000"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6000">that should add up to one</label></td>
+                                                    </tr>
+						    <tr>
+                                                        <td align="right" id=
+
+                                                        "textAnsChoice" style=
+
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+
+                                                        "ans6001" name="ans0"
+                                                        type="radio" value=
+
+                                                        "6000"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+
+                                                        "padding-left:3px;">
+                                                        <label for=
+
+                                                        "ans6000">That must be integers always</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint10" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+
+                                    <table border="0" style="width:100%">
+                                        <tr>
+                                            <td valign="top" width="2%"></td>
+
+                                            <td style=
+                                            "font-weight: bold; vertical-align: top; width: 1%"
+                                            width="5%"><span id=
+                                            "questionNum">2)</span></td>
+
+                                            <td colspan="2" style=
+                                            "vertical-align:top;" width="70%">
+                                            <span id="question">Temperature is
+                                            measure of degree of -------- of a
+                                            substance.</span></td>
+
+                                            <td colspan="3" width="3%">
+                                            &nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;</td>
+
+                                            <td>&nbsp;</td>
+
+                                            <td colspan="5" width="80%">
+                                                <table align="left" border="0"
+                                                width="100%">
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6001" name="ans1"
+                                                        type="radio" value=
+                                                        "6001"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6001">Hotness</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6002" name="ans1"
+                                                        type="radio" value=
+                                                        "6002"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6002">Coldness</label></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="right" id=
+                                                        "textAnsChoice" style=
+                                                        "vertical-align:middle"
+                                                        width="32px"><input id=
+                                                        "ans6003" name="ans1"
+                                                        type="radio" value=
+                                                        "6003"></td>
+
+                                                        <td id="textAnsChoice"
+                                                        style=
+                                                        "padding-left:3px;">
+                                                        <label for=
+                                                        "ans6003">Hotness or
+                                                        Coldness</label></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <div id="hint">
+                                        <div id="textHint11" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    
+                                    <div id="hint">
+                                        <div id="textHint14" style=
+                                        "padding-left:50px; color:#F00;"></div>
+                                    </div>
+                                    <hr id="horizontalLine">
+                                    <input align="middle" id="loadTime" name=
+                                    "loadTime" type="hidden" value=
+                                    "1379688870/"><br>
+
+                                    <div style="padding-left:40px;">
+                                        <input id="submit1" name="submit1"
+                                        onclick="get_radio_value();" style=
+                                        "width:8%;" type="submit" value=
+                                        "&nbsp;Submit&nbsp;">&nbsp;&nbsp;<input id="cancel1"
+                                        name="cancel1" style="width:8%;" type=
+                                        "reset" value="&nbsp;Cancel&nbsp;">
+                                    </div>
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div>
+                </section>
+
+                
+                
+                 <section id="experiment-article-section-9">
+                    <div class="icon" id="experiment-article-section-9-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/quizzes.jpg"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-9-heading">
+                        FAQs
+                    </div>
+
+                </section>
+               
+
+               
+            </div>
+        </article>
+	
+
+        <footer  class="footer">
+            <!-- Put the content here -->
+            <div style="margin-left:40%; margin-right:40% ">
+            <a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+            </div>
+      </footer> 
+    </div>
+</body>
+</html>
